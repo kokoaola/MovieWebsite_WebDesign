@@ -5,45 +5,70 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <link rel="icon" href="favicon.ico"><!-- 32×32 -->
-    <link rel="apple-touch-icon" href="img/apple-touch-icon.png"><!-- 180×180 -->
-    <link rel="icon" href="img/android-chrome-256x256.png" type="image/png">
-    <link rel="stylesheet" href="reset.css">
-    <link rel="stylesheet" href="style.css">
+  <link rel="icon" href="favicon.ico"><!-- 32×32 -->
+  <link rel="apple-touch-icon" href="img/apple-touch-icon.png"><!-- 180×180 -->
+  <link rel="icon" href="img/android-chrome-256x256.png" type="image/png">
+  <link rel="stylesheet" href="reset.css">
+  <link rel="stylesheet" href="style.css">
   <title>shin</title>
 </head>
 
 <body>
 
-    <header id="header" class="wrapper">
+  <header id="header" class="wrapper">
     <h1>Logo</h1>
     <li><a href=#>お知らせ</a></li>
     <li><a href=#>上映スケジュール</a></li>
     <li><a href=#>料金</a></li>
     <li><a href=#>アクセス</a></li>
     <li><a href=#>お問い合わせ</a></li>
-      </header>
+  </header>
 
 
 
-    <main>
-      <div id="mainvisual">
-        <img src="img/cinema.jpg" alt="">
-      </div>
-    <section>
+  <main>
+    <div id="mainvisual">
+      <img src="img/cinema.jpg" alt="">
+    </div>
+
+
+    <section id="news">
       <h2>お知らせ</h2>
-      <dl><dt><script>document.write(new Date().getFullYear())</script>年<script>document.write(new Date().getMonth())</script>月<script>document.write(new Date().getDate())</script>日</dt><dd>狂い咲きサンダーロード舞台挨拶が決定しました</dd></dl>
-      <dl><dt><script>document.write(new Date().getFullYear())</script>年<script>document.write(new Date().getMonth())</script>月<script>document.write(new Date().getDate()-5)</script>日</dt><dd>椅子の入れ替えによる臨時休館日のお知らせ</dd></dl>
-      <dl><dt><script>document.write(new Date().getFullYear())</script>年<script>document.write(new Date().getMonth())</script>月<script>document.write(new Date().getDate()-10)</script>日</dt><dd>ノイズ愛好会雑誌にて当館が記事になりました</dd></dl>
+      <div class="whiteBackgroundContent">
+      <dl>
+        <dt>
+          <script>document.write(new Date().getFullYear())</script>年
+          <script>document.write(new Date().getMonth())</script>月
+          <script>document.write(new Date().getDate())</script>日
+        </dt>
+        <dd>狂い咲きサンダーロード舞台挨拶が決定しました</dd>
+      </dl>
+      <dl>
+        <dt>
+          <script>document.write(new Date().getFullYear())</script>年
+          <script>document.write(new Date().getMonth())</script>月
+          <script>document.write(new Date().getDate() - 5)</script>日
+        </dt>
+        <dd>椅子の入れ替えによる臨時休館日のお知らせ</dd>
+      </dl>
+      <dl>
+        <dt>
+          <script>document.write(new Date().getFullYear())</script>年
+          <script>document.write(new Date().getMonth())</script>月
+          <script>document.write(new Date().getDate() - 10)</script>日
+        </dt>
+        <dd>ノイズ愛好会雑誌にて当館が記事になりました</dd>
+      </dl>
+    </div>
     </section>
 
     <section>
       <h2>上映スケジュール</h2>
+      <div class="blackBackgroundContent" >
       <table border="1">
         <tr>
           <th>
-            
-              <img src="img/cat.jpg" width="100px alt="">
+            <img src="img/cat.jpg" width="100px alt="">
               <p>
               タイトル
             </p>
@@ -53,14 +78,14 @@
           </th>
           <th>
             
-            <img src="img/human.jpg" width="100px" alt="">
+            <img src=" img/human.jpg" width="100px" alt="">
             <p>
-            タイトル
-          </p>
-          <p>
-            字幕のみ
-          </p>
-        </th>
+              タイトル
+            </p>
+            <p>
+              字幕のみ
+            </p>
+          </th>
         </tr>
         <tr>
           <td>10:00 ~ 11:27</td>
@@ -79,42 +104,64 @@
           <td></td>
         </tr>
       </table>
+    </div>
     </section>
 
-    <section>
+    <section id="price">
       <h2>料金</h2>
-      <dl>一般<dt></dt><dd>1500円</dd></dl>
-      <dl>大学生/専門学生<dt></dt><dd>1200円</dd></dl>
-      <dl>高校生以下<dt></dt><dd>1000円</dd></dl>
-      <dl>60歳以上<dt></dt><dd>1000円</dd></dl>
-      <dl>障がい者手帳をお持ちの方<br>
-        （付き添いの方１名まで）<dt></dt><dd>800円</dd></dl>
+      <div class="dlContent whiteBackgroundContent">
+        <dl>
+          <dt>一般</dt>
+          <dd>1500円</dd>
+          <dt>大学生/専門学生</dt>
+          <dd>1200円</dd>
+          <dt>高校生以下</dt>
+          <dd>1000円</dd>
+          <dt>60歳以上</dt>
+          <dd>1000円</dd>
+          <dt>障がい者手帳をお持ちの方<br>
+            （付き添いの方１名まで）</dt>
+          <dd>800円</dd>
+        </dl>
+      </div>
     </section>
-  
 
-    <section>
+
+    <section id="access">
       <h2>アクセス</h2>
-      <dl>住所<dt></dt><dd>群馬県前橋市荒牧町</dd></dl>
-      <dl>営業時間<dt></dt><dd>10:00〜23:00</dd></dl>
-      <dl>定休日<dt></dt><dd>年中無休</dd></dl>
-      <dl>クレジットカード<dt></dt><dd>可</dd></dl>
-      <dl>駐車場<dt></dt><dd>30台あり。<br>
-        満車の場合は近くのコインパーキングをご利用ください</dd></dl>
+      <div class="dlContent blackBackgroundContent" >
+        <dl>
+          <dt>住所</dt>
+          <dd>群馬県前橋市荒牧町</dd>
+          <dt>営業時間</dt>
+          <dd>10:00〜23:00</dd>
+          <dt>定休日</dt>
+          <dd>年中無休</dd>
+          <dt>クレジットカード</dt>
+          <dd>可</dd>
+          <dt>駐車場</dt>
+          <dd>30台あり。<br>
+            満車の場合は近くのコインパーキングをご利用ください</dd>
+        </dl>
+      </div>
     </section>
 
     <section>
       <h2>お問い合わせ</h2>
+      <div class="blackBackgroundContent">
       <a href="http://">送信</a>
+    </div>
     </section>
 
-  <footer>
-    <p class="copyright">
-      <small>
-        &copy; 2019-<script>document.write(new Date().getFullYear())</script> Kiryu Neon Cinema Reserved.
-      </small>
-    </p>
-  </footer>
-</main>
+    <footer>
+      <p class="copyright">
+        <small>
+          &copy; 2019-
+          <script>document.write(new Date().getFullYear())</script> Kiryu Neon Cinema Reserved.
+        </small>
+      </p>
+    </footer>
+  </main>
 </body>
 
 </html>

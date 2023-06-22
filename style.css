@@ -27,12 +27,13 @@ list-style:none;とか
 @charset "UTF-8";
 
 main{
-   background-color: lightgray;
+   background-color: black;
    list-style:none;
 }
 
 body{
    list-style:none;
+   color: white;
 }
 
 @media screen and (min-width: 1024px) {
@@ -43,38 +44,112 @@ body{
 
 
 /*-------------------------------------------
-ヘッダー
+ヘッダーナビゲーション
 -------------------------------------------*/
 #header {
+   background-color:  #24292e;;
    display: flex;
    justify-content: space-between;
    align-items: center;
    margin: 0 auto;
- }
- #header ul {
-   display: flex;
-   padding: 10px 0;
+   color: white;
  }
  #header li {
    margin-left: 30px;
  }
  #header li a {
-   color: #24292e;
+   color: white;
+   text-decoration: none;
  }
  #header li a:hover {
    opacity: 0.7;
  }
 
+ 
+/*-------------------------------------------
+白枠背景
+-------------------------------------------*/
+.whiteBackgroundContent{
+   background-color: white;
+   border-radius: 20px;
+   margin: 0 5%;
+   padding: 5% 5%;
+   color:black;
+}
+
+
+.blackBackgroundContent{
+   margin: 0 5%;
+   padding: 5% 5%;
+}
+
+/*-------------------------------------------
+各セクション共通設定
+-------------------------------------------*/
+section{
+   margin-bottom: 10%;
+}
+
 
  /*-------------------------------------------
-Mainvisual
+メインビジュアル
 -------------------------------------------*/
 #mainvisual {
    margin-bottom: 80px;
  }
  #mainvisual img {
    width: 100%;
-   max-width: 1920px;
+   /* max-width: 1920px; */
    height: 600px;
    object-fit: cover;
+ }
+
+
+ /*-------------------------------------------
+お知らせ
+-------------------------------------------*/
+h2{
+margin-left: 10%;
+}
+
+ 
+ /*-------------------------------------------
+料金、アクセス共通
+-------------------------------------------*/
+.dlContent dl {
+   display: flex;      /* dt、ddを横並びにする */
+   flex-wrap: wrap;    /* dtとddが100%になったら、横並びを折り返す */
+   padding: 16px 0;
+   margin-bottom: 25px;
+ }
+
+.dlContent dt {
+   width: 25%;
+ }
+.dlContent dd {
+   width: 75%;
+ }
+ 
+
+  /*-------------------------------------------
+料金
+-------------------------------------------*/
+ #price .dlContent dt{
+   width: 70%;
+ }
+
+ #price .dlContent dd{
+   width: 30%;
+ }
+
+   /*-------------------------------------------
+アクセス
+-------------------------------------------*/
+
+#access .dlContent dt{
+   width: 35%;
+ }
+
+ #access .dlContent dd{
+   width: 65%;
  }
