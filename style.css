@@ -26,10 +26,20 @@ list-style:none;とか
 
 @charset "UTF-8";
 
+/* * {
+	border: 1px solid red;
+} */
+
 main{
    background-color: black;
    list-style:none;
 }
+
+body {
+  font-family: "Helvetica Neue", "Arial", "Hiragino Sans", "Meiryo", sans-serif;
+	/* font-family: "メイリオ", meiryo, sans-serif; */
+	}
+
 
 body{
    list-style:none;
@@ -77,6 +87,11 @@ li {
  }
 
 
+
+ #mainvisual {
+  width: 100vw;
+  margin: 0;
+}
 
  /*-------------------------------------------
 ハンバーガーメニュー
@@ -207,8 +222,9 @@ li {
    border-bottom: 1px solid #d8c7a0;
  }
  
+
 /*-------------------------------------------
-白枠背景
+白枠背景共通要素
 -------------------------------------------*/
 .whiteBackgroundContent{
    background-color: white;
@@ -229,6 +245,14 @@ li {
 -------------------------------------------*/
 section{
    margin-bottom: 10%;
+}
+
+
+/*-------------------------------------------
+各dl共通設定
+-------------------------------------------*/
+dl{
+  margin: auto;
 }
 
 
@@ -253,6 +277,15 @@ h2{
 margin-left: 10%;
 }
 
+
+ /*-------------------------------------------
+上映スケジュール
+-------------------------------------------*/
+
+#schedule table{
+  background-color: blue;
+  margin: auto;
+}
  
  /*-------------------------------------------
 料金、アクセス共通
@@ -283,6 +316,11 @@ margin-left: 10%;
    width: 30%;
  }
 
+
+#price dd{
+  text-align: right;
+}
+
    /*-------------------------------------------
 アクセス
 -------------------------------------------*/
@@ -294,3 +332,90 @@ margin-left: 10%;
  #access .dlContent dd{
    width: 65%;
  }
+
+
+
+    /*-------------------------------------------
+お問い合わせ
+-------------------------------------------*/
+
+.privacyPolicy{
+  background-color: gray;
+  color: #000;
+  font-size:small;
+margin-bottom: 20px;
+}
+
+input {
+   color: white;
+   }
+
+   textarea {
+      color: white;
+      }
+
+/* フォームの3つのブロックに対する指定 */
+.form-group {
+   margin-bottom: 20px;
+ }
+ 
+ /* 項目名に対する指定 */
+ .form-label {
+   display: block;
+   margin-bottom: 10px;
+   color: white;
+ }
+ 
+ /* 送信ボタンを囲む<div>に対する指定 */
+ .form-btn {
+   margin: 30px 0;
+   text-align: center;
+ }
+ 
+ /* 入力欄に対する指定 */
+ input[type="text"],
+ input[type="email"],
+ textarea {
+   width: 100%;
+   padding: 10px;
+   border: 1px solid #999;
+ }
+ 
+ /* 入力欄が:focus（入力状態）のとき */
+ input[type="text"]:focus,
+ input[type="email"]:focus,
+ textarea:focus {
+   border-color: #032559;
+   outline: none;
+ }
+ 
+ /* 送信ボタン */
+ button[type="submit"] {
+   background: none;
+   border: none;
+   cursor: pointer;
+ }
+ 
+ /* 送信ボタンが:hoverのとき */
+ button[type="submit"]:hover {
+   opacity: 0.65;
+ }
+ .button {
+  display       : inline-block;
+  border-radius : 5%;          /* 角丸       */
+  font-size     : 18pt;        /* 文字サイズ */
+  text-align    : center;      /* 文字位置   */
+  cursor        : pointer;     /* カーソル   */
+  padding       : 12px 35px;   /* 余白       */
+  background    : #ffffff;     /* 背景色     */
+  color         : #000000;     /* 文字色     */
+  line-height   : 1em;         /* 1行の高さ  */
+  transition    : .3s;         /* なめらか変化 */
+  border        : 2px solid #ffffff;    /* 枠の指定 */
+}
+.button:hover {
+  color         : #ffffff;     /* 背景色     */
+  background    : #000000;     /* 文字色     */
+}
+
+
