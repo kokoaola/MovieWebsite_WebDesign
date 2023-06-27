@@ -46,7 +46,7 @@ list-style:none;とか
      color: white;
    }
 
-   @media screen and (min-width: 1024px) {
+   @media screen and (min-width: 768px) {
      main {
        background-color: red;
      }
@@ -68,8 +68,9 @@ list-style:none;とか
      align-items: center;
      margin: 0 auto;
      color: white;
-
    }
+   
+   
 
    #header ul {
      display: flex;
@@ -98,6 +99,14 @@ list-style:none;とか
      vertical-align: bottom;
      margin: 0 0 50px 0;
    }
+
+      /*-------------------------------------------
+ロゴ
+-------------------------------------------*/
+.logo {
+  width: 20vw;
+}
+
 
    /*-------------------------------------------
 ハンバーガーメニュー
@@ -276,13 +285,6 @@ list-style:none;とか
      object-fit: cover;
    }
 
-
-   /*-------------------------------------------
-ロゴ
--------------------------------------------*/
-   .logo {
-     width: 10vw;
-   }
 
    /*-------------------------------------------
 お知らせ
