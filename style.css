@@ -299,72 +299,53 @@ list-style:none;とか
 -------------------------------------------*/
 
 
-.sclollContainer{
-  overflow-x: scroll;
-  scroll-snap-type: x mandatory;/* scroll-snap */
-  width:100vw;/* 任意 */
-  overflow:auto;/* 必要 */
-  display:flex;/* 必要 */
-  justify-content: space-between;
-  flex-direction: row;
-  overflow:hidden;
-}
 
 
 
-   /* #schedule table {
 
-     background-color: blue;
-     margin: auto;
-   } */
 
    table {
-    scroll-snap-align: start;/* scroll-snap */
-  width:100%;/* 任意 */
-  flex:none;/* 必要 */
-
      border-collapse: collapse;
-     margin: 0 30%;
-     padding: 0;
-     width: 80%;
-     table-layout: fixed;
+     margin: 0 auto;
+     padding: 1px;
+     width: 98%;
+     font-size: medium;
+     border: #000 1px solid;
    }
 
    table tr {
+    width: 100%;
      background-color: white;
      padding: .35em;
-     border: 2px solid gray;
    }
 
    table td {
      padding: 1em .5em;
-     border-right: 2px solid gray;
      text-align: center;
    }
 
    table th {
      font-size: .0em;
+     border: #000 1px solid;
    }
 
    table thead tr {
-     background-color: gray;
      color: #fff;
    }
 
-   table tbody th {
-     border-right: 2px solid gray;
-   }
+
 
    .scheduleTitleRow {
      border-top: none;
      padding: 5% 0 5% 0;
+     width: 50%;
    }
 
 
    #schedule .scheduleTitle {
-     font-size: large;
-     font-size: 0.9em;
+     font-size: 1em;
      font-weight: bold;
+
    }
 
    #schedule .scheduleCaption {
@@ -419,6 +400,41 @@ list-style:none;とか
      text-align: right;
    }
 
+
+
+
+   .container {
+    margin: 0px auto;
+  }
+  
+  .swiper-wrapper{
+    text-align: center;
+  }
+  
+  .tab{
+    margin: auto auto 0 auto;
+    font-size: small;
+
+  }
+  .swiper {
+    margin: 0 0 0 0;
+  }
+  .tab-menu {
+    /* border-bottom: 1px solid #CCC; */
+  }
+  
+  .tab-menu .swiper-slide {
+    width: auto;
+    padding: 10px 0;
+  }
+  .tab-contents {
+    margin: 0px auto;
+  }
+  .swiper-slide-thumb-active {
+    font-weight: bold;
+    font-size: large;
+    width: 30px;
+  }
    /*-------------------------------------------
 アクセス
 -------------------------------------------*/

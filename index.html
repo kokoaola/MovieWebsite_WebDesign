@@ -11,6 +11,10 @@
   <link rel="stylesheet" href="reset.css">
   <link rel="stylesheet" href="style.css">
   <title>shin</title>
+  <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css" />
+
+  <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
+
 </head>
 
 <body>
@@ -21,27 +25,27 @@
     <h1><img src="logo.png" alt=""></h1>
     <img class="logo" src="img/logo.png" alt="">
 
-      <!-- ナビゲーション -->
+    <!-- ナビゲーション -->
 
-      <nav id="gnav" class="gnav">
+    <nav id="gnav" class="gnav">
 
-    <!-- navの中に追加 -->
-    <!-- チェックボックス配置 -->
-    <input type="checkbox" id="menu-btn-check">
-    <label for="menu-btn-check" class="menu-btn">
-      <span></span></label>
+      <!-- navの中に追加 -->
+      <!-- チェックボックス配置 -->
+      <input type="checkbox" id="menu-btn-check">
+      <label for="menu-btn-check" class="menu-btn">
+        <span></span></label>
 
 
-        <ul>
-          <li><a href=#>お知らせ</a></li>
-          <li><a href=#>上映スケジュール</a></li>
-          <li><a href=#>料金</a></li>
-          <li><a href=#>アクセス</a></li>
-          <li><a href=#>お問い合わせ</a></li>
-        </ul>
-      </nav>
+      <ul>
+        <li><a href=#>お知らせ</a></li>
+        <li><a href=#>上映スケジュール</a></li>
+        <li><a href=#>料金</a></li>
+        <li><a href=#>アクセス</a></li>
+        <li><a href=#>お問い合わせ</a></li>
+      </ul>
+    </nav>
     </div>
-    
+
   </header>
 
 
@@ -55,138 +59,275 @@
     <section id="news">
       <h2>お知らせ</h2>
       <div class="whiteBackgroundContent">
-      <dl>
-        <dt>
-          <script>document.write(new Date().getFullYear())</script>年
-          <script>document.write(new Date().getMonth())</script>月
-          <script>document.write(new Date().getDate())</script>日
-        </dt>
-        <dd>狂い咲きサンダーロード舞台挨拶が決定しました</dd>
-      </dl>
-      <dl>
-        <dt>
-          <script>document.write(new Date().getFullYear())</script>年
-          <script>document.write(new Date().getMonth())</script>月
-          <script>document.write(new Date().getDate() - 5)</script>日
-        </dt>
-        <dd>椅子の入れ替えによる臨時休館日のお知らせ</dd>
-      </dl>
-      <dl>
-        <dt>
-          <script>document.write(new Date().getFullYear())</script>年
-          <script>document.write(new Date().getMonth())</script>月
-          <script>document.write(new Date().getDate() - 10)</script>日
-        </dt>
-        <dd>ノイズ愛好会雑誌にて当館が記事になりました</dd>
-      </dl>
-    </div>
+        <dl>
+          <dt>
+            <script>document.write(new Date().getFullYear())</script>年
+            <script>document.write(new Date().getMonth())</script>月
+            <script>document.write(new Date().getDate())</script>日
+          </dt>
+          <dd>狂い咲きサンダーロード舞台挨拶が決定しました</dd>
+        </dl>
+        <dl>
+          <dt>
+            <script>document.write(new Date().getFullYear())</script>年
+            <script>document.write(new Date().getMonth())</script>月
+            <script>document.write(new Date().getDate() - 5)</script>日
+          </dt>
+          <dd>椅子の入れ替えによる臨時休館日のお知らせ</dd>
+        </dl>
+        <dl>
+          <dt>
+            <script>document.write(new Date().getFullYear())</script>年
+            <script>document.write(new Date().getMonth())</script>月
+            <script>document.write(new Date().getDate() - 10)</script>日
+          </dt>
+          <dd>ノイズ愛好会雑誌にて当館が記事になりました</dd>
+        </dl>
+      </div>
     </section>
 
     <section id="schedule">
       <h2>上映スケジュール</h2>
-      <div class="blackBackgroundContent whiteBackgroundContent" >
-        <div class="sclollContainer">
-      <table border="1">
-        <tr>
-          <th>
-            <img src="img/cat.jpg" width="100vhw alt="">
-
-          </th>
-          
-          <th>
-            <img src=" img/human.jpg" width="100px" alt="">
-
-          </th>
-        </tr>
+      <div class="blackBackgroundContent whiteBackgroundContent">
 
 
-          <tr>
-            <td class="scheduleTitleRow">              
-              <p class="scheduleTitle">
-              猫の一生
-            </p>
-            <p class="scheduleCaption">
-              字幕のみ
-            </p></td>
-            <td class="scheduleTitleRow">      
-              <p class="scheduleTitle">
-              群馬サバイバルガイド
-            </p>
-            <p class="scheduleCaption">
-              字幕のみ
-            </p></td>
-          </tr>
-        
-
-        <tr>
-          <td>10:00 ~ 11:27</td>
-          <td>10:00 ~ 11:27</td>
-        </tr>
-        <tr>
-          <td>10:00 ~ 11:27</td>
-          <td>10:00 ~ 11:27</td>
-        </tr>
-        <tr>
-          <td>10:00 ~ 11:27</td>
-          <td>10:00 ~ 11:27</td>
-        </tr>
-        <tr>
-          <td>10:00 ~ 11:27</td>
-          <td></td>
-        </tr>
-      </table>
-
-      <table border="1">
-        <tr>
-          <th>
-            <img src="img/cat.jpg" width="100vhw alt="">
-
-          </th>
-          
-          <th>
-            <img src=" img/human.jpg" width="100px" alt="">
-
-          </th>
-        </tr>
 
 
-          <tr>
-            <td class="scheduleTitleRow">              
-              <p class="scheduleTitle">
-              猫の一生
-            </p>
-            <p class="scheduleCaption">
-              字幕のみ
-            </p></td>
-            <td class="scheduleTitleRow">      
-              <p class="scheduleTitle">
-              群馬サバイバルガイド
-            </p>
-            <p class="scheduleCaption">
-              字幕のみ
-            </p></td>
-          </tr>
-        
 
-        <tr>
-          <td>10:00 ~ 11:27</td>
-          <td>10:00 ~ 11:27</td>
-        </tr>
-        <tr>
-          <td>10:00 ~ 11:27</td>
-          <td>10:00 ~ 11:27</td>
-        </tr>
-        <tr>
-          <td>10:00 ~ 11:27</td>
-          <td>10:00 ~ 11:27</td>
-        </tr>
-        <tr>
-          <td>10:00 ~ 11:27</td>
-          <td></td>
-        </tr>
-      </table>
-    </div>
-    </div>
+        <div class="container">
+          <!-- Swiper -->
+          <div class="swiper tab-menu">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide tab">1/1<br>(水)</div>
+              <div class="swiper-slide tab">1/2<br>(水)</div>
+              <div class="swiper-slide tab">1/3<br>(水)</div>
+              <div class="swiper-slide tab">1/4<br>(水)</div>
+              <div class="swiper-slide tab">1/5<br>(水)</div>
+            </div>
+          </div>
+
+          <div class="swiper tab-contents">
+            <div class="swiper-wrapper">
+
+              <div class="swiper-slide">
+                <table border="1">
+                  <tr>
+                    <th><img src="img/cat.jpg" width="100vhw alt=""></th>
+          <th><img src=" img/human.jpg" width="100px" alt=""></th>
+                  </tr>
+
+                  <tr>
+                    <td class="scheduleTitleRow">
+                      <p class="scheduleTitle">猫の一生</p>
+                      <p class="scheduleCaption">字幕のみ</p>
+                    </td>
+                    <td class="scheduleTitleRow">
+                      <p class="scheduleTitle">
+                        群馬サバイバルガイド
+                      </p>
+                      <p class="scheduleCaption">
+                        字幕のみ
+                      </p>
+                    </td>
+                  </tr>
+
+
+                  <tr>
+                    <td>10:00 ~ 11:27</td>
+                    <td>10:00 ~ 11:27</td>
+                  </tr>
+                  <tr>
+                    <td>10:00 ~ 11:27</td>
+                    <td>10:00 ~ 11:27</td>
+                  </tr>
+                  <tr>
+                    <td>10:00 ~ 11:27</td>
+                    <td>10:00 ~ 11:27</td>
+                  </tr>
+                  <tr>
+                    <td>10:00 ~ 11:27</td>
+                    <td></td>
+                  </tr>
+                </table>
+              </div>
+
+              <div class="swiper-slide">
+                <table border="1">
+                  <tr>
+                    <th><img src="img/cat.jpg" width="100vhw alt=""></th>
+                    <th><img src=" img/human.jpg" width="100px" alt=""></th>
+                  </tr>
+
+                  <tr>
+                    <td class="scheduleTitleRow">
+                      <p class="scheduleTitle">猫の一生</p>
+                      <p class="scheduleCaption">字幕のみ</p>
+                    </td>
+                    <td class="scheduleTitleRow">
+                      <p class="scheduleTitle">
+                        群馬サバイバルガイド
+                      </p>
+                      <p class="scheduleCaption">
+                        字幕のみ
+                      </p>
+                    </td>
+                  </tr>
+
+
+                  <tr>
+                    <td>10:00 ~ 11:27</td>
+                    <td>10:00 ~ 11:27</td>
+                  </tr>
+                  <tr>
+                    <td>10:00 ~ 11:27</td>
+                    <td>10:00 ~ 11:27</td>
+                  </tr>
+                  <tr>
+                    <td>10:00 ~ 11:27</td>
+                    <td>10:00 ~ 11:27</td>
+                  </tr>
+                  <tr>
+                    <td>10:00 ~ 11:27</td>
+                    <td></td>
+                  </tr>
+                </table>
+              </div>
+
+              <div class="swiper-slide">                
+                <table border="1">
+                  <tr>
+                    <th><img src="img/cat.jpg" width="100vhw alt=""></th>
+                    <th><img src=" img/human.jpg" width="100px" alt=""></th>
+                  </tr>
+
+                  <tr>
+                    <td class="scheduleTitleRow">
+                      <p class="scheduleTitle">猫の一生</p>
+                      <p class="scheduleCaption">字幕のみ</p>
+                    </td>
+                    <td class="scheduleTitleRow">
+                      <p class="scheduleTitle">
+                        群馬サバイバルガイド
+                      </p>
+                      <p class="scheduleCaption">
+                        字幕のみ
+                      </p>
+                    </td>
+                  </tr>
+
+
+                  <tr>
+                    <td>10:00 ~ 11:27</td>
+                    <td>10:00 ~ 11:27</td>
+                  </tr>
+                  <tr>
+                    <td>10:00 ~ 11:27</td>
+                    <td>10:00 ~ 11:27</td>
+                  </tr>
+                  <tr>
+                    <td>10:00 ~ 11:27</td>
+                    <td>10:00 ~ 11:27</td>
+                  </tr>
+                  <tr>
+                    <td>10:00 ~ 11:27</td>
+                    <td></td>
+                  </tr>
+                </table>
+              </div>
+
+              <div class="swiper-slide">                
+                <table border="1">
+                  <tr>
+                    <th><img src="img/cat.jpg" width="100vhw alt=""></th>
+                    <th><img src=" img/human.jpg" width="100px" alt=""></th>
+                  </tr>
+
+                  <tr>
+                    <td class="scheduleTitleRow">
+                      <p class="scheduleTitle">猫の一生</p>
+                      <p class="scheduleCaption">字幕のみ</p>
+                    </td>
+                    <td class="scheduleTitleRow">
+                      <p class="scheduleTitle">
+                        群馬サバイバルガイド
+                      </p>
+                      <p class="scheduleCaption">
+                        字幕のみ
+                      </p>
+                    </td>
+                  </tr>
+
+
+                  <tr>
+                    <td>10:00 ~ 11:27</td>
+                    <td>10:00 ~ 11:27</td>
+                  </tr>
+                  <tr>
+                    <td>10:00 ~ 11:27</td>
+                    <td>10:00 ~ 11:27</td>
+                  </tr>
+                  <tr>
+                    <td>10:00 ~ 11:27</td>
+                    <td>10:00 ~ 11:27</td>
+                  </tr>
+                  <tr>
+                    <td>10:00 ~ 11:27</td>
+                    <td></td>
+                  </tr>
+                </table>
+              </div>
+
+              <div class="swiper-slide">
+                <table border="1">
+                  <tr>
+                    <th><img src="img/cat.jpg" width="100vhw alt=""></th>
+                    <th><img src=" img/human.jpg" width="100px" alt=""></th>
+                  </tr>
+
+                  <tr>
+                    <td class="scheduleTitleRow">
+                      <p class="scheduleTitle">猫の一生</p>
+                      <p class="scheduleCaption">字幕のみ</p>
+                    </td>
+                    <td class="scheduleTitleRow">
+                      <p class="scheduleTitle">
+                        群馬サバイバルガイド
+                      </p>
+                      <p class="scheduleCaption">
+                        字幕のみ
+                      </p>
+                    </td>
+                  </tr>
+
+
+                  <tr>
+                    <td>10:00 ~ 11:27</td>
+                    <td>10:00 ~ 11:27</td>
+                  </tr>
+                  <tr>
+                    <td>10:00 ~ 11:27</td>
+                    <td>10:00 ~ 11:27</td>
+                  </tr>
+                  <tr>
+                    <td>10:00 ~ 11:27</td>
+                    <td>10:00 ~ 11:27</td>
+                  </tr>
+                  <tr>
+                    <td>10:00 ~ 11:27</td>
+                    <td></td>
+                  </tr>
+                </table>
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+
+
+
+
+      </div>
     </section>
 
     <section id="price">
@@ -213,10 +354,12 @@
       <h2>アクセス</h2>
       <div class="map ">
 
-        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3212.8699320193227!2d139.07982807431162!3d36.363929292173125!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x601ef27d44b99d25%3A0xce79902b7c8e0195!2z44CSMzcxLTA4MTYg576k6aas55yM5YmN5qmL5biC5LiK5L2Q6bOl55S677yU77yW77yV4oiS77yR!5e0!3m2!1sja!2sjp!4v1687417564924!5m2!1sja!2sjp" width="100%" height="300" frameborder="0" style="border:0" allowfullscreen></iframe>
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3212.8699320193227!2d139.07982807431162!3d36.363929292173125!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x601ef27d44b99d25%3A0xce79902b7c8e0195!2z44CSMzcxLTA4MTYg576k6aas55yM5YmN5qmL5biC5LiK5L2Q6bOl55S677yU77yW77yV4oiS77yR!5e0!3m2!1sja!2sjp!4v1687417564924!5m2!1sja!2sjp"
+          width="100%" height="300" frameborder="0" style="border:0" allowfullscreen></iframe>
 
       </div>
-      <div class="dlContent blackBackgroundContent" >
+      <div class="dlContent blackBackgroundContent">
         <dl>
           <dt>住所</dt>
           <dd>群馬県前橋市荒牧町</dd>
@@ -237,56 +380,58 @@
       <h2>お問い合わせ</h2>
 
       <div class="blackBackgroundContent">
-      
+
         <div class="privacyPolicy" style="width: 100%; height: 100px; overflow-y: scroll; background:#eeeeee;">
 
           <H4>プライバシーポリシー</H4>
-          <p>私も前ついにこうした尊敬事というののためを行かたいで。まあ十一月を約束学はいったいその落第たただってをしのでいでをは品評きめなけれないが、ちょっととは与えたないでなく。様子をするでのも何しろ今のことにでなけれだ。          私も前ついにこうした尊敬事というののためを行かたいで。まあ十一月を約束学はいったいその落第たただってをしのでいでをは品評きめなけれないが、ちょっととは与えたないでなく。様子をするでのも何しろ今のことにでなけれだ。</p>
-          
-          </div>
+          <p>私も前ついにこうした尊敬事というののためを行かたいで。まあ十一月を約束学はいったいその落第たただってをしのでいでをは品評きめなけれないが、ちょっととは与えたないでなく。様子をするでのも何しろ今のことにでなけれだ。
+            私も前ついにこうした尊敬事というののためを行かたいで。まあ十一月を約束学はいったいその落第たただってをしのでいでをは品評きめなけれないが、ちょっととは与えたないでなく。様子をするでのも何しろ今のことにでなけれだ。
+          </p>
 
-
-      <!-- フォーム -->
-      <form action="">
-        <!-- お名前 -->
-        <div class="form-group">
-          <!-- 項目名 -->
-          <label for="yourName" class="form-label">お名前</label>
-          <div class="form-col">
-            <!-- 入力欄：テキスト -->
-            <input type="text" name="お名前" id="yourName">
-          </div>
         </div>
 
-        <!-- E-Mail -->
-        <div class="form-group">
-          <!-- 項目名 -->
-          <label for="yourEmail" class="form-label">E-Mail</label>
-          <div class="form-col">
-            <!-- 入力欄：email -->
-            <input type="email" name="E-Mail" id="yourEmail">
+
+        <!-- フォーム -->
+        <form action="">
+          <!-- お名前 -->
+          <div class="form-group">
+            <!-- 項目名 -->
+            <label for="yourName" class="form-label">お名前</label>
+            <div class="form-col">
+              <!-- 入力欄：テキスト -->
+              <input type="text" name="お名前" id="yourName">
+            </div>
           </div>
-        </div>
 
-        <!-- お問い合わせ内容 -->
-        <div class="form-group">
-          <!-- 項目名 -->
-          <label for="yourInquiry" class="form-label">お問い合わせ内容</label>
-          <div class="form-col">
-            <!-- 入力欄：テキストエリア -->
-            <textarea name="お問い合わせ内容" id="yourInquiry" cols="30" rows="5"></textarea>
+          <!-- E-Mail -->
+          <div class="form-group">
+            <!-- 項目名 -->
+            <label for="yourEmail" class="form-label">E-Mail</label>
+            <div class="form-col">
+              <!-- 入力欄：email -->
+              <input type="email" name="E-Mail" id="yourEmail">
+            </div>
           </div>
-        </div>
 
-        <!-- 送信ボタン -->
-        <div class="form-btn">
+          <!-- お問い合わせ内容 -->
+          <div class="form-group">
+            <!-- 項目名 -->
+            <label for="yourInquiry" class="form-label">お問い合わせ内容</label>
+            <div class="form-col">
+              <!-- 入力欄：テキストエリア -->
+              <textarea name="お問い合わせ内容" id="yourInquiry" cols="30" rows="5"></textarea>
+            </div>
+          </div>
 
-<input type="submit" value"送信する" class="button">
-<!-- 
+          <!-- 送信ボタン -->
+          <div class="form-btn">
+
+            <input type="submit" value"送信する" class="button">
+            <!-- 
           <button type="submit"><a href="http://">送信</a></button> -->
-        </div>
-      </form>
-      <!-- フォームここまで -->
+          </div>
+        </form>
+        <!-- フォームここまで -->
 
       </div>
     </section>
@@ -301,5 +446,25 @@
     </footer>
   </main>
 </body>
+
+<script>
+  const galleryThumbs = new Swiper('.tab-menu', {
+    spaceBetween: 20,
+    slidesPerView: '5',
+    watchSlidesVisibility: true,
+    watchSlidesProgress: true,
+    slideActiveClass: 'swiper-slide-active'
+  });
+  galleryThumbs.on('tap', function () {
+    const current = galleryTop.activeIndex;
+    galleryThumbs.slideTo(current, 500, true);
+  });
+  const galleryTop = new Swiper('.tab-contents', {
+    autoHeight: true,
+    thumbs: {
+      swiper: galleryThumbs
+    }
+  });
+</script>
 
 </html>
