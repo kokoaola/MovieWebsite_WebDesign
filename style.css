@@ -24,109 +24,112 @@ list-style:none;とか
 
 */
 
-@charset "UTF-8";
+   @charset "UTF-8";
 
-/* * {
+   /* * {
 	border: 1px solid red;
 } */
 
-main{
-   background-color: black;
-   list-style:none;
-}
-
-body {
-  font-family: "Helvetica Neue", "Arial", "Hiragino Sans", "Meiryo", sans-serif;
-	/* font-family: "メイリオ", meiryo, sans-serif; */
-	}
-
-
-body{
-   list-style:none;
-   color: white;
-}
-
-@media screen and (min-width: 1024px) {
-   main{
-      background-color: red;
+   main {
+     background-color: black;
+     list-style: none;
    }
-}
 
-li {
-   list-style: none;
- }
+   body {
+     font-family: "Helvetica Neue", "Arial", "Hiragino Sans", "Meiryo", sans-serif;
+     /* font-family: "メイリオ", meiryo, sans-serif; */
+   }
 
 
-/*-------------------------------------------
+   body {
+     list-style: none;
+     color: white;
+   }
+
+   @media screen and (min-width: 1024px) {
+     main {
+       background-color: red;
+     }
+   }
+
+   li {
+     list-style: none;
+   }
+
+
+   /*-------------------------------------------
 ヘッダーナビゲーション
 -------------------------------------------*/
 
-#header {
-   background-color:  #24292e;;
-   display: flex;
-   justify-content: space-between;
-   align-items: center;
-   margin: 0 auto;
-   color: white;
+   #header {
+     background-color: black;
+     display: flex;
+     justify-content: space-between;
+     align-items: center;
+     margin: 0 auto;
+     color: white;
 
- }
+   }
 
- #header ul {
-   display: flex;
-   padding: 10px 0;
- }
- #header li {
-   margin-left: 30px;
- }
- #header li a {
-   color: black;
-      text-decoration: none;
- }
- #header li a:hover {
-   opacity: 0.7;
- }
+   #header ul {
+     display: flex;
+     padding: 10px 0;
+   }
+
+   #header li {
+     margin-left: 30px;
+   }
+
+   #header li a {
+     color: black;
+     text-decoration: none;
+   }
+
+   #header li a:hover {
+     opacity: 0.7;
+   }
 
 
 
- .mainvisual img{
-  width: 100%;
-  height: 60vh;
-  object-fit: cover;
-  vertical-align: bottom;
-  margin: 0 0 50px 0;
-}
+   .mainvisual img {
+     width: 100%;
+     height: 60vh;
+     object-fit: cover;
+     vertical-align: bottom;
+     margin: 0 0 50px 0;
+   }
 
- /*-------------------------------------------
+   /*-------------------------------------------
 ハンバーガーメニュー
 -------------------------------------------*/
 
-/* ハンバーガーメニュー */
-/* メディアクエリの設定 画面サイズが７６７以下の時*/
+   /* ハンバーガーメニュー */
+   /* メディアクエリの設定 画面サイズが７６７以下の時*/
    .menu-btn {
      /* 場所を右上に固定する */
      position: fixed;
      right: 0;
      top: 0;
- 
+
      /* サイズの調整を可能にする */
      display: flex;
      width: 48px;
      height: 48px;
- 
+
      /* 背景色 */
-     background: #FC0441;
- 
+     background: black;
+
      /* 3本線（span）を子要素にして、ボックスの中央に持ってくる */
      justify-content: center;
      align-items: center;
      z-index: 2;
    }
- 
+
    /* ３本線の共通の項目 */
-     /* span＝中央の線 */
+   /* span＝中央の線 */
    .menu-btn span,
    .menu-btn span::before,
-   .menu-btn span::after{
+   .menu-btn span::after {
      transition: 0.5s;
      content: '';
      display: block;
@@ -135,355 +138,375 @@ li {
      height: 3px;
      background: #ffffff;
    }
- 
+
    /* spanの要素内側の行頭に要素を挿入する（１本目の線） */
    .menu-btn span::before {
      bottom: 8px;
    }
- 
+
    /* spanの要素内側の行尾に要素を挿入する */
    .menu-btn span::after {
      top: 8px;
    }
- 
- #menu-btn-check{
-   outline: 5px solid red;
- }
- 
- /* IDmenu-btn-checkにチェックが入っているときに限り、弟要素の中にあるspanに適応 */
- #menu-btn-check:checked~.menu-btn span{
-   background-color: rgba(255, 255, 255, 0);
+
+   #menu-btn-check {
+     outline: 5px solid red;
    }
- 
+
+   /* IDmenu-btn-checkにチェックが入っているときに限り、弟要素の中にあるspanに適応 */
+   #menu-btn-check:checked~.menu-btn span {
+     background-color: rgba(255, 255, 255, 0);
+   }
+
    #menu-btn-check:checked~.menu-btn span::before {
      bottom: 0;
      transform: rotate(45deg);
    }
- 
+
    #menu-btn-check:checked~.menu-btn span::after {
      top: 0;
      transform: rotate(-45deg);
    }
- 
- /* メニューが右から出現する */
+
+   /* メニューが右から出現する */
    /* gnavクラスの中にあるIDmenu-btn-checkがチェックされたときに限り、弟要素のulに */
-   .gnav #menu-btn-check:checked~ul{
+   .gnav #menu-btn-check:checked~ul {
      left: 0;
      transition: 0.5s;
    }
- 
- 
- /* チェックボックスを見えなくする */
- #menu-btn-check {
-   display: none;
- }
 
 
- /* ここからナビ */
- .gnav ul {
-   background: white;
-   position: fixed;
-   top: 0;
-   left: 100%;
-   bottom: 0;
-   width: 50%;
-   height: 100%;
-   transition: all 0.5s;
-   /* 配置を最前面に持ってくる（デフォルトは０、後ろに置きたいときはマイナス、前はプラス） */
-   z-index: 1;
-   flex-direction: column;
+   /* チェックボックスを見えなくする */
+   #menu-btn-check {
+     display: none;
+   }
 
-   /* ナビメニューの内容を中央に配置 */
-   justify-content: center;
-   align-items: center;
-   padding: 0;
- }
 
- .gnav #menu-btn-check:checked~ul {
-   left: 50%;
- }
+   /* ここからナビ */
+   .gnav ul {
+     background: white;
+     position: fixed;
+     top: 0;
+     left: 100%;
+     bottom: 0;
+     width: 50%;
+     height: 100%;
+     transition: all 0.5s;
+     /* 配置を最前面に持ってくる（デフォルトは０、後ろに置きたいときはマイナス、前はプラス） */
+     z-index: 1;
+     flex-direction: column;
 
- /* タッチ領域を画面いっぱいに広げる */
- .gnav li {
-   width: 100%;
- }
+     /* ナビメニューの内容を中央に配置 */
+     justify-content: center;
+     align-items: center;
+     padding: 0;
+   }
 
- /* ナビゲーション内の文字を左揃え */
- .gnav a {
-   text-align: left;
-   padding-left: 20px;
- }
+   .gnav #menu-btn-check:checked~ul {
+     left: 50%;
+   }
 
- 
- /* ヘッダー・グローバルナビゲーションを上書き */
- .header {
-   height: 100vh;
- }
+   /* タッチ領域を画面いっぱいに広げる */
+   .gnav li {
+     width: 100%;
+   }
 
- /* デザインを整えるためのボーダー（画像の下の境界） */
- .gnav {
-   border-bottom: 1px solid #d8c7a0;
- }
- 
+   /* ナビゲーション内の文字を左揃え */
+   .gnav a {
+     text-align: left;
+     padding-left: 20px;
+   }
 
-/*-------------------------------------------
+
+   /* ヘッダー・グローバルナビゲーションを上書き */
+   .header {
+     height: 100vh;
+   }
+
+   /* デザインを整えるためのボーダー（画像の下の境界） */
+   .gnav {
+     border-bottom: 1px solid #d8c7a0;
+   }
+
+
+   /*-------------------------------------------
 白枠背景共通要素
 -------------------------------------------*/
-.whiteBackgroundContent{
-   background-color: white;
-   border-radius: 20px;
-   margin: 0 5%;
-   padding: 5% 5%;
-   color:black;
-}
+   .whiteBackgroundContent {
+     background-color: white;
+     border-radius: 20px;
+     margin: 0 5%;
+     padding: 5% 5%;
+     color: black;
+   }
 
 
-.blackBackgroundContent{
-   margin: 0 5%;
-   padding: 5% 5%;
-}
+   .blackBackgroundContent {
+     margin: 0 5%;
+     padding: 5% 5%;
+   }
 
-/*-------------------------------------------
+   /*-------------------------------------------
 各セクション共通設定
 -------------------------------------------*/
-section{
-   margin-bottom: 10%;
-}
+   section {
+     margin-bottom: 10%;
+   }
 
 
-/*-------------------------------------------
+   /*-------------------------------------------
 各dl共通設定
 -------------------------------------------*/
-dl{
-  margin: auto;
-}
+   dl {
+     margin: auto;
+   }
 
 
- /*-------------------------------------------
+   /*-------------------------------------------
 メインビジュアル
 -------------------------------------------*/
-#mainvisual {
-   margin-bottom: 80px;
- }
- #mainvisual img {
-   width: 100%;
-   /* max-width: 1920px; */
-   height: 600px;
-   object-fit: cover;
- }
+   #mainvisual {
+     margin-bottom: 80px;
+   }
+
+   #mainvisual img {
+     width: 100%;
+     /* max-width: 1920px; */
+     height: 600px;
+     object-fit: cover;
+   }
 
 
- /*-------------------------------------------
+   /*-------------------------------------------
+ロゴ
+-------------------------------------------*/
+   .logo {
+     width: 10vw;
+   }
+
+   /*-------------------------------------------
 お知らせ
 -------------------------------------------*/
-h2{
-margin-left: 10%;
-}
+   h2 {
+     margin-left: 10%;
+   }
 
 
- /*-------------------------------------------
+   /*-------------------------------------------
 上映スケジュール
 -------------------------------------------*/
 
 
-#schedule table{
-  background-color: white;
-  margin: auto;
-}
+   #schedule table {
+     background-color: white;
+     margin: auto;
+   }
 
- 
+   table {
+     border-collapse: collapse;
+     margin: 0 auto;
+     padding: 0;
+     width: 100%;
+     table-layout: fixed;
+   }
 
-table {
-  border-collapse: collapse;
-  margin: 0 auto;
-  padding: 0;
-  width: 100%;
-  table-layout: fixed;
-}
+   table tr {
+     background-color: white;
+     padding: .35em;
+     border: 2px solid gray;
+   }
 
-table tr {
-  background-color: white;
-  padding: .35em;
-  border: 2px solid gray;
-}
+   table td {
+     padding: 1em .5em;
+     border-right: 2px solid gray;
+     text-align: center;
+   }
 
-table th{
-  padding: 2em;
-  border-right: 2px solid #fff;
-}
-table td {
-  padding: 2em .5em;
-  border-right: 2px solid gray;
-  text-align: center;
-}
-table th {
-  font-size: .0em;
-}
-table thead tr{
-  background-color: gray;
-  color:#fff;
-}
-table tbody th {
-    border-right: 2px solid gray;
-}
-th.non {
-    border-right: none;
-}
-.txt{
-   text-align: left;
-   font-size: .85em;
-}
+   table th {
+     font-size: .0em;
+   }
 
-.scheduleTitleRow{
-  border-top: none;
-  background-color: #FC0441;
-  padding: 5% 0 5% 0;
-}
+   table thead tr {
+     background-color: gray;
+     color: #fff;
+   }
+
+   table tbody th {
+     border-right: 2px solid gray;
+   }
+
+   .scheduleTitleRow {
+     border-top: none;
+     padding: 5% 0 5% 0;
+   }
 
 
-#schedule .scheduleTitle{
-  font-size: large;
-  font-size: 0.8em;
-  font-weight: bold;
-}
+   #schedule .scheduleTitle {
+     font-size: large;
+     font-size: 0.9em;
+     font-weight: bold;
+   }
 
-#schedule .scheduleCaption{
-  font-size: large;
-  font-size: 0.6em;
-  font-weight: bold;
-  padding-top: 2em;
-}
+   #schedule .scheduleCaption {
+     font-size: large;
+     font-size: 0.6em;
+     font-weight: bold;
+     padding-top: 2em;
+   }
+
+   #schedule img {
+     width: 30vw;
+     aspect-ratio: 3 / 4;
+     object-fit: cover;
+     margin: 10px 0 10px 0;
+   }
 
 
- /*-------------------------------------------
+   /*-------------------------------------------
 料金、アクセス共通
 -------------------------------------------*/
-.dlContent dl {
-   display: flex;      /* dt、ddを横並びにする */
-   flex-wrap: wrap;    /* dtとddが100%になったら、横並びを折り返す */
-   padding: 16px 0;
-   margin-bottom: 25px;
- }
+   .dlContent dl {
+     display: flex;
+     /* dt、ddを横並びにする */
+     flex-wrap: wrap;
+     /* dtとddが100%になったら、横並びを折り返す */
+     padding: 16px 0;
+     margin-bottom: 25px;
+   }
 
-.dlContent dt {
-   width: 25%;
- }
-.dlContent dd {
-   width: 75%;
- }
- 
+   .dlContent dt {
+     width: 25%;
+   }
 
-  /*-------------------------------------------
+   .dlContent dd {
+     width: 75%;
+   }
+
+
+   /*-------------------------------------------
 料金
 -------------------------------------------*/
- #price .dlContent dt{
-   width: 70%;
- }
+   #price .dlContent dt {
+     width: 70%;
+   }
 
- #price .dlContent dd{
-   width: 30%;
- }
+   #price .dlContent dd {
+     width: 30%;
+   }
 
 
-#price dd{
-  text-align: right;
-}
+   #price dd {
+     text-align: right;
+   }
 
    /*-------------------------------------------
 アクセス
 -------------------------------------------*/
 
-#access .dlContent dt{
-   width: 35%;
- }
+   #access .dlContent dt {
+     width: 35%;
+   }
 
- #access .dlContent dd{
-   width: 65%;
- }
+   #access .dlContent dd {
+     width: 65%;
+   }
 
 
 
-    /*-------------------------------------------
+   /*-------------------------------------------
 お問い合わせ
 -------------------------------------------*/
 
-.privacyPolicy{
-  background-color: gray;
-  color: #000;
-  font-size:small;
-margin-bottom: 20px;
-}
+   .privacyPolicy {
+     background-color: gray;
+     color: #000;
+     font-size: small;
+     margin-bottom: 20px;
+     padding: 3%;
+   }
 
-input {
-   color: white;
+   input {
+     color: white;
    }
 
    textarea {
-      color: white;
-      }
+     color: white;
+   }
 
-/* フォームの3つのブロックに対する指定 */
-.form-group {
-   margin-bottom: 20px;
- }
- 
- /* 項目名に対する指定 */
- .form-label {
-   display: block;
-   margin-bottom: 10px;
-   color: white;
- }
- 
- /* 送信ボタンを囲む<div>に対する指定 */
- .form-btn {
-   margin: 30px 0;
-   text-align: center;
- }
- 
- /* 入力欄に対する指定 */
- input[type="text"],
- input[type="email"],
- textarea {
-   width: 100%;
-   padding: 10px;
-   border: 1px solid #999;
- }
- 
- /* 入力欄が:focus（入力状態）のとき */
- input[type="text"]:focus,
- input[type="email"]:focus,
- textarea:focus {
-   border-color: #032559;
-   outline: none;
- }
- 
- /* 送信ボタン */
- button[type="submit"] {
-   background: none;
-   border: none;
-   cursor: pointer;
- }
- 
- /* 送信ボタンが:hoverのとき */
- button[type="submit"]:hover {
-   opacity: 0.65;
- }
- .button {
-  display       : inline-block;
-  border-radius : 5%;          /* 角丸       */
-  font-size     : 18pt;        /* 文字サイズ */
-  text-align    : center;      /* 文字位置   */
-  cursor        : pointer;     /* カーソル   */
-  padding       : 12px 35px;   /* 余白       */
-  background    : #ffffff;     /* 背景色     */
-  color         : #000000;     /* 文字色     */
-  line-height   : 1em;         /* 1行の高さ  */
-  transition    : .3s;         /* なめらか変化 */
-  border        : 2px solid #ffffff;    /* 枠の指定 */
-}
-.button:hover {
-  color         : #ffffff;     /* 背景色     */
-  background    : #000000;     /* 文字色     */
-}
+   /* フォームの3つのブロックに対する指定 */
+   .form-group {
+     margin-bottom: 20px;
+   }
 
+   /* 項目名に対する指定 */
+   .form-label {
+     display: block;
+     margin-bottom: 10px;
+     color: white;
+   }
 
+   /* 送信ボタンを囲む<div>に対する指定 */
+   .form-btn {
+     margin: 30px 0;
+     text-align: center;
+   }
+
+   /* 入力欄に対する指定 */
+   input[type="text"],
+   input[type="email"],
+   textarea {
+     width: 100%;
+     padding: 10px;
+     border: 1px solid #999;
+   }
+
+   /* 入力欄が:focus（入力状態）のとき */
+   input[type="text"]:focus,
+   input[type="email"]:focus,
+   textarea:focus {
+     border-color: #032559;
+     outline: none;
+   }
+
+   /* 送信ボタン */
+   button[type="submit"] {
+     background: none;
+     border: none;
+     cursor: pointer;
+   }
+
+   /* 送信ボタンが:hoverのとき */
+   button[type="submit"]:hover {
+     opacity: 0.65;
+   }
+
+   .button {
+     display: inline-block;
+     border-radius: 5%;
+     /* 角丸       */
+     font-size: 18pt;
+     /* 文字サイズ */
+     text-align: center;
+     /* 文字位置   */
+     cursor: pointer;
+     /* カーソル   */
+     padding: 12px 35px;
+     /* 余白       */
+     background: #ffffff;
+     /* 背景色     */
+     color: #000000;
+     /* 文字色     */
+     line-height: 1em;
+     /* 1行の高さ  */
+     transition: .3s;
+     /* なめらか変化 */
+     border: 2px solid #ffffff;
+     /* 枠の指定 */
+   }
+
+   .button:hover {
+     color: #ffffff;
+     /* 背景色     */
+     background: #000000;
+     /* 文字色     */
+   }
