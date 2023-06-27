@@ -47,7 +47,7 @@ list-style:none;とか
    }
 
    @media screen and (min-width: 768px) {
-     body {
+     main {
        background-color: red;
      }
    }
@@ -299,16 +299,34 @@ list-style:none;とか
 -------------------------------------------*/
 
 
-   #schedule table {
-     background-color: white;
+.sclollContainer{
+  overflow-x: scroll;
+  scroll-snap-type: x mandatory;/* scroll-snap */
+  width:100vw;/* 任意 */
+  overflow:auto;/* 必要 */
+  display:flex;/* 必要 */
+  justify-content: space-between;
+  flex-direction: row;
+  overflow:hidden;
+}
+
+
+
+   /* #schedule table {
+
+     background-color: blue;
      margin: auto;
-   }
+   } */
 
    table {
+    scroll-snap-align: start;/* scroll-snap */
+  width:100%;/* 任意 */
+  flex:none;/* 必要 */
+
      border-collapse: collapse;
-     margin: 0 auto;
+     margin: 0 30%;
      padding: 0;
-     width: 100%;
+     width: 80%;
      table-layout: fixed;
    }
 
