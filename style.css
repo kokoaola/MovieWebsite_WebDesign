@@ -61,7 +61,14 @@ list-style:none;とか
 ヘッダーナビゲーション
 -------------------------------------------*/
 
-   #header {
+#header {
+     background-color: black;
+     display: flex;
+     justify-content: center;
+   }
+
+
+   /* #header {
      background-color: black;
      display: flex;
      justify-content: space-between;
@@ -88,7 +95,7 @@ list-style:none;とか
 
    #header li a:hover {
      opacity: 0.7;
-   }
+   } */
 
 
 
@@ -293,6 +300,10 @@ list-style:none;とか
      margin-left: 10%;
    }
 
+   #news{
+    font-size: small;
+   }
+
 
    /*-------------------------------------------
 上映スケジュール
@@ -416,7 +427,7 @@ list-style:none;とか
 
    .scheduleTable img {
      width: 100%;
-     /* aspect-ratio: 3 / 4; */
+     aspect-ratio: 3 / 4;
      object-fit: cover;
    }
 
@@ -427,7 +438,7 @@ list-style:none;とか
      position: relative;
      top: -80vw;
      z-index: 1;
-     opacity: 30%;
+     opacity: 20%;
      border-radius: 10px;
      margin: 0 4%;
    }
