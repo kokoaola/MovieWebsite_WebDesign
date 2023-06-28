@@ -69,8 +69,8 @@ list-style:none;とか
      margin: 0 auto;
      color: white;
    }
-   
-   
+
+
 
    #header ul {
      display: flex;
@@ -100,12 +100,12 @@ list-style:none;とか
      margin: 0 0 50px 0;
    }
 
-      /*-------------------------------------------
+   /*-------------------------------------------
 ロゴ
 -------------------------------------------*/
-.logo {
-  width: 80px;
-}
+   .logo {
+     width: 80px;
+   }
 
 
    /*-------------------------------------------
@@ -297,39 +297,41 @@ list-style:none;とか
    /*-------------------------------------------
 上映スケジュール
 -------------------------------------------*/
-.container {
-  margin: 0px auto;
-}
+   .container {
+     margin: 0px auto;
+   }
 
-.swiper-wrapper{
-  text-align: center;
-}
+   .swiper-wrapper {
+     text-align: center;
+   }
 
-.tab{
-  margin: auto auto 0 auto;
-  font-size: small;
-  color: gray;
-}
-.swiper {
-  margin: 0 0 0 0;
-}
-.tab-menu {
-  /* border-bottom: 1px solid #CCC; */
-}
+   .tab {
+     margin: auto auto 0 auto;
+     font-size: small;
+     color: gray;
+   }
 
-.tab-menu .swiper-slide {
-  width: auto;
-  padding: 10px 0;
-}
-.tab-contents {
-  margin: 0px auto;
-}
-.swiper-slide-thumb-active {
-  font-weight: bold;
-  font-size: large;
-  width: 30px;
-  color: black;
-}
+   .swiper {
+     margin: 0 0 0 0;
+   }
+
+   .tab-menu .swiper-slide {
+     width: auto;
+     padding: 10px 0;
+   }
+
+   .tab-contents {
+     margin: 0px auto;
+   }
+
+   .swiper-slide-thumb-active {
+     font-weight: bold;
+     font-size: large;
+     width: 30px;
+     color: black;
+   }
+
+
 
    /* table {
      border-collapse: collapse;
@@ -388,39 +390,54 @@ list-style:none;とか
      margin: 10px 0 10px 0;
    } */
 
-   #schedule img {
-    width: 20vw;
-    aspect-ratio: 3 / 4;
-    object-fit: cover;
-    margin:0;
-  }
 
-  table {
-    border-collapse: collapse;
-    margin: 10px 10px;
-    padding: 1px;
-    width: 95%;
-    font-size: medium;
-    /* border: 1px solid black; */
-    margin: 10px;
-  }
 
-  table tr {
-   width: 50%;
-    padding: .35em;
-  }
+   table {
+     border-collapse: collapse;
+     /* margin: 10px 10px; */
+     /* padding: 1px; */
+     /* width: 90%; */
+     font-size: medium;
+     /* border: 1px solid black; */
+     margin: 10px;
+   }
 
-  table td {
-    padding: 0.58em .3em;
-    text-align: center;
-    border: 1px solid gray;
-    width: 40%;
-  }
+   table tr {
+     width: 50%;
+     padding: .35em;
+   }
 
-  table th {
-    font-size: .0em;
-  }
-  
+   table td {
+     padding: 0.58em .3em;
+     text-align: center;
+     border: 1px solid gray;
+     width: 40%;
+   }
+
+   .scheduleTable img {
+     width: 100%;
+     /* aspect-ratio: 3 / 4; */
+     object-fit: cover;
+   }
+
+   .arrowImage {
+     width: 10%;
+     height: 20%;
+     object-fit: cover;
+     position: relative;
+     top: -80vw;
+     z-index: 1;
+     opacity: 30%;
+     border-radius: 10px;
+     margin: 0 4%;
+   }
+
+   .arrowContainer {
+     display: flex;
+     justify-content: space-between;
+   }
+
+
 
    /*-------------------------------------------
 料金、アクセス共通
@@ -465,14 +482,50 @@ list-style:none;とか
 アクセス
 -------------------------------------------*/
 
-   #access .dlContent dt {
+   /* .accessTable .dlContent dt {
      width: 35%;
    }
 
-   #access .dlContent dd {
-     width: 65%;
+   .accessTable .dlContent dd {
+     width: 55%;
+   } */
+
+   .accessTable tr {
+     border-bottom: 1px solid #b5b1b1;
    }
 
+
+   #table01 tr {
+    border-bottom: 1px solid #b5b1b1;
+  }
+  
+  #table01 th,
+  #table01 td {
+    padding: 24px 0;
+    border: none;
+    text-align: left;
+  }
+  
+  #table01 th {
+    text-align: left;
+    width: 15%;
+  }
+  
+  /* sp */
+  /* @media only screen and (max-width: 480px) {
+    #table01 th,
+    #table01 td {
+      width: 100%;
+      display: block;
+    }
+  
+    #table01 th {
+      width: 100%;
+    }
+  
+    #table01 td {
+      padding-top: 0;
+    } */
 
 
    /*-------------------------------------------
@@ -572,3 +625,12 @@ list-style:none;とか
      background: #000000;
      /* 文字色     */
    }
+
+
+   /* .arrowImage{
+    background-color: white;
+    color: wheat;
+    position:relative;
+    top: 100px;
+    z-index: 1;
+   } */
