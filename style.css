@@ -404,32 +404,63 @@ list-style:none;とか
 
 
    table {
-     border-collapse: collapse;
-     /* margin: 10px 10px; */
-     /* padding: 1px; */
-     /* width: 90%; */
-     font-size: medium;
-     /* border: 1px solid black; */
-     margin: 10px;
-   }
+    border-collapse: collapse;
+    /* margin: 10px 10px; */
+    /* padding: 1px; */
+    width: 90%;
+    font-size: large;
+    /* border: 1px solid black; */
+    margin: 15px;
+  }
 
-   table tr {
-     width: 50%;
-     padding: .35em;
-   }
 
-   table td {
-     padding: 0.58em .3em;
-     text-align: center;
-     border: 1px solid gray;
-     width: 40%;
-   }
+  .scheduleTitle{
+   padding: 3% 0 ;
+   font-weight: bold;
+  }
 
-   .scheduleTable img {
-     width: 100%;
-     aspect-ratio: 3 / 4;
-     object-fit: cover;
-   }
+  table td {
+    /* padding: 0.58em .3em; */
+    text-align: center;
+    border: 1px solid gray;
+  }
+
+  /* .scheduleTable img {
+   width: 30vh;
+   height: 30vh;
+    /* aspect-ratio: 3 / 4; 
+         object-fit: cover;
+         
+
+  } */
+
+
+  #schedule table {
+   border-collapse: collapse;
+ }
+ 
+ #schedule table td {
+   padding: 0px;
+ }
+ 
+ #schedule table img {
+   vertical-align: bottom;
+ }
+
+ .movieImage{
+   aspect-ratio: 3 / 4;
+   object-fit: cover;
+   width: 100%;
+  }
+
+  .imageCell{
+   width: 45%;
+  }
+
+  .timeCell{
+   width: 55%;
+   height: 25%;
+  }
 
    .arrowImage {
      width: 10%;
