@@ -61,7 +61,7 @@ list-style:none;とか
 ヘッダーナビゲーション
 -------------------------------------------*/
 
-#header {
+   #header {
      background-color: black;
      display: flex;
      justify-content: center;
@@ -300,14 +300,16 @@ list-style:none;とか
      margin-left: 10%;
    }
 
-   #news{
-    font-size: small;
+   #news {
+     font-size: small;
    }
 
 
    /*-------------------------------------------
 上映スケジュール
 -------------------------------------------*/
+
+   /* スワイプタブ */
    .container {
      margin: 0px auto;
    }
@@ -340,128 +342,48 @@ list-style:none;とか
      font-size: large;
      width: 30px;
      color: black;
+     border-bottom: #000 solid 2px;
    }
 
-
-
-   /* table {
-     border-collapse: collapse;
-     margin: 0 auto;
-     padding: 1px;
-     width: 98%;
-     font-size: medium;
-     border: 1px solid black;
-   }
-
-   table tr {
-    width: 100%;
-     background-color: white;
-     padding: .35em;
-
+   /* テーブルのレイアウト */
+   .scheduleTitle {
+     padding: 3% 0;
+     font-weight: bold;
    }
 
    table td {
-     padding: 1em .5em;
      text-align: center;
      border: 1px solid gray;
    }
 
-   table th {
-     font-size: .0em;
-   }
-
-   table {
-    border: 3px solid white;
-  }
-
-   .scheduleTitleRow {
-     border-top: none;
-     padding: 5% 0 5% 0;
-     width: 50%;
-   }
-
-
-   #schedule .scheduleTitle {
-     font-size: 1em;
-     font-weight: bold;
-
-   }
-
-   #schedule .scheduleCaption {
+   .schedule table {
+     border-collapse: collapse;
+     width: 90%;
      font-size: large;
-     font-size: 0.6em;
-     font-weight: bold;
-     padding-top: 2em;
+     margin: 10px auto 20px auto;
    }
 
-   #schedule img {
-     width: 30vw;
+   .schedule table img {
+     vertical-align: bottom;
+   }
+
+   .movieImage {
      aspect-ratio: 3 / 4;
-     object-fit: cover;
-     margin: 10px 0 10px 0;
-   } */
+     object-fit: fill;
+     width: 100%;
+   }
+
+   .imageCell {
+     width: 45%;
+   }
+
+   .timeCell {
+     width: 55%;
+     height: 2.5em;
+   }
 
 
-
-   table {
-    border-collapse: collapse;
-    /* margin: 10px 10px; */
-    /* padding: 1px; */
-    width: 90%;
-    font-size: large;
-    /* border: 1px solid black; */
-    margin: 15px;
-  }
-
-
-  .scheduleTitle{
-   padding: 3% 0 ;
-   font-weight: bold;
-  }
-
-  table td {
-    /* padding: 0.58em .3em; */
-    text-align: center;
-    border: 1px solid gray;
-  }
-
-  /* .scheduleTable img {
-   width: 30vh;
-   height: 30vh;
-    /* aspect-ratio: 3 / 4; 
-         object-fit: cover;
-         
-
-  } */
-
-
-  #schedule table {
-   border-collapse: collapse;
- }
- 
- #schedule table td {
-   padding: 0px;
- }
- 
- #schedule table img {
-   vertical-align: bottom;
- }
-
- .movieImage{
-   aspect-ratio: 3 / 4;
-   object-fit: cover;
-   width: 100%;
-  }
-
-  .imageCell{
-   width: 45%;
-  }
-
-  .timeCell{
-   width: 55%;
-   height: 25%;
-  }
-
+   /* 左右の矢印 */
    .arrowImage {
      width: 10%;
      height: 20%;
@@ -478,7 +400,6 @@ list-style:none;とか
      display: flex;
      justify-content: space-between;
    }
-
 
 
    /*-------------------------------------------
@@ -538,23 +459,23 @@ list-style:none;とか
 
 
    #table01 tr {
-    border-bottom: 1px solid #b5b1b1;
-  }
-  
-  #table01 th,
-  #table01 td {
-    padding: 24px 0;
-    border: none;
-    text-align: left;
-  }
-  
-  #table01 th {
-    text-align: left;
-    width: 15%;
-  }
-  
-  /* sp */
-  /* @media only screen and (max-width: 480px) {
+     border-bottom: 1px solid #b5b1b1;
+   }
+
+   #table01 th,
+   #table01 td {
+     padding: 24px 0;
+     border: none;
+     text-align: left;
+   }
+
+   #table01 th {
+     text-align: left;
+     width: 15%;
+   }
+
+   /* sp */
+   /* @media only screen and (max-width: 480px) {
     #table01 th,
     #table01 td {
       width: 100%;
