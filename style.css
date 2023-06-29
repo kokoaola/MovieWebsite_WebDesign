@@ -133,12 +133,13 @@ list-style:none;とか
      height: 48px;
 
      /* 背景色 */
-     background: black;
+     background: gray;
 
      /* 3本線（span）を子要素にして、ボックスの中央に持ってくる */
      justify-content: center;
      align-items: center;
      z-index: 2;
+     border-radius: 5px;
    }
 
    /* ３本線の共通の項目 */
@@ -153,6 +154,7 @@ list-style:none;とか
      width: 25px;
      height: 3px;
      background: #ffffff;
+     border-radius: 10px;
    }
 
    /* spanの要素内側の行頭に要素を挿入する（１本目の線） */
@@ -368,9 +370,10 @@ list-style:none;とか
    }
 
    .movieImage {
-     aspect-ratio: 3 / 4;
-     object-fit: fill;
+     object-fit: cover;
      width: 100%;
+     height: 100%;
+     aspect-ratio: 3/4;
    }
 
    .imageCell {
@@ -379,7 +382,8 @@ list-style:none;とか
 
    .timeCell {
      width: 55%;
-     height: 2.5em;
+     /* height: 2.5em; */
+     padding: 0.5em;
    }
 
 
@@ -491,7 +495,7 @@ list-style:none;とか
     } */
 
 
-   /*-------------------------------------------
+/*-------------------------------------------
 お問い合わせ
 -------------------------------------------*/
 
@@ -597,3 +601,12 @@ list-style:none;とか
     top: 100px;
     z-index: 1;
    } */
+
+
+/*-------------------------------------------
+フッター
+-------------------------------------------*/
+footer{
+  text-align: center;
+  height: 1.5rem;
+}
