@@ -120,7 +120,6 @@ list-style:none;とか
 -------------------------------------------*/
 
    /* ハンバーガーメニュー */
-   /* メディアクエリの設定 画面サイズが７６７以下の時*/
    .menu-btn {
      /* 場所を右上に固定する */
      position: fixed;
@@ -134,7 +133,7 @@ list-style:none;とか
 
      /* 背景色 */
      background: gray;
-
+     z-index: 1001;
      /* 3本線（span）を子要素にして、ボックスの中央に持ってくる */
      justify-content: center;
      align-items: center;
