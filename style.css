@@ -252,7 +252,7 @@ list-style:none;とか
 -------------------------------------------*/
    .whiteBackgroundContent {
      background-color: white;
-     border-radius: 20px;
+     border-radius: 10px;
      margin: 0 5%;
      padding: 5% 5%;
      color: black;
@@ -500,11 +500,22 @@ list-style:none;とか
 -------------------------------------------*/
 
    .privacyPolicy {
-     background-color: gray;
+
      color: #000;
      font-size: small;
      margin-bottom: 20px;
      padding: 3%;
+   }
+
+   .privacyPolicy h3{
+    padding-top: 1em;
+   }
+
+   .address{
+    margin-top: 3em;
+    /* margin-left: auto; */
+    margin-right: 0%;
+    width: 70%;
    }
 
    input {
