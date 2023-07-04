@@ -55,10 +55,12 @@
     <input type="checkbox" id="menu-btn-check">
     <label for="menu-btn-check" class="menu-btn"><span></span></label>
     <ul class="container">
-      <li><a href="#">Home</a></li>
-      <li><a href="#">Concept</a></li>
-      <li><a href="#">Menu</a></li>
-      <li><a href="#access">Access</a></li>
+      <li><a href="#">ホーム</a></li>
+      <li><a href=#news>お知らせ</a></li>
+      <li><a href=#schedule>上映スケジュール</a></li>
+      <li><a href=#price>料金</a></li>
+      <li><a href=#access>アクセス</a></li>
+      <li><a href="contact.html">お問い合わせ</a></li>
     </ul>
   </nav><!-- /#gnav -->
 
@@ -112,27 +114,16 @@
       <h2>上映スケジュール</h2>
       <div class="blackBackgroundContent whiteBackgroundContent">
 
-
         <div class="container">
-
-          <!-- <script>
-            var dayOfWeek = date.getDay();
-            var dayOfWeekStr = ["日", "月", "火", "水", "木", "金", "土"][dayOfWeek];
-          </script> -->
 
           <!-- Swiper -->
           <div class="swiper tab-menu">
             <div class="swiper-wrapper">
-              <div class="swiper-slide tab">
-                <!-- <script>
-                  
-                  document.write(new Date().getMonth() + 1);</script>/<script>document.write(new Date().getDate())
-                  </script> -->
-              </div>
-              <div class="swiper-slide tab"><br></div>
-              <div class="swiper-slide tab"><br></div>
-              <div class="swiper-slide tab"><br></div>
-              <div class="swiper-slide tab"><br></div>
+              <ol class="swiper-slide tab"></ol>
+              <ol class="swiper-slide tab"></ol>
+              <ol class="swiper-slide tab"></ol>
+              <ol class="swiper-slide tab"></ol>
+              <ul class="swiper-slide tab"></ul>
             </div>
           </div>
 
@@ -388,10 +379,6 @@
           </div>
         </div>
       </div>
-
-
-
-
 
       <div class="arrowContainer">
         <img class="arrowImage" src="img/arrow_left_line.svg" alt="">

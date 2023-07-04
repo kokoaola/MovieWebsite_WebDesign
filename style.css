@@ -39,6 +39,7 @@ list-style:none;とか
      /* font-family: "Helvetica Neue", "Arial", "Hiragino Sans", "Meiryo", sans-serif; */
      /* font-family: "メイリオ", meiryo, sans-serif; */
      font-family: 'Noto Sans JP', sans-serif;
+     font-weight: 300;
    }
 
 
@@ -121,123 +122,117 @@ list-style:none;とか
 ハンバーガーメニュー
 -------------------------------------------*/
 
+   .gnav a {
+     display: block;
+     padding: 15px 0;
+     color: #fff;
+     text-align: center;
+     text-decoration: none;
+     font-size: 20px;
+   }
 
-
-
-
-
-
-
-
-
-
-.gnav a {
-  display: block;
-  padding: 15px 0;
-  color: #fff;
-  text-align: center;
-  text-decoration: none;
-  font-size: 20px;
-  font-family: 'Cardo', serif;
-  font-style: italic;
-}
-
-.gnav a:hover {
-  background: #ecdfc2;
-}
+   .gnav a:hover {
+     background-color: #a7a7a7;
+     color: white;
+     font-weight: 700;
+   }
+   
 
 
    /* ハンバーガーメニュー
 ---------------------------------*/
-@media screen and (max-width: 767px) {
-  .menu-btn {
-    position: fixed;
-    right: 0;
-    top: 0;
-    width: 48px;
-    height: 48px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background: #4d941a;
-    z-index: 2;
-  }
+   @media screen and (max-width: 767px) {
+     .menu-btn {
+       position: fixed;
+       right: 0;
+       top: 0;
+       width: 48px;
+       height: 48px;
+       display: flex;
+       justify-content: center;
+       align-items: center;
+       background: #828282;
+       border-radius: 5px;
+       z-index: 100;
+     }
 
-  .menu-btn span,
-  .menu-btn span:before,
-  .menu-btn span:after {
-    content: '';
-    display: block;
-    position: absolute;
-    width: 25px;
-    height: 3px;
-    border-radius: 3px;
-    background-color: #ffffff;
-  }
+     .menu-btn span,
+     .menu-btn span:before,
+     .menu-btn span:after {
+       content: '';
+       display: block;
+       position: absolute;
+       width: 25px;
+       height: 3px;
+       border-radius: 3px;
+       background-color: #ffffff;
+     }
 
-  .menu-btn span:before {
-    bottom: 8px;
-  }
 
-  .menu-btn span:after {
-    top: 8px;
-  }
+     .gnav ul {
+       background: gray;
+       position: fixed;
+       width: 50%;
+       height: 100%;
+       left: 100%;
+       font-weight: 600;
+       top: 0;
+       transition: all 0.5s;
+       flex-direction: column;
+       justify-content: center;
+       align-items: center;
+       padding-top: 5em;
+       z-index: 10;
+     }
 
-  #menu-btn-check:checked~.menu-btn span {
-    background-color: rgba(255, 255, 255, 0);
-  }
+     .menu-btn span:before {
+       bottom: 8px;
+     }
 
-  #menu-btn-check:checked~.menu-btn span::before {
-    bottom: 0;
-    transform: rotate(45deg);
-  }
+     .menu-btn span:after {
+       top: 8px;
+     }
 
-  #menu-btn-check:checked~.menu-btn span::after {
-    top: 0;
-    transform: rotate(-45deg);
-  }
+     #menu-btn-check:checked~.menu-btn span {
+       background-color: rgba(255, 255, 255, 0);
+     }
 
-  /* ヘッダー・グローバルナビゲーションを上書き */
-  .header {
-    height: calc(100vh);
-  }
+     #menu-btn-check:checked~.menu-btn span::before {
+       bottom: 0;
+       transform: rotate(45deg);
+     }
 
-  .gnav {
-    border-bottom: 1px solid #d8c7a0;
-  }
+     #menu-btn-check:checked~.menu-btn span::after {
+       top: 0;
+       transform: rotate(-45deg);
+     }
 
-  .gnav ul {
-    background: #d8c7a0;
-    position: fixed;
-    width: 50%;
-    height: 100%;
-    left: 100%;
-    top: 0;
-    transition: all 0.5s;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    padding: 0;
-    z-index: 1;
-  }
+     /* ヘッダー・グローバルナビゲーションを上書き */
+     .header {
+       height: calc(100vh);
+     }
 
-  .gnav #menu-btn-check:checked~ul {
-    left: 50%;
-  }
+     .gnav {
+       border-bottom: 1px solid #d8c7a0;
+     }
 
-  .gnav li {
-    width: 100%;
-  }
+     .gnav #menu-btn-check:checked~ul {
+       left: 50%;
+     }
 
-  .gnav a {
-    text-align: left;
-    padding-left: 20px;
-  }
-}
+     .gnav li {
+       width: 100%;
+     }
 
-#menu-btn-check {
-  display: none;
-}
+     .gnav a {
+       text-align: left;
+       padding-left: 20px;
+     }
+   }
+
+   #menu-btn-check {
+     display: none;
+   }
 
    /*-------------------------------------------
 白枠背景共通要素
@@ -266,12 +261,13 @@ list-style:none;とか
    dl {
      margin: auto;
    }
+
    h2 {
-    margin-left: 5%;
-    margin-bottom: 0.5em;
-    color: white;
-    font-weight: 500;
-  }
+     margin-left: 5%;
+     margin-bottom: 0.5em;
+     color: white;
+     font-weight: 500;
+   }
 
 
    /*-------------------------------------------
@@ -292,19 +288,22 @@ list-style:none;とか
 お知らせ
 -------------------------------------------*/
 
-   .news dl{
-    margin-top: 0.5em;
-    margin-bottom: 1.3em;
+   .news dl {
+     font-size: 0.9em;
+     margin-top: 0.5em;
+     margin-bottom: 1.3em;
    }
-   .news dd{
-    font-size: small;
-    /* background-color: red; */
+
+   .news dd {
+     font-weight: 300;
+     /* background-color: red; */
    }
 
 
    /*-------------------------------------------
 上映スケジュール
 -------------------------------------------*/
+
 
    /* スワイプタブ */
    .container {
@@ -313,6 +312,7 @@ list-style:none;とか
 
    .swiper-wrapper {
      text-align: center;
+     z-index: -10;
    }
 
    .tab {
@@ -329,6 +329,7 @@ list-style:none;とか
    .tab-contents {
      margin: 0px auto;
    }
+
 
    /* タブ選択中の装飾 */
    .swiper-slide-thumb-active {
@@ -362,6 +363,7 @@ list-style:none;とか
      width: 90%;
      font-size: large;
      margin: 10px auto 20px auto;
+     z-index: 1;
    }
 
    .schedule table img {
@@ -385,8 +387,8 @@ list-style:none;とか
      /* padding: 0.5em; */
    }
 
-   .titleCell{
-    background-color: white;
+   .titleCell {
+     background-color: white;
    }
 
 
@@ -455,6 +457,7 @@ list-style:none;とか
      border-collapse: collapse;
      margin: 20px auto;
    }
+
    .tbl-r02 th {
      border: 1px solid #ccc;
      background: rgb(30, 30, 30);
@@ -462,11 +465,13 @@ list-style:none;とか
      color: #fff;
      padding: 10px;
    }
+
    .tbl-r02 td {
      border: 1px solid #ccc;
      padding: 10px;
      text-align: left;
    }
+
    .last td:last-child {
      border-bottom: solid 1px #ccc;
      width: 100%;
