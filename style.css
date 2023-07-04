@@ -345,10 +345,10 @@ list-style:none;とか
    }
 
    /* タブの下の「○/○のスケジュール」部分 */
-   .scheduleText{
-    margin: 0.5em 0;
-    font-size: medium;
-    font-weight: bold;
+   .scheduleText {
+     margin: 0.5em 0;
+     font-size: medium;
+     font-weight: bold;
    }
 
    /* テーブルのレイアウト */
@@ -411,7 +411,7 @@ list-style:none;とか
 
 
    /*-------------------------------------------
-料金、アクセス共通
+料金
 -------------------------------------------*/
    .dlContent dl {
      display: flex;
@@ -430,10 +430,6 @@ list-style:none;とか
      width: 75%;
    }
 
-
-   /*-------------------------------------------
-料金
--------------------------------------------*/
    #price .dlContent dt {
      width: 70%;
    }
@@ -453,50 +449,68 @@ list-style:none;とか
 アクセス
 -------------------------------------------*/
 
-   /* .accessTable .dlContent dt {
-     width: 35%;
+
+
+   .tbl-r02 {
+     width: 80%;
+     border-collapse: collapse;
    }
 
-   .accessTable .dlContent dd {
-     width: 55%;
-   } */
-
-   .accessTable tr {
-     border-bottom: 1px solid #b5b1b1;
+   table {
+     width: 100%;
+     margin: 20px auto;
    }
 
-
-   #table01 tr {
-     border-bottom: 1px solid #b5b1b1;
+   .tbl-r02 th {
+     border: 1px solid #ccc;
+     background: rgb(30, 30, 30);
+     /* background: #e9727e; */
+     color: #fff;
+     padding: 10px;
    }
 
-   #table01 th,
-   #table01 td {
-     padding: 24px 0;
-     border: none;
+   .tbl-r02 td {
+     border: 1px solid #ccc;
+     padding: 10px;
      text-align: left;
+     /* background-color: #032559; */
    }
 
-   #table01 th {
-     text-align: left;
-     width: 15%;
+
+
+   /* @media screen and (max-width: 768px) { */
+   .last td:last-child {
+     border-bottom: solid 1px #ccc;
+     width: 100%;
    }
 
-   /* sp */
-   /* @media only screen and (max-width: 480px) {
-    #table01 th,
-    #table01 td {
-      width: 100%;
-      display: block;
-    }
-  
-    #table01 th {
-      width: 100%;
-    }
-  
-    #table01 td {
-      padding-top: 0;
-    } */
+   .tbl-r02 th,
+   .tbl-r02 td {
+     border-bottom: none;
+     display: block;
+     width: 100%;
+   }
+
+   /* } */
+
+   @media screen and (min-width: 768px) {
+
+     .tbl-r02 th,
+     .tbl-r02 td {
+       border-bottom: none;
+       display: table-cell;
+     }
+
+     .tbl-r02 td {
+       width: 70%;
+     }
+
+     .tbl-r02 th {
+       width: 30%;
+     }
+
+   }
+
 
 
    /*-------------------------------------------
