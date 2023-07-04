@@ -71,7 +71,7 @@
           <dt>
             <script>document.write(new Date().getFullYear())</script>年
             <script>document.write(new Date().getMonth())</script>月
-            <script>document.write(new Date().getDate() - 5)</script>日
+            <script>document.write(new Date().getDate())</script>日
           </dt>
           <dd>椅子の入れ替えによる臨時休館日のお知らせ</dd>
         </dl>
@@ -79,7 +79,7 @@
           <dt>
             <script>document.write(new Date().getFullYear())</script>年
             <script>document.write(new Date().getMonth())</script>月
-            <script>document.write(new Date().getDate() - 10)</script>日
+            <script>document.write(new Date().getDate())</script>日
           </dt>
           <dd>ノイズ愛好会雑誌にて当館が記事になりました</dd>
         </dl>
@@ -95,14 +95,25 @@
 
 
         <div class="container">
+
+          <!-- <script>
+            var dayOfWeek = date.getDay();
+            var dayOfWeekStr = ["日", "月", "火", "水", "木", "金", "土"][dayOfWeek];
+          </script> -->
+
           <!-- Swiper -->
           <div class="swiper tab-menu">
             <div class="swiper-wrapper">
-              <div class="swiper-slide tab">1/1<br>(水)</div>
-              <div class="swiper-slide tab">1/2<br>(水)</div>
-              <div class="swiper-slide tab">1/3<br>(水)</div>
-              <div class="swiper-slide tab">1/4<br>(水)</div>
-              <div class="swiper-slide tab">1/5<br>(水)</div>
+              <div class="swiper-slide tab">
+                <!-- <script>
+                  
+                  document.write(new Date().getMonth() + 1);</script>/<script>document.write(new Date().getDate())
+                  </script> -->
+              </div>
+              <div class="swiper-slide tab"><br></div>
+              <div class="swiper-slide tab"><br></div>
+              <div class="swiper-slide tab"><br></div>
+              <div class="swiper-slide tab"><br></div>
             </div>
           </div>
 
@@ -111,7 +122,7 @@
 
               <div class="swiper-slide">
                 <div class="scheduleTable">
-                  <p>1/1のスケジュール</p>
+                  <p class="scheduleText">1/1のスケジュール</p>
                   <table>
                     <tr>
                       <td colspan="4">
@@ -461,26 +472,62 @@
       </p>
     </footer>
   </main>
-</body>
 
-<script>
-  const galleryThumbs = new Swiper('.tab-menu', {
-    spaceBetween: 20,
-    slidesPerView: '5',
-    watchSlidesVisibility: true,
-    watchSlidesProgress: true,
-    slideActiveClass: 'swiper-slide-active'
-  });
-  galleryThumbs.on('tap', function () {
-    const current = galleryTop.activeIndex;
-    galleryThumbs.slideTo(current, 500, true);
-  });
-  const galleryTop = new Swiper('.tab-contents', {
-    autoHeight: true,
-    thumbs: {
-      swiper: galleryThumbs
-    }
-  });
-</script>
+
+  <script>
+    const galleryThumbs = new Swiper('.tab-menu', {
+      spaceBetween: 20,
+      slidesPerView: '5',
+      watchSlidesVisibility: true,
+      watchSlidesProgress: true,
+      slideActiveClass: 'swiper-slide-active'
+    });
+    galleryThumbs.on('tap', function () {
+      const current = galleryTop.activeIndex;
+      galleryThumbs.slideTo(current, 500, true);
+    });
+    const galleryTop = new Swiper('.tab-contents', {
+      autoHeight: true,
+      thumbs: {
+        swiper: galleryThumbs
+      }
+    });
+
+    // HTML読み込み完了後に実行
+    window.addEventListener('load', () => {
+      // 日本語の日付配列の定数
+      const WEEK_STR_LIST = ["日", "月", "火", "水", "木", "金", "土"];
+
+      // スワイパーのタブの要素を配列で取得
+      const SWIPER_TAB_LIST = document.querySelectorAll('.swiper-slide.tab');
+
+
+      // 日付クラスから必要な変数を定数を取得
+      const tabDay = new Date();
+      const month = tabDay.getMonth() + 1;
+      const startDate = tabDay.getDate();
+
+      //即時関数 = 関数を定義すると同時に実行
+      //戻り値はgetDayWeekStrに格納される
+      const getDayWeekStr = (i) => {
+        // 計算結果を配列内に収める
+        const strIndex = (startDate + i - 2) % WEEK_STR_LIST.length;
+        return WEEK_STR_LIST[strIndex];
+      }
+
+      //
+      let date = startDate;
+      SWIPER_TAB_LIST.forEach((tab, i) => {
+        date = startDate + i;
+        // 要素のコンテンツ
+        // tab.textContent = `${month} / ${date}
+        tab.innerHTML = `${month} / ${date}<br>
+        ${getDayWeekStr(i)}`;
+      })
+
+    }) 
+  </script>
+
+</body>
 
 </html>

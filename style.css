@@ -31,7 +31,7 @@ list-style:none;とか
 } */
 
    main {
-     background-color: black;
+     background-color: rgb(0, 0, 0);
      list-style: none;
    }
 
@@ -101,7 +101,7 @@ list-style:none;とか
 
    .mainvisual img {
      width: 100%;
-     height: 50vh;
+     height: 40vh;
      object-fit: cover;
      vertical-align: bottom;
      margin: 0 0 50px 0;
@@ -111,7 +111,8 @@ list-style:none;とか
 ロゴ
 -------------------------------------------*/
    .logo {
-     width: 80px;
+     width: 60px;
+     margin-top: 10px;
    }
 
 
@@ -340,7 +341,7 @@ list-style:none;とか
 
    .swiper-slide-thumb-active {
      font-weight: bold;
-     font-size: large;
+     font-size: small;
      width: 30px;
      color: black;
      border-bottom: #000 solid 2px;
@@ -369,20 +370,20 @@ list-style:none;とか
    }
 
    .movieImage {
+     /* aspect-ratio: 3/4; */
      object-fit: cover;
      width: 100%;
      height: 100%;
-     aspect-ratio: 3/4;
    }
 
    .imageCell {
-     width: 45%;
+     width: 30vw;
+     height: 40vw;
    }
 
    .timeCell {
-     width: 55%;
-     /* height: 2.5em; */
-     padding: 0.5em;
+     height: 2em;
+     /* padding: 0.5em; */
    }
 
 
@@ -494,7 +495,7 @@ list-style:none;とか
     } */
 
 
-/*-------------------------------------------
+   /*-------------------------------------------
 お問い合わせ
 -------------------------------------------*/
 
@@ -506,15 +507,15 @@ list-style:none;とか
      padding: 3%;
    }
 
-   .privacyPolicy h3{
-    padding-top: 1em;
+   .privacyPolicy h3 {
+     padding-top: 1em;
    }
 
-   .address{
-    margin-top: 3em;
-    /* margin-left: auto; */
-    margin-right: 0%;
-    width: 70%;
+   .address {
+     margin-top: 3em;
+     /* margin-left: auto; */
+     margin-right: 0%;
+     width: 70%;
    }
 
    input {
@@ -613,10 +614,10 @@ list-style:none;とか
    } */
 
 
-/*-------------------------------------------
+   /*-------------------------------------------
 フッター
 -------------------------------------------*/
-footer{
-  text-align: center;
-  height: 1.5rem;
-}
+   footer {
+     text-align: center;
+     height: 1.5rem;
+   }
