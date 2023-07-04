@@ -122,7 +122,7 @@
 
               <div class="swiper-slide">
                 <div class="scheduleTable">
-                  <p class="scheduleText">1/1のスケジュール</p>
+                  <p class="scheduleText">- / - のスケジュール</p>
                   <table>
                     <tr>
                       <td colspan="4">
@@ -171,10 +171,11 @@
 
               <div class="swiper-slide">
                 <div class="scheduleTable">
+                  <p class="scheduleText">- / - のスケジュール</p>
                   <table>
                     <tr>
                       <td colspan="4">
-                        <p class="scheduleTitle">1猫の一生（仮）</p>
+                        <p class="scheduleTitle">猫の一生（仮）</p>
                       </td>
                     </tr>
 
@@ -196,12 +197,12 @@
                   <table>
                     <tr>
                       <td colspan="4">
-                        <p class="scheduleTitle">1群馬サバイバルガイド（仮）</p>
+                        <p class="scheduleTitle">コア山コアは行方不明（仮）</p>
                       </td>
                     </tr>
 
                     <tr>
-                      <td rowspan="4" class="imageCell"><img class="movieImage" src="img/human.jpg" alt=""></td>
+                      <td rowspan="4" class="imageCell"><img class="movieImage" src="img/maigo.jpg " alt=""></td>
                       <td class="timeCell">10:00 ~ 11:27</td>
                     </tr>
                     <tr>
@@ -219,10 +220,11 @@
 
               <div class="swiper-slide">
                 <div class="scheduleTable">
+                  <p class="scheduleText">- / - のスケジュール</p>
                   <table>
                     <tr>
                       <td colspan="4">
-                        <p class="scheduleTitle">1猫の一生（仮）</p>
+                        <p class="scheduleTitle">猫の一生（仮）</p>
                       </td>
                     </tr>
 
@@ -244,12 +246,12 @@
                   <table>
                     <tr>
                       <td colspan="4">
-                        <p class="scheduleTitle">1群馬サバイバルガイド（仮）</p>
+                        <p class="scheduleTitle">コア山コアは行方不明（仮）</p>
                       </td>
                     </tr>
 
                     <tr>
-                      <td rowspan="4" class="imageCell"><img class="movieImage" src="img/human.jpg" alt=""></td>
+                      <td rowspan="4" class="imageCell"><img class="movieImage" src="img/maigo.jpg " alt=""></td>
                       <td class="timeCell">10:00 ~ 11:27</td>
                     </tr>
                     <tr>
@@ -267,10 +269,11 @@
 
               <div class="swiper-slide">
                 <div class="scheduleTable">
+                  <p class="scheduleText">- / - のスケジュール</p>
                   <table>
                     <tr>
                       <td colspan="4">
-                        <p class="scheduleTitle">1猫の一生（仮）</p>
+                        <p class="scheduleTitle">猫の一生（仮）</p>
                       </td>
                     </tr>
 
@@ -292,12 +295,12 @@
                   <table>
                     <tr>
                       <td colspan="4">
-                        <p class="scheduleTitle">1群馬サバイバルガイド（仮）</p>
+                        <p class="scheduleTitle">コア山コアは行方不明（仮）</p>
                       </td>
                     </tr>
 
                     <tr>
-                      <td rowspan="4" class="imageCell"><img class="movieImage" src="img/human.jpg" alt=""></td>
+                      <td rowspan="4" class="imageCell"><img class="movieImage" src="img/maigo.jpg " alt=""></td>
                       <td class="timeCell">10:00 ~ 11:27</td>
                     </tr>
                     <tr>
@@ -315,10 +318,11 @@
 
               <div class="swiper-slide">
                 <div class="scheduleTable">
+                  <p class="scheduleText">- / - のスケジュール</p>
                   <table>
                     <tr>
                       <td colspan="4">
-                        <p class="scheduleTitle">1猫の一生（仮）</p>
+                        <p class="scheduleTitle">猫の一生（仮）</p>
                       </td>
                     </tr>
 
@@ -340,12 +344,12 @@
                   <table>
                     <tr>
                       <td colspan="4">
-                        <p class="scheduleTitle">1群馬サバイバルガイド（仮）</p>
+                        <p class="scheduleTitle">コア山コアは行方不明（仮）</p>
                       </td>
                     </tr>
 
                     <tr>
-                      <td rowspan="4" class="imageCell"><img class="movieImage" src="img/human.jpg" alt=""></td>
+                      <td rowspan="4" class="imageCell"><img class="movieImage" src="img/maigo.jpg " alt=""></td>
                       <td class="timeCell">10:00 ~ 11:27</td>
                     </tr>
                     <tr>
@@ -360,6 +364,7 @@
                   </table>
                 </div>
               </div>
+              
             </div>
           </div>
         </div>
@@ -522,8 +527,19 @@
         // 要素のコンテンツ
         // tab.textContent = `${month} / ${date}
         tab.innerHTML = `${month} / ${date}<br>
-        ${getDayWeekStr(i)}`;
+        (${getDayWeekStr(i)})`;
       })
+
+
+      // スケジュール内のp要素を配列で取得
+      const scheduleText = document.querySelectorAll('.scheduleText');
+      scheduleText.forEach((tab, i) => {
+        date = startDate + i;
+        // 要素のコンテンツ
+        // tab.textContent = `${month} / ${date}
+        tab.textContent = `${month} / ${date}の上映スケジュール`;
+      })
+
 
     }) 
   </script>

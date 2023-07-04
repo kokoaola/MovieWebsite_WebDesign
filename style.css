@@ -326,10 +326,6 @@ list-style:none;とか
      color: gray;
    }
 
-   .swiper {
-     margin: 0 0 0 0;
-   }
-
    .tab-menu .swiper-slide {
      width: auto;
      padding: 10px 0;
@@ -339,12 +335,20 @@ list-style:none;とか
      margin: 0px auto;
    }
 
+   /* タブ選択中の装飾 */
    .swiper-slide-thumb-active {
      font-weight: bold;
-     font-size: small;
+     font-size: large;
      width: 30px;
      color: black;
      border-bottom: #000 solid 2px;
+   }
+
+   /* タブの下の「○/○のスケジュール」部分 */
+   .scheduleText{
+    margin: 0.5em 0;
+    font-size: medium;
+    font-weight: bold;
    }
 
    /* テーブルのレイアウト */
