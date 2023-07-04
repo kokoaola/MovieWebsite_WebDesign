@@ -136,7 +136,7 @@ list-style:none;とか
      color: white;
      font-weight: 700;
    }
-   
+
 
 
    /* ハンバーガーメニュー
@@ -509,12 +509,24 @@ list-style:none;とか
 お問い合わせ
 -------------------------------------------*/
 
-   .privacyPolicy {
+   .contact {
+     width: 90%;
+     margin: 0 auto;
+   }
 
+   .privacyPolicy h2 {
+     color: black;
+     font-weight: 900;
+     margin: 0%;
+     margin-bottom: 1em;
+   }
+
+   .privacyPolicy {
      color: #000;
      font-size: small;
      margin-bottom: 20px;
-     padding: 3%;
+     padding: 2%;
+     width: 100%;
    }
 
    .privacyPolicy h3 {
