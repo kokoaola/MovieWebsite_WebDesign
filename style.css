@@ -36,8 +36,9 @@ list-style:none;とか
    }
 
    body {
-     font-family: "Helvetica Neue", "Arial", "Hiragino Sans", "Meiryo", sans-serif;
+     /* font-family: "Helvetica Neue", "Arial", "Hiragino Sans", "Meiryo", sans-serif; */
      /* font-family: "メイリオ", meiryo, sans-serif; */
+     font-family: 'Noto Sans JP', sans-serif;
    }
 
 
@@ -271,13 +272,15 @@ list-style:none;とか
      margin-bottom: 10%;
    }
 
-
-   /*-------------------------------------------
-各dl共通設定
--------------------------------------------*/
    dl {
      margin: auto;
    }
+   h2 {
+    margin-left: 5%;
+    margin-bottom: 0.5em;
+    color: white;
+    font-weight: 500;
+  }
 
 
    /*-------------------------------------------
@@ -298,13 +301,11 @@ list-style:none;とか
    /*-------------------------------------------
 お知らせ
 -------------------------------------------*/
-   h2 {
-     margin-left: 10%;
-   }
 
-   #news {
+
+   /* #news {
      font-size: small;
-   }
+   } */
 
 
    /*-------------------------------------------
@@ -390,6 +391,10 @@ list-style:none;とか
      /* padding: 0.5em; */
    }
 
+   .titleCell{
+    background-color: white;
+   }
+
 
    /* 左右の矢印 */
    .arrowImage {
@@ -452,15 +457,10 @@ list-style:none;とか
 
 
    .tbl-r02 {
-     width: 80%;
+     width: 90%;
      border-collapse: collapse;
-   }
-
-   table {
-     width: 100%;
      margin: 20px auto;
    }
-
    .tbl-r02 th {
      border: 1px solid #ccc;
      background: rgb(30, 30, 30);
@@ -468,17 +468,11 @@ list-style:none;とか
      color: #fff;
      padding: 10px;
    }
-
    .tbl-r02 td {
      border: 1px solid #ccc;
      padding: 10px;
      text-align: left;
-     /* background-color: #032559; */
    }
-
-
-
-   /* @media screen and (max-width: 768px) { */
    .last td:last-child {
      border-bottom: solid 1px #ccc;
      width: 100%;
@@ -491,7 +485,6 @@ list-style:none;とか
      width: 100%;
    }
 
-   /* } */
 
    @media screen and (min-width: 768px) {
 
