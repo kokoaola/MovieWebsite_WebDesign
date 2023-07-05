@@ -68,19 +68,17 @@ list-style:none;とか
 -------------------------------------------*/
 
 
-   .head {
+   .headerContainer {
      color: #fff;
      background: black;
      display: flex;
      justify-content: center;
    }
 
-   .logo {
-    padding-top: 5px;
-    height: 60px;
-  }
-
-
+   .logo,
+   .logo img {
+     height: 60px;
+   }
 
 
    /*-------------------------------------------
@@ -107,7 +105,7 @@ list-style:none;とか
 ---------------------------------*/
    @media screen and (max-width: 767px) {
      .menu-btn {
-      margin: 8px;
+       margin: 8px;
        /* margin-top: 10px; */
        position: fixed;
        right: 0;
@@ -200,33 +198,41 @@ list-style:none;とか
    }
 
 
-
    @media screen and (min-width: 768px) {
-     /* .head {
-       display: flex;
+
+
+
+     .headerContainer {
+       justify-content: space-between;
+       /* background-color: rgb(165, 165, 42); */
+       align-items: center;
+       flex-direction: row;
      }
-     .head ul {
-      display: flex;
-    } */
 
-    .head {
-      justify-content: space-between;
-    }
+     .logo {
+       /* height: 2em; */
+       margin: 0.5em;
+       /* background-color: #999; */
+     }
 
-    .container{
-      display: flex;
-    }
-    .head li {
-      background-color: #032559;
-    }
-    .head h1{
-      background-color: red;
-      width: 100px;
-    }
+     .listContainer {
+       /* background-color: rebeccapurple; */
+       width: 70vw;
+       display: flex;
+       justify-content: flex-end;
+     }
 
-    .head li:last-child {
+     .gnav a {
+       font-size: medium;
+       /* background-color: #032559; */
+       padding-right: 1em;
+       padding-left: 1em;
+
+     }
+
+     /* .head li:last-child {
       margin-right: 0;
-    }
+    } */
    }
 
 
