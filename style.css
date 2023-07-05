@@ -269,12 +269,12 @@ list-style:none;とか
 メインビジュアル
 -------------------------------------------*/
    .mainvisual img {
-    width: 100%;
-    height: 40vh;
-    object-fit: cover;
-    vertical-align: bottom;
-    margin: 0 0 50px 0;
-  }
+     width: 100%;
+     height: 40vh;
+     object-fit: cover;
+     vertical-align: bottom;
+     margin: 0 0 50px 0;
+   }
 
 
    /*-------------------------------------------
@@ -459,25 +459,21 @@ list-style:none;とか
      /* dt、ddを横並びにする */
      flex-wrap: wrap;
      /* dtとddが100%になったら、横並びを折り返す */
-     padding: 16px 0;
-     margin-bottom: 25px;
-   }
-
-   .dlContent dd {
-     width: 75%;
-     margin-top: 1em;
+     margin-bottom: 1em;
+     mar
    }
 
    #price .dlContent dt {
-     width: 70%;
+     width: 60%;
    }
 
    #price .dlContent dd {
+    text-align: right;
      width: 30%;
    }
 
-   #price dd {
-     text-align: right;
+   #price dd, dt{
+    margin-top: 1em;
    }
 
 
@@ -488,7 +484,7 @@ list-style:none;とか
 
 
 
-   .accessTable{
+   .accessTable {
      width: 90%;
      border-collapse: collapse;
      margin: 20px auto;
@@ -668,10 +664,28 @@ list-style:none;とか
    }
 
 
+
+
+   footer div {
+     text-align: right;
+   }
+
+   .jumpToTopButton {
+    margin-right: 20px;
+     background-color: white;
+     width: 4m;
+     height: 4em;
+     border-radius: 50%;
+   }
+
+
    /*-------------------------------------------
 フッター
 -------------------------------------------*/
    footer {
      text-align: center;
+   }
+
+   footer .copyright {
      height: 2rem;
    }
