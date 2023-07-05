@@ -58,16 +58,10 @@ list-style:none;とか
      list-style: none;
    }
 
-
    /*-------------------------------------------
 ヘッダーナビゲーション
 -------------------------------------------*/
 
-   #header {
-     background-color: black;
-     display: flex;
-     justify-content: center;
-   }
 
 
    /* #header {
@@ -99,27 +93,60 @@ list-style:none;とか
      opacity: 0.7;
    } */
 
-
-
-   .mainvisual img {
-     width: 100%;
-     height: 40vh;
-     object-fit: cover;
-     vertical-align: bottom;
-     margin: 0 0 50px 0;
-   }
-
    /*-------------------------------------------
 ロゴ
 -------------------------------------------*/
+
+
+   /* .header1 {
+     top: 0;
+     text-align: center;
+     position: fixed;
+     width: 100%;
+     background-color: black;
+     height: 65px;
+     z-index: 50;
+   } */
+
    .logo {
-     width: 60px;
-     margin-top: 10px;
+     width: 13%;
+   }
+
+   .head {
+     width: 100%;
+     text-align: center;
+     color: #fff;
+     background: black;
+     box-sizing: border-box;
+     display: flex;
+     justify-content: space-between;
+     align-content: center;
+     padding: 2%;
    }
 
 
+   /* .header {
+    background-color: #fff;
+    left: 0;
+    padding-left: 40px;
+    padding-right: 40px;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 20;
+} */
+
+   /* .header {
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    position: fixed;
+    height: 2em;
+  } */
+
+
    /*-------------------------------------------
-ハンバーガーメニュー
+ハンバーガーメニューの中身のメニューの装飾
 -------------------------------------------*/
 
    .gnav a {
@@ -139,19 +166,20 @@ list-style:none;とか
 
 
 
-   /* ハンバーガーメニュー
+   /* --------------------------------
+ハンバーガーメニュー
 ---------------------------------*/
    @media screen and (max-width: 767px) {
      .menu-btn {
+       /* margin-top: 10px; */
        position: fixed;
        right: 0;
-       top: 0;
        width: 48px;
        height: 48px;
        display: flex;
        justify-content: center;
        align-items: center;
-       background: #828282;
+       background: black;
        border-radius: 5px;
        z-index: 100;
      }
@@ -234,6 +262,21 @@ list-style:none;とか
      display: none;
    }
 
+
+
+
+   /*-------------------------------------------
+メインビジュアル
+-------------------------------------------*/
+   .mainvisual img {
+    width: 100%;
+    height: 40vh;
+    object-fit: cover;
+    vertical-align: bottom;
+    margin: 0 0 50px 0;
+  }
+
+
    /*-------------------------------------------
 白枠背景共通要素
 -------------------------------------------*/
@@ -258,10 +301,10 @@ list-style:none;とか
      margin-bottom: 10%;
    }
 
-   dl {
-     margin: auto;
-   }
 
+   /*-------------------------------------------
+各見出し共通設定
+-------------------------------------------*/
    h2 {
      margin-left: 5%;
      margin-bottom: 0.5em;
@@ -296,14 +339,12 @@ list-style:none;とか
 
    .news dd {
      font-weight: 300;
-     /* background-color: red; */
    }
 
 
    /*-------------------------------------------
 上映スケジュール
 -------------------------------------------*/
-
 
    /* スワイプタブ */
    .container {
@@ -312,7 +353,6 @@ list-style:none;とか
 
    .swiper-wrapper {
      text-align: center;
-     z-index: -10;
    }
 
    .tab {
@@ -337,12 +377,12 @@ list-style:none;とか
      font-size: large;
      width: 30px;
      color: black;
-     border-bottom: #000 solid 2px;
+     border-bottom: #000 solid 3px;
    }
 
    /* タブの下の「○/○のスケジュール」部分 */
    .scheduleText {
-     margin: 0.5em 0;
+     margin: 1em 0;
      font-size: medium;
      font-weight: bold;
    }
@@ -423,12 +463,9 @@ list-style:none;とか
      margin-bottom: 25px;
    }
 
-   .dlContent dt {
-     width: 25%;
-   }
-
    .dlContent dd {
      width: 75%;
+     margin-top: 1em;
    }
 
    #price .dlContent dt {
@@ -438,7 +475,6 @@ list-style:none;とか
    #price .dlContent dd {
      width: 30%;
    }
-
 
    #price dd {
      text-align: right;
@@ -452,33 +488,38 @@ list-style:none;とか
 
 
 
-   .tbl-r02 {
+   .accessTable{
      width: 90%;
      border-collapse: collapse;
      margin: 20px auto;
    }
 
-   .tbl-r02 th {
-     border: 1px solid #ccc;
+   .accessTable th {
+     /* border: 1px solid #ccc; */
      background: rgb(30, 30, 30);
      /* background: #e9727e; */
      color: #fff;
-     padding: 10px;
+     padding: 0.5em;
+     font-size: medium;
+     font-weight: 400;
+
    }
 
-   .tbl-r02 td {
-     border: 1px solid #ccc;
+   .accessTable td {
+     /* border: 1px solid #ccc; */
+     border: 0px solid black;
      padding: 10px;
      text-align: left;
    }
 
    .last td:last-child {
-     border-bottom: solid 1px #ccc;
+     /* border-bottom: solid 1px #ccc; */
+     border: 0px solid black;
      width: 100%;
    }
 
-   .tbl-r02 th,
-   .tbl-r02 td {
+   .accessTable th,
+   .accessTable td {
      border-bottom: none;
      display: block;
      width: 100%;
@@ -487,17 +528,17 @@ list-style:none;とか
 
    @media screen and (min-width: 768px) {
 
-     .tbl-r02 th,
-     .tbl-r02 td {
+     .accessTable th,
+     .accessTable td {
        border-bottom: none;
        display: table-cell;
      }
 
-     .tbl-r02 td {
+     .accessTable td {
        width: 70%;
      }
 
-     .tbl-r02 th {
+     .accessTable th {
        width: 30%;
      }
 
@@ -627,19 +668,10 @@ list-style:none;とか
    }
 
 
-   /* .arrowImage{
-    background-color: white;
-    color: wheat;
-    position:relative;
-    top: 100px;
-    z-index: 1;
-   } */
-
-
    /*-------------------------------------------
 フッター
 -------------------------------------------*/
    footer {
      text-align: center;
-     height: 1.5rem;
+     height: 2rem;
    }
