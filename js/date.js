@@ -1,3 +1,20 @@
+const galleryThumbs = new Swiper('.tab-menu', {
+  spaceBetween: 20,
+  slidesPerView: '5',
+  watchSlidesVisibility: true,
+  watchSlidesProgress: true,
+  slideActiveClass: 'swiper-slide-active'
+});
+galleryThumbs.on('tap', function () {
+  const current = galleryTop.activeIndex;
+  galleryThumbs.slideTo(current, 500, true);
+});
+const galleryTop = new Swiper('.tab-contents', {
+  autoHeight: true,
+  thumbs: {
+    swiper: galleryThumbs
+  }
+});
 
 
 
@@ -44,20 +61,4 @@ window.addEventListener('load', () => {
   })
 }) 
 
-const galleryThumbs = new Swiper('.tab-menu', {
-  spaceBetween: 20,
-  slidesPerView: '5',
-  watchSlidesVisibility: true,
-  watchSlidesProgress: true,
-  slideActiveClass: 'swiper-slide-active'
-});
-galleryThumbs.on('tap', function () {
-  const current = galleryTop.activeIndex;
-  galleryThumbs.slideTo(current, 500, true);
-});
-const galleryTop = new Swiper('.tab-contents', {
-  autoHeight: true,
-  thumbs: {
-    swiper: galleryThumbs
-  }
-});
+

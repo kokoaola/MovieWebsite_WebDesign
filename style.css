@@ -313,6 +313,41 @@ list-style:none;とか
      font-weight: 300;
    }
 
+   /*-------------------------------------------
+上映スケジュール実験中
+-------------------------------------------*/
+
+   .slider {
+    width: 90%;
+    margin: 30px auto;
+  }
+  .slick-slide {
+    margin: 0px 20px;
+  }
+  .slick-slide img {
+    width: 100%;
+  }
+
+  .slick-prev:before,
+.slick-next:before {
+  color: red !important; /* or any color you prefer */
+}
+  .tabs {
+    display: flex;
+    justify-content: space-around;
+    list-style-type: none;
+    margin-bottom: 20px;
+  }
+  .tabs li {
+    cursor: pointer;
+    font-weight: normal;
+  }
+  .active-tab {
+    font-weight: bold;
+    color: yellow;
+    border: #000 1px solid;
+  }
+  
 
    /*-------------------------------------------
 上映スケジュール
@@ -661,3 +696,18 @@ list-style:none;とか
    footer .copyright {
      height: 2rem;
    }
+
+
+
+
+
+   
+   .slick-slide img {
+    width: 100%;
+  }
+  
+  .slick-prev:before,
+  .slick-next:before {
+    color: #d8c7a0;
+  }
+  
