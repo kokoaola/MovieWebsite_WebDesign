@@ -30,6 +30,10 @@ list-style:none;とか
 	border: 1px solid red;
 } */
 
+   html {
+     -webkit-overflow-scrolling: touch;
+   }
+
    main {
      background-color: rgb(0, 0, 0);
      list-style: none;
@@ -140,7 +144,8 @@ list-style:none;とか
        left: 100%;
        font-weight: 600;
        top: 0;
-       transition: all 0.5s;
+       /* transition: all 0.5s; */
+       transition: .4s;
        flex-direction: column;
        justify-content: center;
        align-items: center;
@@ -318,36 +323,87 @@ list-style:none;とか
 -------------------------------------------*/
 
    .slider {
-    width: 90%;
-    margin: 30px auto;
-  }
-  .slick-slide {
-    margin: 0px 20px;
-  }
-  .slick-slide img {
-    width: 100%;
-  }
+     /* width: 90%; */
+     margin: 30px auto;
+     background-color: #032559;
+   }
 
-  .slick-prev:before,
-.slick-next:before {
-  color: red !important; /* or any color you prefer */
-}
-  .tabs {
-    display: flex;
-    justify-content: space-around;
-    list-style-type: none;
-    margin-bottom: 20px;
-  }
-  .tabs li {
-    cursor: pointer;
-    font-weight: normal;
-  }
-  .active-tab {
-    font-weight: bold;
-    color: yellow;
-    border: #000 1px solid;
-  }
-  
+   .slick-slide {
+     /* margin: 0px 20px; */
+   }
+
+   .slick-slide img {
+     /* width: 100%; */
+   }
+
+   .slick-prev:before,
+   .slick-next:before {
+     color: red !important;
+     /* or any color you prefer */
+   }
+
+   .tabs {
+     display: flex;
+     justify-content: space-around;
+     list-style-type: none;
+     margin-bottom: 20px;
+   }
+
+   .tabs li {
+     cursor: pointer;
+     font-weight: normal;
+   }
+
+   .active-tab {
+     font-weight: bold !important;
+     font-size: large !important;
+     border-bottom: #000 3px solid;
+   }
+
+
+
+   .scheduleTitle2 {
+     padding: 3% 0;
+     font-weight: bold;
+   }
+
+
+   .schedul2 td {
+     text-align: center;
+     border: 1px solid gray;
+   }
+
+   .schedule2 table {
+     border-collapse: collapse;
+     font-size: large;
+     margin: 0px auto 0px auto;
+     z-index: 1;
+   }
+
+   .schedule2 img {
+     vertical-align: bottom;
+   }
+
+   .schedule2 .movieImage2 {
+     /* aspect-ratio: 3/4; */
+     object-fit: cover;
+     width: 100%;
+     height: 100%;
+   }
+
+   .schedule2 .imageCell2 {
+     width: 30vw;
+     height: 40vw;
+   }
+
+   .schedule2 .timeCell2 {
+     height: 2em;
+     /* padding: 0.5em; */
+   }
+
+   .schedule2 .titleCell2 {
+     background-color: white;
+   }
 
    /*-------------------------------------------
 上映スケジュール
@@ -400,7 +456,7 @@ list-style:none;とか
      font-weight: bold;
    }
 
-   table td {
+   .schedule td {
      text-align: center;
      border: 1px solid gray;
    }
@@ -413,28 +469,28 @@ list-style:none;とか
      z-index: 1;
    }
 
-   .schedule table img {
+   .schedule img {
      vertical-align: bottom;
    }
 
-   .movieImage {
+   .schedule .movieImage {
      /* aspect-ratio: 3/4; */
      object-fit: cover;
      width: 100%;
      height: 100%;
    }
 
-   .imageCell {
+   .schedule .imageCell {
      width: 30vw;
      height: 40vw;
    }
 
-   .timeCell {
+   .schedule .timeCell {
      height: 2em;
      /* padding: 0.5em; */
    }
 
-   .titleCell {
+   .schedule .titleCell {
      background-color: white;
    }
 
@@ -701,13 +757,12 @@ list-style:none;とか
 
 
 
-   
+
    .slick-slide img {
-    width: 100%;
-  }
-  
-  .slick-prev:before,
-  .slick-next:before {
-    color: #d8c7a0;
-  }
-  
+     width: 100%;
+   }
+
+   .slick-prev:before,
+   .slick-next:before {
+     color: #d8c7a0;
+   }
