@@ -108,10 +108,11 @@ list-style:none;とか
 ハンバーガーメニュー
 ---------------------------------*/
    @media screen and (max-width: 767px) {
+
+     /* ハンバーガーメニューを画面右上に配置 */
      .menu-btn {
-       margin: 8px;
-       /* margin-top: 10px; */
        position: fixed;
+       margin: 8px;
        right: 0;
        width: 48px;
        height: 48px;
@@ -120,9 +121,11 @@ list-style:none;とか
        align-items: center;
        background: black;
        border-radius: 5px;
+       /* メニューは常に最前面に */
        z-index: 100;
      }
 
+     /* 三本線の配置 */
      .menu-btn span,
      .menu-btn span:before,
      .menu-btn span:after {
@@ -131,11 +134,21 @@ list-style:none;とか
        position: absolute;
        width: 25px;
        height: 3px;
-       border-radius: 3px;
+       /* 線の色は白、角丸 */
        background-color: #ffffff;
+       border-radius: 3px;
      }
 
+     .menu-btn span:before,
+     span:after {
+       bottom: 8px;
+     }
 
+     .menu-btn span:after {
+       top: 8px;
+     }
+
+     /* メニュー開いた時の表示されるリンク */
      .gnav ul {
        background: gray;
        position: fixed;
@@ -144,32 +157,27 @@ list-style:none;とか
        left: 100%;
        font-weight: 600;
        top: 0;
-       /* transition: all 0.5s; */
-       transition: .4s;
+       transition: all 0.5s;
        flex-direction: column;
        justify-content: center;
        align-items: center;
        padding-top: 5em;
-       z-index: 10;
+       z-index: 99;
      }
 
-     .menu-btn span:before {
-       bottom: 8px;
-     }
 
-     .menu-btn span:after {
-       top: 8px;
-     }
-
+     /* ハンバーガーメニュータップ時の挙動 */
      #menu-btn-check:checked~.menu-btn span {
-       background-color: rgba(255, 255, 255, 0);
+       background-color: black;
      }
 
+     /* 線を斜めに */
      #menu-btn-check:checked~.menu-btn span::before {
        bottom: 0;
        transform: rotate(45deg);
      }
 
+     /* 線を斜めに */
      #menu-btn-check:checked~.menu-btn span::after {
        top: 0;
        transform: rotate(-45deg);
@@ -204,20 +212,14 @@ list-style:none;とか
 
 
    @media screen and (min-width: 768px) {
-
-
-
      .headerContainer {
        justify-content: space-between;
-       /* background-color: rgb(165, 165, 42); */
        align-items: center;
        flex-direction: row;
      }
 
      .logo {
-       /* height: 2em; */
        margin: 0.5em;
-       /* background-color: #999; */
      }
 
      .listContainer {
@@ -324,7 +326,7 @@ list-style:none;とか
 
    .slider {
      /* width: 90%; */
-     margin: 30px auto;
+     /* margin: 30px auto; */
      background-color: #032559;
    }
 
@@ -336,10 +338,14 @@ list-style:none;とか
      /* width: 100%; */
    }
 
+   .slick-next {
+     right: -5px !important;
+   }
+
    .slick-prev:before,
    .slick-next:before {
      color: red !important;
-     /* or any color you prefer */
+     font-size: 40px !important;
    }
 
    .tabs {
@@ -362,6 +368,9 @@ list-style:none;とか
 
 
 
+
+
+
    .scheduleTitle2 {
      padding: 3% 0;
      font-weight: bold;
@@ -377,7 +386,6 @@ list-style:none;とか
      border-collapse: collapse;
      font-size: large;
      margin: 0px auto 0px auto;
-     z-index: 1;
    }
 
    .schedule2 img {
