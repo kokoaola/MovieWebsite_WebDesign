@@ -113,6 +113,7 @@ list-style:none;とか
      text-align: center;
      text-decoration: none;
      font-size: 20px;
+     font-weight: 500;
    }
 
    .gnav a:hover {
@@ -314,7 +315,29 @@ list-style:none;とか
    /*-------------------------------------------
 お知らせ
 -------------------------------------------*/
-   .news .whiteBackgroundContent {
+   .topic {
+     margin-bottom: 1em;
+   }
+
+   .topNews img {
+     display: none;
+   }
+
+   .topNews {
+     font-weight: 600;
+   }
+
+   .subNews {
+     font-weight: 600;
+   }
+
+   .topic p:last-child {
+     text-align: right;
+     color: gray;
+     margin-bottom: 2em;
+   }
+
+   /* .news .whiteBackgroundContent {
      align-items: center;
    }
 
@@ -331,41 +354,72 @@ list-style:none;とか
    .news dd {
      margin: 0;
      padding: 0;
-   }
+   } */
 
    /* タブレットサイズ時 */
    @media screen and (min-width: 768px) {
 
+     .topNews {
+       width: 30%;
+       border: #999 solid 0px;
+     }
+
+     .subNews {
+       width: 55%;
+     }
+
+
+     .topNews img {
+       width: 100%;
+       display: block;
+       margin: 0 auto 0 auto;
+       margin-bottom: 10px;
+     }
+
+     .topic {
+       margin-bottom: 1em;
+     }
+
+     .newsContainer {
+       display: flex;
+       justify-content: space-around;
+     }
+
      .news dl {
        font-size: 1.3rem;
      }
-     .news dd {
-      margin-left: 10vw;
-      padding: 0;
-    }
 
+     .news dd {
+       margin-left: 10vw;
+       padding: 0;
+     }
    }
 
 
    /* PCサイズ時 */
    @media screen and (min-width: 1024px) {
-    .news dl {
-      display: flex;
-      justify-content: space-evenly;
-      width: 90%;
-      margin:  0.5em auto 1.3em auto;
-    }
+
+     .newsContainer {
+       display: flex;
+     }
+
+     .news dl {
+
+       justify-content: space-evenly;
+       width: 90%;
+       margin: 0.5em auto 1.3em auto;
+     }
 
      .news dt {
        margin-right: 5em;
-       width: 30%;
+       width: 100%;
      }
 
      .news dd {
        margin: 0;
        padding: 0;
        margin-right: 5em;
-       width: 70%;
+       width: 100%;
      }
 
 
@@ -379,6 +433,7 @@ list-style:none;とか
 上映スケジュール
 -------------------------------------------*/
 
+   /* slickの矢印のレイアウト設定 */
    .slick-prev:before,
    .slick-next:before {
      color: red !important;
@@ -386,18 +441,12 @@ list-style:none;とか
      opacity: 0.5 !important;
    }
 
+   /* slickの矢印の位置調整 */
    .slick-next {
      right: 5px !important;
    }
 
-   .tab {
-     width: 3em;
-     padding-bottom: 5px;
-     margin: auto auto 0 auto;
-     font-size: small;
-     color: gray;
-   }
-
+   /* タブ全体の設定 */
    .tabs {
      display: flex;
      justify-content: space-around;
@@ -406,11 +455,19 @@ list-style:none;とか
      text-align: center;
    }
 
-   .tabs li {
+   /* 個々のタブの設定 */
+   .tab {
+     width: 3em;
+     padding-bottom: 5px;
+     margin: auto auto 0 auto;
+     font-size: small;
      cursor: pointer;
      font-weight: normal;
+     color: gray;
    }
 
+
+   /* 選択中のタブの設定 */
    .active-tab {
      color: black;
      font-weight: bold !important;
@@ -420,20 +477,24 @@ list-style:none;とか
 
 
 
-   /* テーブルの設定 */
+   /* 上映スケジュールテーブルの設定 */
+
+
+   /* -/-のスケジュール */
    .schedule h3 {
      text-align: center;
-     margin-bottom: 0.5em;
    }
 
+   /* テーブルの設定 */
    .schedule table {
-     width: 85%;
+     width: 95%;
      table-layout: fixed;
      border-collapse: collapse;
      font-size: large;
-     margin: 0.5em auto 1em auto;
+     margin: 0.5em auto 0em auto;
    }
 
+   /* 作品ポスター画像の設定 */
    .schedule .movieImage {
      aspect-ratio: 3/4;
      object-fit: cover;
@@ -441,11 +502,13 @@ list-style:none;とか
      align-items: baseline;
    }
 
+   /* 作品ポスターセルの設定 */
    .schedule .imageCell {
      width: 45vw;
      border: 1px solid gray;
    }
 
+   /* 時間格納セルの設定 */
    .schedule .timeCell {
      height: 2em;
      font-size: 1rem;
@@ -453,15 +516,7 @@ list-style:none;とか
      text-align: center;
    }
 
-   .schedule .whiteBackgroundContent {
-     padding-bottom: 1em;
-   }
-
-   .scheduleTitle {
-     padding: 3% 0;
-     font-weight: bold;
-   }
-
+   /* セルの共通設定 */
    .schedule td {
      text-align: center;
      border: 1px solid gray;
@@ -470,29 +525,56 @@ list-style:none;とか
 
 
 
-      
-      /* タブレット、PCサイズ時設定 */
-      @media screen and (min-width: 768px) {
-        .schedule table {
-          background-color: red;
-        }
-    
-        .scheduleContainer{
-          display: flex;
-          flex-direction: row;
-        }
 
-        .schedule .whiteBackgroundContent{
-        }
-    
-        
-      }
-    
-      @media screen and (min-width: 1028px) {
-        main {
-          background-color: red;
-        }
-      }
+   /* タブレット、PCサイズ時設定 */
+   @media screen and (min-width: 768px) {
+
+     /* タブ全体の設定 */
+     .tabs {
+       margin-bottom: 10px;
+     }
+
+
+     /* -/-のスケジュール */
+     .scheduleTitle {
+       padding: 5px 0;
+       font-weight: bold;
+     }
+
+
+     .schedule .whiteBackgroundContent {
+       padding-bottom: 0px;
+       padding-top: 20px;
+     }
+
+
+     .schedule table {
+       width: 35vw;
+     }
+
+     .scheduleContainer {
+       display: flex;
+       justify-content: space-evenly;
+       flex-direction: row;
+       width: 80vw;
+       margin: 0 auto 0 auto;
+       margin-bottom: 50px;
+     }
+
+     /* .whiteBackgroundContent {
+       background-color: white;
+       border-radius: 10px;
+       margin: 0 5%;
+       padding: 5% 5%;
+       color: black;
+     } */
+
+
+   }
+
+   @media screen and (min-width: 1028px) {
+     main {}
+   }
 
 
    /*-------------------------------------------
