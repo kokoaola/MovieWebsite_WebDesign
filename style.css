@@ -71,7 +71,7 @@ list-style:none;とか
 ロゴ
 -------------------------------------------*/
 
-
+   /* ヘッダー本体のレイアウト */
    .headerContainer {
      color: #fff;
      background: black;
@@ -79,11 +79,22 @@ list-style:none;とか
      justify-content: center;
    }
 
-   .logo,
-   .logo img {
-     height: 60px;
+   .logo {
+     vertical-align: baselinel;
+     margin: 0.3em;
    }
 
+   /* ロゴ画像の設定 */
+   .logo img {
+     height: 60px;
+     vertical-align: middle;
+    
+   }
+
+   .logo a {
+    display: block;
+     height: 60px;
+   }
 
    /*-------------------------------------------
 ハンバーガーメニューの中身のメニューの装飾
@@ -100,8 +111,8 @@ list-style:none;とか
 
    .gnav a:hover {
      background-color: #a7a7a7;
-     color: white;
-     font-weight: 700;
+     color: black;
+     font-weight: 500;
    }
 
    /* --------------------------------
@@ -211,15 +222,16 @@ list-style:none;とか
    }
 
 
+   /* PCサイズ時ヘッダー設定 */
    @media screen and (min-width: 768px) {
      .headerContainer {
        justify-content: space-between;
        align-items: center;
-       flex-direction: row;
      }
 
      .logo {
-       margin: 0.5em;
+       margin: 0.3em;
+       margin-left: 1em;
      }
 
      .listContainer {
@@ -327,7 +339,7 @@ list-style:none;とか
    .slider {
      /* width: 90%; */
      /* margin: 30px auto; */
-     background-color: #032559;
+     /* background-color: #032559; */
    }
 
    .slick-slide {
@@ -338,14 +350,23 @@ list-style:none;とか
      /* width: 100%; */
    }
 
-   .slick-next {
-     right: -5px !important;
-   }
-
    .slick-prev:before,
    .slick-next:before {
      color: red !important;
-     font-size: 40px !important;
+     font-size: 50px !important;
+     opacity: 0.5 !important;
+   }
+
+   .slick-next {
+     right: 5px !important;
+   }
+
+   .tab {
+     width: 3em;
+     padding-bottom: 5px;
+     margin: auto auto 0 auto;
+     font-size: small;
+     color: gray;
    }
 
    .tabs {
@@ -353,6 +374,7 @@ list-style:none;とか
      justify-content: space-around;
      list-style-type: none;
      margin-bottom: 20px;
+     text-align: center;
    }
 
    .tabs li {
@@ -361,6 +383,7 @@ list-style:none;とか
    }
 
    .active-tab {
+     color: black;
      font-weight: bold !important;
      font-size: large !important;
      border-bottom: #000 3px solid;
@@ -368,49 +391,54 @@ list-style:none;とか
 
 
 
-
-
-
-   .scheduleTitle2 {
-     padding: 3% 0;
-     font-weight: bold;
-   }
-
-
-   .schedul2 td {
+   /* テーブルの設定 */
+   .schedule2 h3 {
      text-align: center;
-     border: 1px solid gray;
    }
 
    .schedule2 table {
+     width: 85%;
+     table-layout: fixed;
      border-collapse: collapse;
      font-size: large;
-     margin: 0px auto 0px auto;
+     margin: 0.5em auto 1em auto;
    }
+
+   .scheduleTitle2 {}
 
    .schedule2 img {
      vertical-align: bottom;
    }
 
    .schedule2 .movieImage2 {
-     /* aspect-ratio: 3/4; */
+     aspect-ratio: 3/4;
      object-fit: cover;
-     width: 100%;
+     /* width: 100%; */
      height: 100%;
+     align-items: baseline;
    }
 
    .schedule2 .imageCell2 {
-     width: 30vw;
-     height: 40vw;
+     /* width: 30vw; */
+     width: 45vw;
+     border: 1px solid gray;
    }
 
    .schedule2 .timeCell2 {
-     height: 2em;
+     /* height: 2em; */
+     font-size: medium;
+     height: 3em;
+     border: 1px solid gray;
+     text-align: center;
      /* padding: 0.5em; */
    }
 
    .schedule2 .titleCell2 {
      background-color: white;
+   }
+
+   .schedule2 .whiteBackgroundContent {
+     padding-bottom: 1em;
    }
 
    /*-------------------------------------------
@@ -426,11 +454,11 @@ list-style:none;とか
      text-align: center;
    }
 
-   .tab {
+   /* .tab {
      margin: auto auto 0 auto;
      font-size: small;
      color: gray;
-   }
+   } */
 
    .tab-menu .swiper-slide {
      width: auto;
@@ -459,6 +487,14 @@ list-style:none;とか
    }
 
    /* テーブルのレイアウト */
+   .schedule table {
+     border-collapse: collapse;
+     width: 90%;
+     font-size: large;
+     margin: 10px auto 20px auto;
+     z-index: 1;
+   }
+
    .scheduleTitle {
      padding: 3% 0;
      font-weight: bold;
@@ -467,14 +503,7 @@ list-style:none;とか
    .schedule td {
      text-align: center;
      border: 1px solid gray;
-   }
-
-   .schedule table {
-     border-collapse: collapse;
-     width: 90%;
-     font-size: large;
-     margin: 10px auto 20px auto;
-     z-index: 1;
+     height: 2em;
    }
 
    .schedule img {

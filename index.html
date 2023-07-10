@@ -5,21 +5,12 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- page title -->
+  <title>shin</title>
+  <!-- set icon -->
   <link rel="icon" href="favicon.ico"><!-- 32×32 -->
   <link rel="apple-touch-icon" href="img/apple-touch-icon.png"><!-- 180×180 -->
   <link rel="icon" href="img/android-chrome-256x256.png" type="image/png">
-  <link rel="stylesheet" href="reset.css">
-  <link rel="stylesheet" href="style.css">
-  <title>shin</title>
-  <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css" />
-  <!-- <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script> -->
-
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link
-    href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100;200;300;400;500;600;700;800;900&display=swap"
-    rel="stylesheet">
-
 
   <!-- slick -->
   <link rel="stylesheet" type="text/css"
@@ -27,13 +18,26 @@
   <link rel="stylesheet" type="text/css"
     href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css" />
 
+  <!-- my css -->
+  <link rel="stylesheet" href="reset.css">
+  <link rel="stylesheet" href="style.css">
+
+  <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css" />
+
+  <!-- use google font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100;200;300;400;500;600;700;800;900&display=swap"
+    rel="stylesheet">
+
 </head>
 
 <body>
 
   <header id="header">
     <div class="headerContainer">
-      <h1 class="logo"><a href="index.html"><img src="img/kiryuLogoYoko2.svg" alt="桐生シネマのロゴマーク"></a></h1>
+      <div class="logo"><h1><a href="index.html"><img src="img/kiryuLogoYoko2.svg" alt="桐生シネマのロゴマーク"></a></h1></div>
 
       <div>
         <nav class="gnav">
@@ -66,16 +70,40 @@
 
         <div class="container">
           <ul class="tabs">
-            <li class="tab" data-slide="0">Title 1</li>
-            <li class="tab" data-slide="1">Title 2</li>
-            <li class="tab" data-slide="2">Title 3</li>
-            <li class="tab" data-slide="3">Title 4</li>
-            <li class="tab" data-slide="4">Title 5</li>
+            <oi class="tab" data-slide="0">-/-</oi>
+            <oi class="tab" data-slide="1">-/-</oi>
+            <oi class="tab" data-slide="2">-/-</oi>
+            <oi class="tab" data-slide="3">-/-</oi>
+            <oi class="tab" data-slide="4">-/-</oi>
           </ul>
 
           <section class="slider">
             <div>
-              <h3 class="scheduleTex2t">- / - のスケジュール</h3>
+              <h3 class="scheduleText2">- / - のスケジュール</h3>
+              <table>
+                <tr>
+                  <td colspan="2" class="titleCell2">
+                    <p class="scheduleTitle2">猫の一生（仮）</p>
+                  </td>
+                </tr>
+                <tr>
+                  <td rowspan="5" class="imageCell2"><img src="img/cat.jpg" alt=""></td>
+                </tr>
+
+                <tr>
+                  <td class="timeCell2">10:00 ~ 11:27</td>
+                </tr>
+                <tr>
+                  <td class="timeCell2">10:00 ~ 11:27</td>
+                </tr>
+                <tr>
+                  <td class="timeCell2">10:00 ~ 11:27</td>
+                </tr>
+                <tr>
+                  <td class="timeCell2">10:00 ~ 11:27</td>
+                </tr>
+              </table>
+
               <table>
                 <tr>
                   <td colspan="2" class="titleCell2">
@@ -102,23 +130,207 @@
             </div>
 
             <div>
-              <h3 class="scheduleText">- / - のスケジュール</h3>
-              <p>AAA</p>
+              <h3 class="scheduleText2">- / - のスケジュール</h3>
+              <table>
+                <tr>
+                  <td colspan="2" class="titleCell2">
+                    <p class="scheduleTitle2">猫の一生（仮）</p>
+                  </td>
+                </tr>
+                <tr>
+                  <td rowspan="5" class="imageCell2"><img src="img/cat.jpg" alt=""></td>
+                </tr>
+
+                <tr>
+                  <td class="timeCell2">10:00 ~ 11:27</td>
+                </tr>
+                <tr>
+                  <td class="timeCell2">10:00 ~ 11:27</td>
+                </tr>
+                <tr>
+                  <td class="timeCell2">10:00 ~ 11:27</td>
+                </tr>
+                <tr>
+                  <td class="timeCell2">10:00 ~ 11:27</td>
+                </tr>
+              </table>
+
+              <table>
+                <tr>
+                  <td colspan="2" class="titleCell2">
+                    <p class="scheduleTitle2">猫の一生（仮）</p>
+                  </td>
+                </tr>
+                <tr>
+                  <td rowspan="5" class="imageCell2"><img src="img/cat.jpg" alt=""></td>
+                </tr>
+
+                <tr>
+                  <td class="timeCell2">10:00 ~ 11:27</td>
+                </tr>
+                <tr>
+                  <td class="timeCell2">10:00 ~ 11:27</td>
+                </tr>
+                <tr>
+                  <td class="timeCell2">10:00 ~ 11:27</td>
+                </tr>
+                <tr>
+                  <td class="timeCell2">10:00 ~ 11:27</td>
+                </tr>
+              </table>
             </div>
 
             <div>
-              <h3 class="scheduleText">- / - のスケジュール</h3>
-              <p>AAA</p>
+              <h3 class="scheduleText2">- / - のスケジュール</h3>
+              <table>
+                <tr>
+                  <td colspan="2" class="titleCell2">
+                    <p class="scheduleTitle2">猫の一生（仮）</p>
+                  </td>
+                </tr>
+                <tr>
+                  <td rowspan="5" class="imageCell2"><img src="img/cat.jpg" alt=""></td>
+                </tr>
+
+                <tr>
+                  <td class="timeCell2">10:00 ~ 11:27</td>
+                </tr>
+                <tr>
+                  <td class="timeCell2">10:00 ~ 11:27</td>
+                </tr>
+                <tr>
+                  <td class="timeCell2">10:00 ~ 11:27</td>
+                </tr>
+                <tr>
+                  <td class="timeCell2">10:00 ~ 11:27</td>
+                </tr>
+              </table>
+
+              <table>
+                <tr>
+                  <td colspan="2" class="titleCell2">
+                    <p class="scheduleTitle2">猫の一生（仮）</p>
+                  </td>
+                </tr>
+                <tr>
+                  <td rowspan="5" class="imageCell2"><img src="img/cat.jpg" alt=""></td>
+                </tr>
+
+                <tr>
+                  <td class="timeCell2">10:00 ~ 11:27</td>
+                </tr>
+                <tr>
+                  <td class="timeCell2">10:00 ~ 11:27</td>
+                </tr>
+                <tr>
+                  <td class="timeCell2">10:00 ~ 11:27</td>
+                </tr>
+                <tr>
+                  <td class="timeCell2">10:00 ~ 11:27</td>
+                </tr>
+              </table>
             </div>
 
             <div>
-              <h3 class="scheduleText">- / - のスケジュール</h3>
-              <p>AAA</p>
+              <h3 class="scheduleText2">- / - のスケジュール</h3>
+              <table>
+                <tr>
+                  <td colspan="2" class="titleCell2">
+                    <p class="scheduleTitle2">猫の一生（仮）</p>
+                  </td>
+                </tr>
+                <tr>
+                  <td rowspan="5" class="imageCell2"><img src="img/cat.jpg" alt=""></td>
+                </tr>
+
+                <tr>
+                  <td class="timeCell2">10:00 ~ 11:27</td>
+                </tr>
+                <tr>
+                  <td class="timeCell2">10:00 ~ 11:27</td>
+                </tr>
+                <tr>
+                  <td class="timeCell2">10:00 ~ 11:27</td>
+                </tr>
+                <tr>
+                  <td class="timeCell2">10:00 ~ 11:27</td>
+                </tr>
+              </table>
+
+              <table>
+                <tr>
+                  <td colspan="2" class="titleCell2">
+                    <p class="scheduleTitle2">猫の一生（仮）</p>
+                  </td>
+                </tr>
+                <tr>
+                  <td rowspan="5" class="imageCell2"><img src="img/cat.jpg" alt=""></td>
+                </tr>
+
+                <tr>
+                  <td class="timeCell2">10:00 ~ 11:27</td>
+                </tr>
+                <tr>
+                  <td class="timeCell2">10:00 ~ 11:27</td>
+                </tr>
+                <tr>
+                  <td class="timeCell2">10:00 ~ 11:27</td>
+                </tr>
+                <tr>
+                  <td class="timeCell2">10:00 ~ 11:27</td>
+                </tr>
+              </table>
             </div>
 
             <div>
-              <h3 class="scheduleText">- / - のスケジュール</h3>
-              <p>AAA</p>
+              <h3 class="scheduleText2">- / - のスケジュール</h3>
+              <table>
+                <tr>
+                  <td colspan="2" class="titleCell2">
+                    <p class="scheduleTitle2">猫の一生（仮）</p>
+                  </td>
+                </tr>
+                <tr>
+                  <td rowspan="5" class="imageCell2"><img src="img/cat.jpg" alt=""></td>
+                </tr>
+
+                <tr>
+                  <td class="timeCell2">10:00 ~ 11:27</td>
+                </tr>
+                <tr>
+                  <td class="timeCell2">10:00 ~ 11:27</td>
+                </tr>
+                <tr>
+                  <td class="timeCell2">10:00 ~ 11:27</td>
+                </tr>
+                <tr>
+                  <td class="timeCell2">10:00 ~ 11:27</td>
+                </tr>
+              </table>
+
+              <table>
+                <tr>
+                  <td colspan="2" class="titleCell2">
+                    <p class="scheduleTitle2">猫の一生（仮）</p>
+                  </td>
+                </tr>
+                <tr>
+                  <td rowspan="5" class="imageCell2"><img src="img/cat.jpg" alt=""></td>
+                </tr>
+
+                <tr>
+                  <td class="timeCell2">10:00 ~ 11:27</td>
+                </tr>
+                <tr>
+                  <td class="timeCell2">10:00 ~ 11:27</td>
+                </tr>
+                <tr>
+                  <td class="timeCell2">10:00 ~ 11:27</td>
+                </tr>
+                <tr>
+                  <td class="timeCell2">10:00 ~ 11:27</td>
+                </tr>
+              </table>
             </div>
 
           </section>
@@ -162,282 +374,6 @@
     </section>
 
 
-
-    <section id="schedule" class="schedule">
-      <h2>上映スケジュール</h2>
-      <div class="whiteBackgroundContent">
-        <div class="container">
-
-          <!-- Swiper -->
-          <div class="swiper tab-menu">
-            <div class="swiper-wrapper">
-              <ol class="swiper-slide tab">-/-</ol>
-              <ol class="swiper-slide tab">-/-</ol>
-              <ol class="swiper-slide tab">-/-</ol>
-              <ol class="swiper-slide tab">-/-</ol>
-              <ul class="swiper-slide tab">-/-</ul>
-            </div>
-          </div>
-
-          <div class="swiper tab-contents">
-            <div class="swiper-wrapper">
-
-              <div class="swiper-slide">
-                <div class="scheduleTable">
-                  <p class="scheduleText">- / - のスケジュール</p>
-                  <table>
-                    <tr>
-                      <td colspan="4" class="titleCell">
-                        <p class="scheduleTitle">猫の一生（仮）</p>
-                      </td>
-                    </tr>
-
-                    <tr>
-                      <td rowspan="4" class="imageCell"><img class="movieImage" src="img/cat.jpg" alt=""></td>
-                      <td class="timeCell">10:00 ~ 11:27</td>
-                    </tr>
-                    <tr>
-                      <td class="timeCell">10:00 ~ 11:27</td>
-                    </tr>
-                    <tr>
-                      <td class="timeCell">10:00 ~ 11:27</td>
-                    </tr>
-                    <tr>
-                      <td class="timeCell">10:00 ~ 11:27</td>
-                    </tr>
-                  </table>
-
-                  <table>
-                    <tr>
-                      <td colspan="4">
-                        <p class="scheduleTitle">コア山コアは行方不明（仮）</p>
-                      </td>
-                    </tr>
-
-                    <tr>
-                      <td rowspan="4" class="imageCell"><img class="movieImage" src="img/maigo.jpg " alt=""></td>
-                      <td class="timeCell">10:00 ~ 11:27</td>
-                    </tr>
-                    <tr>
-                      <td class="timeCell">10:00 ~ 11:27</td>
-                    </tr>
-                    <tr>
-                      <td class="timeCell">10:00 ~ 11:27</td>
-                    </tr>
-                    <tr>
-                      <td class="timeCell">10:00 ~ 11:27</td>
-                    </tr>
-                  </table>
-                </div>
-              </div>
-
-              <div class="swiper-slide">
-                <div class="scheduleTable">
-                  <p class="scheduleText">- / - のスケジュール</p>
-                  <table>
-                    <tr>
-                      <td colspan="4">
-                        <p class="scheduleTitle">猫の一生（仮）</p>
-                      </td>
-                    </tr>
-
-                    <tr>
-                      <td rowspan="4" class="imageCell"><img class="movieImage" src="img/cat.jpg" alt=""></td>
-                      <td class="timeCell">10:00 ~ 11:27</td>
-                    </tr>
-                    <tr>
-                      <td class="timeCell">10:00 ~ 11:27</td>
-                    </tr>
-                    <tr>
-                      <td class="timeCell">10:00 ~ 11:27</td>
-                    </tr>
-                    <tr>
-                      <td class="timeCell">10:00 ~ 11:27</td>
-                    </tr>
-                  </table>
-
-                  <table>
-                    <tr>
-                      <td colspan="4">
-                        <p class="scheduleTitle">コア山コアは行方不明（仮）</p>
-                      </td>
-                    </tr>
-
-                    <tr>
-                      <td rowspan="4" class="imageCell"><img class="movieImage" src="img/maigo.jpg " alt=""></td>
-                      <td class="timeCell">10:00 ~ 11:27</td>
-                    </tr>
-                    <tr>
-                      <td class="timeCell">10:00 ~ 11:27</td>
-                    </tr>
-                    <tr>
-                      <td class="timeCell">10:00 ~ 11:27</td>
-                    </tr>
-                    <tr>
-                      <td class="timeCell">10:00 ~ 11:27</td>
-                    </tr>
-                  </table>
-                </div>
-              </div>
-
-              <div class="swiper-slide">
-                <div class="scheduleTable">
-                  <p class="scheduleText">- / - のスケジュール</p>
-                  <table>
-                    <tr>
-                      <td colspan="4">
-                        <p class="scheduleTitle">猫の一生（仮）</p>
-                      </td>
-                    </tr>
-
-                    <tr>
-                      <td rowspan="4" class="imageCell"><img class="movieImage" src="img/cat.jpg" alt=""></td>
-                      <td class="timeCell">10:00 ~ 11:27</td>
-                    </tr>
-                    <tr>
-                      <td class="timeCell">10:00 ~ 11:27</td>
-                    </tr>
-                    <tr>
-                      <td class="timeCell">10:00 ~ 11:27</td>
-                    </tr>
-                    <tr>
-                      <td class="timeCell">10:00 ~ 11:27</td>
-                    </tr>
-                  </table>
-
-                  <table>
-                    <tr>
-                      <td colspan="4">
-                        <p class="scheduleTitle">コア山コアは行方不明（仮）</p>
-                      </td>
-                    </tr>
-
-                    <tr>
-                      <td rowspan="4" class="imageCell"><img class="movieImage" src="img/maigo.jpg " alt=""></td>
-                      <td class="timeCell">10:00 ~ 11:27</td>
-                    </tr>
-                    <tr>
-                      <td class="timeCell">10:00 ~ 11:27</td>
-                    </tr>
-                    <tr>
-                      <td class="timeCell">10:00 ~ 11:27</td>
-                    </tr>
-                    <tr>
-                      <td class="timeCell">10:00 ~ 11:27</td>
-                    </tr>
-                  </table>
-                </div>
-              </div>
-
-              <div class="swiper-slide">
-                <div class="scheduleTable">
-                  <p class="scheduleText">- / - のスケジュール</p>
-                  <table>
-                    <tr>
-                      <td colspan="4">
-                        <p class="scheduleTitle">猫の一生（仮）</p>
-                      </td>
-                    </tr>
-
-                    <tr>
-                      <td rowspan="4" class="imageCell"><img class="movieImage" src="img/cat.jpg" alt=""></td>
-                      <td class="timeCell">10:00 ~ 11:27</td>
-                    </tr>
-                    <tr>
-                      <td class="timeCell">10:00 ~ 11:27</td>
-                    </tr>
-                    <tr>
-                      <td class="timeCell">10:00 ~ 11:27</td>
-                    </tr>
-                    <tr>
-                      <td class="timeCell">10:00 ~ 11:27</td>
-                    </tr>
-                  </table>
-
-                  <table>
-                    <tr>
-                      <td colspan="4">
-                        <p class="scheduleTitle">コア山コアは行方不明（仮）</p>
-                      </td>
-                    </tr>
-
-                    <tr>
-                      <td rowspan="4" class="imageCell"><img class="movieImage" src="img/maigo.jpg " alt=""></td>
-                      <td class="timeCell">10:00 ~ 11:27</td>
-                    </tr>
-                    <tr>
-                      <td class="timeCell">10:00 ~ 11:27</td>
-                    </tr>
-                    <tr>
-                      <td class="timeCell">10:00 ~ 11:27</td>
-                    </tr>
-                    <tr>
-                      <td class="timeCell">10:00 ~ 11:27</td>
-                    </tr>
-                  </table>
-                </div>
-              </div>
-
-              <div class="swiper-slide">
-                <div class="scheduleTable">
-                  <p class="scheduleText">- / - のスケジュール</p>
-                  <table>
-                    <tr>
-                      <td colspan="4">
-                        <p class="scheduleTitle">猫の一生（仮）</p>
-                      </td>
-                    </tr>
-
-                    <tr>
-                      <td rowspan="4" class="imageCell"><img class="movieImage" src="img/cat.jpg" alt=""></td>
-                      <td class="timeCell">10:00 ~ 11:27</td>
-                    </tr>
-                    <tr>
-                      <td class="timeCell">10:00 ~ 11:27</td>
-                    </tr>
-                    <tr>
-                      <td class="timeCell">10:00 ~ 11:27</td>
-                    </tr>
-                    <tr>
-                      <td class="timeCell">10:00 ~ 11:27</td>
-                    </tr>
-                  </table>
-
-                  <table>
-                    <tr>
-                      <td colspan="4">
-                        <p class="scheduleTitle">コア山コアは行方不明（仮）</p>
-                      </td>
-                    </tr>
-
-                    <tr>
-                      <td rowspan="4" class="imageCell"><img class="movieImage" src="img/maigo.jpg " alt=""></td>
-                      <td class="timeCell">10:00 ~ 11:27</td>
-                    </tr>
-                    <tr>
-                      <td class="timeCell">10:00 ~ 11:27</td>
-                    </tr>
-                    <tr>
-                      <td class="timeCell">10:00 ~ 11:27</td>
-                    </tr>
-                    <tr>
-                      <td class="timeCell">10:00 ~ 11:27</td>
-                    </tr>
-                  </table>
-                </div>
-              </div>
-
-            </div>
-          </div>
-
-        </div>
-      </div>
-
-      <div class="arrowContainer">
-        <img class="arrowImage" src="img/arrow_left_line.svg" alt="右矢印">
-        <img class="arrowImage" src="img/arrow_right_line.svg" alt="左矢印">
-      </div>
-    </section>
 
 
     <section id="price">
@@ -520,12 +456,10 @@
   <!-- ナビゲーションをクリックした時にハンバーガーメニューを閉じる -->
   <script src="js/hamburgerClose.js">  </script>
   <script src="js/date.js">  </script>
-
-
-
-
   <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
+
+
   <!-- Custom script will be here -->
   <script>
     $(document).ready(function () {
@@ -533,6 +467,12 @@
         infinite: true,
         slidesToShow: 1,
         slidesToScroll: 1,
+        focusOnSelect: true,
+        mobileFirst: true,
+        speed: 300,
+        swipeToSlide: true,
+        fade: true,
+
         prevArrow: "<button type='button' class='slick-prev'>Previous</button>",
         nextArrow: "<button type='button' class='slick-next'>Next</button>"
       });
