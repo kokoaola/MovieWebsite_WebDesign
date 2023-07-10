@@ -54,6 +54,12 @@ list-style:none;とか
 
    @media screen and (min-width: 768px) {
      main {
+       background-color: blue;
+     }
+   }
+
+   @media screen and (min-width: 1028px) {
+     main {
        background-color: red;
      }
    }
@@ -88,11 +94,11 @@ list-style:none;とか
    .logo img {
      height: 60px;
      vertical-align: middle;
-    
+
    }
 
    .logo a {
-    display: block;
+     display: block;
      height: 60px;
    }
 
@@ -222,7 +228,7 @@ list-style:none;とか
    }
 
 
-   /* PCサイズ時ヘッダー設定 */
+   /* タブレット、PCサイズ時ヘッダー設定 */
    @media screen and (min-width: 768px) {
      .headerContainer {
        justify-content: space-between;
@@ -248,10 +254,6 @@ list-style:none;とか
        padding-left: 1em;
 
      }
-
-     /* .head li:last-child {
-      margin-right: 0;
-    } */
    }
 
 
@@ -261,10 +263,14 @@ list-style:none;とか
 -------------------------------------------*/
    .mainvisual img {
      width: 100%;
-     height: 40vh;
+     height: 50vh;
      object-fit: cover;
      vertical-align: bottom;
      margin: 0 0 50px 0;
+   }
+
+   .mainvisual {
+     margin-bottom: 80px;
    }
 
 
@@ -305,31 +311,68 @@ list-style:none;とか
 
 
    /*-------------------------------------------
-メインビジュアル
--------------------------------------------*/
-   .mainvisual {
-     margin-bottom: 80px;
-   }
-
-   .mainvisual img {
-     width: 100%;
-     height: 50vh;
-     object-fit: cover;
-   }
-
-
-   /*-------------------------------------------
 お知らせ
 -------------------------------------------*/
+   .news .whiteBackgroundContent {
+     align-items: center;
+   }
 
    .news dl {
-     font-size: 0.9em;
-     margin-top: 0.5em;
-     margin-bottom: 1.3em;
+     margin: 0.5em auto 1.3em auto;
+     font-size: 0.9rem;
+   }
+
+   .news dt {
+     margin: 0;
+     padding: 0;
    }
 
    .news dd {
-     font-weight: 300;
+     margin: 0;
+     padding: 0;
+   }
+
+   /* タブレットサイズ時 */
+   @media screen and (min-width: 768px) {
+
+     .news dl {
+       font-size: 1.5rem;
+     }
+     .news dd {
+      margin-left: 10vw;
+      padding: 0;
+    }
+
+   }
+
+
+   /* PCサイズ時 */
+   @media screen and (min-width: 1024px) {
+
+     .news dt {
+       margin-right: 5em;
+       width: 15em;
+     }
+
+     .news dd {
+       margin: 0;
+       padding: 0;
+       margin-right: 5em;
+       width: 22em;
+     }
+
+     .news dl {
+       font-size: 1.5rem;
+       margin-top: 0.5em;
+       margin-bottom: 1.3em;
+       display: flex;
+       justify-content: space-evenly;
+     }
+
+     .news .whiteBackgroundContent {
+       padding: 2rem;
+     }
+
    }
 
    /*-------------------------------------------
@@ -392,11 +435,12 @@ list-style:none;とか
 
 
    /* テーブルの設定 */
-   .schedule2 h3 {
+   .schedule h3 {
      text-align: center;
+     margin-bottom: 0.5em;
    }
 
-   .schedule2 table {
+   .schedule table {
      width: 85%;
      table-layout: fixed;
      border-collapse: collapse;
@@ -404,13 +448,11 @@ list-style:none;とか
      margin: 0.5em auto 1em auto;
    }
 
-   .scheduleTitle2 {}
-
-   .schedule2 img {
+   .schedule img {
      vertical-align: bottom;
    }
 
-   .schedule2 .movieImage2 {
+   .schedule .movieImage {
      aspect-ratio: 3/4;
      object-fit: cover;
      /* width: 100%; */
@@ -418,13 +460,13 @@ list-style:none;とか
      align-items: baseline;
    }
 
-   .schedule2 .imageCell2 {
+   .schedule .imageCell {
      /* width: 30vw; */
      width: 45vw;
      border: 1px solid gray;
    }
 
-   .schedule2 .timeCell2 {
+   .schedule .timeCell {
      /* height: 2em; */
      font-size: medium;
      height: 3em;
@@ -433,11 +475,11 @@ list-style:none;とか
      /* padding: 0.5em; */
    }
 
-   .schedule2 .titleCell2 {
+   .schedule .titleCell {
      background-color: white;
    }
 
-   .schedule2 .whiteBackgroundContent {
+   .schedule .whiteBackgroundContent {
      padding-bottom: 1em;
    }
 
