@@ -228,7 +228,7 @@ list-style:none;とか
    }
 
 
-   /* タブレット、PCサイズ時ヘッダー設定 */
+   /* タブレット、PCサイズ時設定 */
    @media screen and (min-width: 768px) {
      .headerContainer {
        justify-content: space-between;
@@ -376,22 +376,8 @@ list-style:none;とか
    }
 
    /*-------------------------------------------
-上映スケジュール実験中
+上映スケジュール
 -------------------------------------------*/
-
-   .slider {
-     /* width: 90%; */
-     /* margin: 30px auto; */
-     /* background-color: #032559; */
-   }
-
-   .slick-slide {
-     /* margin: 0px 20px; */
-   }
-
-   .slick-slide img {
-     /* width: 100%; */
-   }
 
    .slick-prev:before,
    .slick-next:before {
@@ -465,13 +451,11 @@ list-style:none;とか
      font-size: 1rem;
      border: 1px solid gray;
      text-align: center;
-     /* padding: 0.5em; */
    }
 
    .schedule .whiteBackgroundContent {
      padding-bottom: 1em;
    }
-
 
    .scheduleTitle {
      padding: 3% 0;
@@ -485,6 +469,30 @@ list-style:none;とか
    }
 
 
+
+      
+      /* タブレット、PCサイズ時設定 */
+      @media screen and (min-width: 768px) {
+        .schedule table {
+          background-color: red;
+        }
+    
+        .scheduleContainer{
+          display: flex;
+          flex-direction: row;
+        }
+
+        .schedule .whiteBackgroundContent{
+        }
+    
+        
+      }
+    
+      @media screen and (min-width: 1028px) {
+        main {
+          background-color: red;
+        }
+      }
 
 
    /*-------------------------------------------
