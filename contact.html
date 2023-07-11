@@ -20,24 +20,26 @@
 <body>
 
 
-  <header id="header" class="wrapper">
-    <h1><a href="index.html"><img class="logo" src="img/logo.png" alt=""></a></h1>
+  <header id="header">
+    <div class="headerContainer">
+      <div class="logo">
+        <h1><a href="index.html"><img src="img/kiryuLogoYoko2.svg" alt="桐生シネマのロゴマーク"></a></h1>
+      </div>
 
-    <!-- ナビゲーション -->
-
-      <nav id="gnav" class="gnav">
-        <input type="checkbox" id="menu-btn-check">
-        <label for="menu-btn-check" class="menu-btn"><span></span></label>
-        <ul class="container">
-          <li><a href="#">ホーム</a></li>
-          <li><a href=#news>お知らせ</a></li>
-          <li><a href=#schedule>上映スケジュール</a></li>
-          <li><a href=#price>料金</a></li>
-          <li><a href=#access>アクセス</a></li>
-          <li><a href="contact.html">お問い合わせ</a></li>
-        </ul>
-      </nav>
-      <!-- /#gnav -->
+      <div>
+        <nav class="gnav">
+          <input type="checkbox" id="menu-btn-check">
+          <label for="menu-btn-check" class="menu-btn"><span></span></label>
+          <ul class="listContainer">
+            <li><a href="index.html#news">お知らせ</a></li>
+            <li><a href="index.html#schedule">上映スケジュール</a></li>
+            <li><a href="index.html#price">料金</a></li>
+            <li><a href="index.html#access">アクセス</a></li>
+            <li><a href="contact.html">お問い合わせ</a></li>
+          </ul>
+        </nav>
+      </div>
+    </div>
   </header>
 
 
@@ -45,7 +47,7 @@
   <main>
 
     <section id="contact" class="contact">
-      <h2>お問い合わせ</h2>
+      <h2 class="contactTop">お問い合わせ</h2>
 
         <div class="privacyPolicy" style="width: 100%; height: 250px; overflow-y: scroll; background:#eeeeee;">
 

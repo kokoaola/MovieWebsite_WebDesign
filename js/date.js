@@ -1,22 +1,3 @@
-// const galleryThumbs = new Swiper('.tab-menu', {
-//   spaceBetween: 20,
-//   slidesPerView: '5',
-//   watchSlidesVisibility: true,
-//   watchSlidesProgress: true,
-//   slideActiveClass: 'swiper-slide-active'
-// });
-// galleryThumbs.on('tap', function () {
-//   const current = galleryTop.activeIndex;
-//   galleryThumbs.slideTo(current, 500, true);
-// });
-// const galleryTop = new Swiper('.tab-contents', {
-//   autoHeight: true,
-//   thumbs: {
-//     swiper: galleryThumbs
-//   }
-// });
-
-
 
 // HTML読み込み完了後に実行
 // window.addEventListener('load', () => {
@@ -76,13 +57,12 @@ window.addEventListener('load', () => {
   const startDate = tabDay.getDate();
   const theDay = tabDay.getDay();
 
-  //即時関数 = 関数を定義すると同時に実行
   //戻り値はgetDayWeekStrに格納される
-  const getDayWeekStr = (i) => {
-    // 計算結果を配列内に収める
-    const strIndex = (startDate + i - 2) % WEEK_STR_LIST.length;
-    return WEEK_STR_LIST[strIndex];
-  }
+  // const getDayWeekStr = (i) => {
+  //   // 計算結果を配列内に収める
+  //   const strIndex = (startDate + i - 2) % WEEK_STR_LIST.length;
+  //   return WEEK_STR_LIST[strIndex];
+  // }
 
   //
   let date = startDate;
@@ -99,9 +79,15 @@ window.addEventListener('load', () => {
   const scheduleText = document.querySelectorAll('.scheduleText');
   scheduleText.forEach((str, i) => {
     date = startDate + i;
+
     // 要素のコンテンツ
     // tab.textContent = `${month} / ${date}
-    str.textContent = `${month} / ${date}の上映スケジュール`;
+    if (i === 0) {
+      str.textContent = `本日の上映スケジュール`;
+    } else {
+      str.textContent = `${month} / ${date}の上映スケジュール`;
+    }
+
   })
 })
 

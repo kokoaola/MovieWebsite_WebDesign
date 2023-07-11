@@ -54,13 +54,15 @@ list-style:none;とか
 
    @media screen and (min-width: 768px) {
      main {
-       background-color: rgb(33, 33, 33);
+       background-color: rgb(0, 0, 0);
+       /* background-color: rgb(33, 33, 33); */
      }
    }
 
    @media screen and (min-width: 1028px) {
      main {
-       background-color: rgb(78, 78, 78);
+       /* background-color: rgb(78, 78, 78); */
+       background-color: rgb(0, 0, 0);
      }
    }
 
@@ -269,8 +271,11 @@ list-style:none;とか
    .whiteBackgroundContent {
      background-color: white;
      border-radius: 10px;
-     margin: 0 5%;
-     padding: 2rem;
+     /* margin: 0 5%; */
+     /* padding: 2rem; */
+     width: 90vw;
+     margin: 0 auto;
+     padding: 3vw;
      color: black;
    }
 
@@ -474,19 +479,19 @@ list-style:none;とか
        font-weight: bold;
      }
 
-/* スケジュールの背景設定 */
+     /* スケジュールの背景設定 */
      .schedule .whiteBackgroundContent {
        padding-bottom: 0px;
        padding-top: 20px;
      }
 
-/* タイムテーブルサイズ設定 */
+     /* タイムテーブルサイズ設定 */
      .schedule table {
        width: 35vw;
      }
 
 
-/* 段組み変更の設定 */
+     /* 段組み変更の設定 */
      .scheduleContainer {
        display: flex;
        justify-content: space-evenly;
@@ -495,50 +500,68 @@ list-style:none;とか
        margin: 0 auto 0 auto;
        margin-bottom: 50px;
      }
-
-     /* .whiteBackgroundContent {
-       background-color: white;
-       border-radius: 10px;
-       margin: 0 5%;
-       padding: 5% 5%;
-       color: black;
-     } */
-
-
    }
 
    /* PC表示はタブレットと同じ */
-   @media screen and (min-width: 1028px) {
-     main {}
-   }
+   @media screen and (min-width: 1028px) {}
 
 
    /*-------------------------------------------
 料金
 -------------------------------------------*/
-   .dlContent dl {
+   .price dl {
      display: flex;
      justify-content: space-around;
      /* dt、ddを横並びにする */
      flex-wrap: wrap;
      /* dtとddが100%になったら、横並びを折り返す */
+     padding: 0 1em;
      margin-bottom: 1em;
      margin-left: auto;
      margin-right: auto;
    }
 
-   #price .dlContent dt {
+   .price dt {
      width: 70%;
    }
 
-   #price .dlContent dd {
+   .price dd {
      width: 30%;
      text-align: right;
    }
 
-   #price dd,
+   .price dd,
    dt {
      margin-top: 1em;
+   }
+
+   .price p {
+     margin: 2em 1em;
+   }
+
+
+
+   @media screen and (min-width: 768px) {}
+
+   /* PC表示*/
+   @media screen and (min-width: 1028px) {
+    .price p {
+      margin: 2em 0 0 0;
+    }
+    
+    .price dl {
+      /* background-color: #032559; */
+      width: 35vw;
+      margin: 0;
+      /* background-color: red; */
+    }
+
+     .priceContainer {
+       display: flex;
+       /* background-color: black; */
+       justify-content: space-between;
+     }
+
    }
 
 
@@ -550,15 +573,13 @@ list-style:none;とか
 
 
    .accessTable {
-     width: 90%;
      border-collapse: collapse;
      margin: 20px auto;
+     width: 85vw;
    }
 
    .accessTable th {
-     /* border: 1px solid #ccc; */
      background: rgb(30, 30, 30);
-     /* background: #e9727e; */
      color: #fff;
      padding: 0.5em;
      font-size: medium;
@@ -567,14 +588,13 @@ list-style:none;とか
    }
 
    .accessTable td {
-     /* border: 1px solid #ccc; */
      border: 0px solid black;
-     padding: 10px;
+     padding: 0.5em;
      text-align: left;
+     background-color: rgb(16, 16, 16);
    }
 
    .last td:last-child {
-     /* border-bottom: solid 1px #ccc; */
      border: 0px solid black;
      width: 100%;
    }
@@ -586,24 +606,52 @@ list-style:none;とか
      width: 100%;
    }
 
+   
+   .map {
+    width: 100%;
+    position: relative;
+    /* padding-top: 56.25%; */
+  }
+  
+  .map iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+
 
    @media screen and (min-width: 768px) {
 
-     .accessTable th,
-     .accessTable td {
-       border-bottom: none;
-       display: table-cell;
+   }
+
+   /* PC表示*/
+   @media screen and (min-width: 1028px) {
+    .accessContainer {
+      /* width: 85vw; */
+      align-items: center;
+      margin: 0 auto;
+      display: flex;
+      justify-content:space-between;
+    }
+
+    .accessContainer {
+      width: 90vw;
+    }
+
+     .accessContainer table {
+      width: 46vw;
      }
 
-     .accessTable td {
-       width: 70%;
-     }
-
-     .accessTable th {
-       width: 30%;
+     .map {
+       /* width: 40vw; */
+       height: 35em;
+       width: 40vw;
      }
 
    }
+
 
 
 
@@ -614,6 +662,10 @@ list-style:none;とか
    .contact {
      width: 90%;
      margin: 0 auto;
+   }
+
+   .contactTop {
+     padding: 2em 0 0 0;
    }
 
    .privacyPolicy h2 {
@@ -738,8 +790,8 @@ list-style:none;とか
    .jumpToTopButton {
      margin-right: 20px;
      background-color: white;
-     width: 4m;
-     height: 4em;
+     width: 3m;
+     height: 3em;
      border-radius: 50%;
    }
 
