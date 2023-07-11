@@ -96,7 +96,7 @@ window.addEventListener('load', () => {
 
 
   // スケジュール内のp要素を配列で取得
-  const scheduleText = document.querySelectorAll('.scheduleText2');
+  const scheduleText = document.querySelectorAll('.scheduleText');
   scheduleText.forEach((str, i) => {
     date = startDate + i;
     // 要素のコンテンツ

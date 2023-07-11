@@ -54,13 +54,13 @@ list-style:none;とか
 
    @media screen and (min-width: 768px) {
      main {
-       background-color: blue;
+       background-color: rgb(33, 33, 33);
      }
    }
 
    @media screen and (min-width: 1028px) {
      main {
-       background-color: red;
+       background-color: rgb(78, 78, 78);
      }
    }
 
@@ -68,13 +68,11 @@ list-style:none;とか
      list-style: none;
    }
 
-   /*-------------------------------------------
-ヘッダーナビゲーション
--------------------------------------------*/
+
 
 
    /*-------------------------------------------
-ロゴ
+ヘッダーナビゲーション、ロゴ
 -------------------------------------------*/
 
    /* ヘッダー本体のレイアウト */
@@ -85,27 +83,18 @@ list-style:none;とか
      justify-content: center;
    }
 
-   .logo {
-     vertical-align: baselinel;
-     margin: 0.3em;
-   }
-
    /* ロゴ画像の設定 */
    .logo img {
      height: 60px;
      vertical-align: middle;
-
    }
 
-   .logo a {
-     display: block;
-     height: 60px;
-   }
 
-   /*-------------------------------------------
-ハンバーガーメニューの中身のメニューの装飾
--------------------------------------------*/
+   /* --------------------------------
+ハンバーガーメニュー
+---------------------------------*/
 
+   /* メニューの中身のコンテンツのレイアウト設定 */
    .gnav a {
      display: block;
      padding: 15px 0;
@@ -116,18 +105,17 @@ list-style:none;とか
      font-weight: 500;
    }
 
+   /* ホバー時のメニューのコンテンツの設定 */
    .gnav a:hover {
      background-color: #a7a7a7;
      color: black;
      font-weight: 500;
    }
 
-   /* --------------------------------
-ハンバーガーメニュー
----------------------------------*/
+   /* スマートフォンのみハンバーガーメニュー表示 */
    @media screen and (max-width: 767px) {
 
-     /* ハンバーガーメニューを画面右上に配置 */
+     /* ハンバーガーメニューアイコン */
      .menu-btn {
        position: fixed;
        margin: 8px;
@@ -157,11 +145,13 @@ list-style:none;とか
        border-radius: 3px;
      }
 
+     /* 三本線の配置 */
      .menu-btn span:before,
      span:after {
        bottom: 8px;
      }
 
+     /* 三本線の配置 */
      .menu-btn span:after {
        top: 8px;
      }
@@ -224,36 +214,39 @@ list-style:none;とか
      }
    }
 
+   /* チェックボックスの非表示 */
    #menu-btn-check {
      display: none;
    }
 
 
-   /* タブレット、PCサイズ時設定 */
+   /*ヘッダー タブレット、PCサイズ時設定 */
    @media screen and (min-width: 768px) {
-     .headerContainer {
-       justify-content: space-between;
-       align-items: center;
-     }
 
+     /* ロゴの余白設定 */
      .logo {
        margin: 0.3em;
        margin-left: 1em;
      }
 
+     /* ロゴとメニューの配置設定 */
+     .headerContainer {
+       justify-content: space-between;
+       align-items: center;
+     }
+
+     /* メニューを横並びに変更 */
      .listContainer {
-       /* background-color: rebeccapurple; */
        width: 70vw;
        display: flex;
        justify-content: flex-end;
      }
 
+     /* メニューの文字レイアウト設定 */
      .gnav a {
        font-size: medium;
-       /* background-color: #032559; */
        padding-right: 1em;
        padding-left: 1em;
-
      }
    }
 
@@ -267,13 +260,8 @@ list-style:none;とか
      height: 50vh;
      object-fit: cover;
      vertical-align: bottom;
-     margin: 0 0 50px 0;
-   }
-
-   .mainvisual {
      margin-bottom: 80px;
    }
-
 
    /*-------------------------------------------
 白枠背景共通要素
@@ -282,7 +270,7 @@ list-style:none;とか
      background-color: white;
      border-radius: 10px;
      margin: 0 5%;
-     padding: 5% 5%;
+     padding: 2rem;
      color: black;
    }
 
@@ -303,6 +291,7 @@ list-style:none;とか
    /*-------------------------------------------
 各見出し共通設定
 -------------------------------------------*/
+   /* セクション毎の見出しの設定 */
    h2 {
      margin-left: 5%;
      margin-bottom: 0.5em;
@@ -315,116 +304,60 @@ list-style:none;とか
    /*-------------------------------------------
 お知らせ
 -------------------------------------------*/
+
+   /* 各お知らせの共通設定 */
    .topic {
-     margin-bottom: 1em;
+     margin-top: 1em;
+     font-weight: 600;
    }
 
+   /* トップメニューの画像設定 */
    .topNews img {
      display: none;
    }
 
-   .topNews {
-     font-weight: 600;
-   }
-
-   .subNews {
-     font-weight: 600;
-   }
-
+   /* 日付の書体設定 */
    .topic p:last-child {
      text-align: right;
+     font-size: 0.8em;
      color: gray;
-     margin-bottom: 2em;
    }
 
-   /* .news .whiteBackgroundContent {
-     align-items: center;
+   /* アイコンのスタイル */
+   .icon {
+     font-size: small;
+     background-color: rgb(248, 255, 41);
+     display: inline-block;
+     color: #000;
+     padding: 2px 10px;
+     margin-bottom: 1px;
    }
 
-   .news dl {
-     margin: 0.5em auto 1.3em auto;
-     font-size: 0.9rem;
-   }
-
-   .news dt {
-     margin: 0;
-     padding: 0;
-   }
-
-   .news dd {
-     margin: 0;
-     padding: 0;
-   } */
-
-   /* タブレットサイズ時 */
+   /* タブレットサイズ、PCサイズ時 */
    @media screen and (min-width: 768px) {
 
-     .topNews {
-       width: 30%;
-       border: #999 solid 0px;
-     }
-
-     .subNews {
-       width: 55%;
-     }
-
-
-     .topNews img {
-       width: 100%;
-       display: block;
-       margin: 0 auto 0 auto;
-       margin-bottom: 10px;
-     }
-
-     .topic {
-       margin-bottom: 1em;
-     }
-
+     /* ２カラムに変更 */
      .newsContainer {
        display: flex;
        justify-content: space-around;
      }
 
-     .news dl {
-       font-size: 1.3rem;
+     /* トップニュースの幅設定 */
+     .topNews {
+       width: 30%;
      }
 
-     .news dd {
-       margin-left: 10vw;
-       padding: 0;
-     }
-   }
-
-
-   /* PCサイズ時 */
-   @media screen and (min-width: 1024px) {
-
-     .newsContainer {
-       display: flex;
-     }
-
-     .news dl {
-
-       justify-content: space-evenly;
-       width: 90%;
-       margin: 0.5em auto 1.3em auto;
-     }
-
-     .news dt {
-       margin-right: 5em;
+     /* トップニュースの画像設定 */
+     .topNews img {
        width: 100%;
+       display: block;
+       margin: 0 auto 0 auto;
+       margin-bottom: 5px;
      }
 
-     .news dd {
-       margin: 0;
-       padding: 0;
-       margin-right: 5em;
-       width: 100%;
-     }
-
-
-     .news .whiteBackgroundContent {
-       padding: 2rem;
+     /* サブニュースの幅設定 */
+     .subNews {
+       width: 55%;
      }
 
    }
@@ -541,17 +474,19 @@ list-style:none;とか
        font-weight: bold;
      }
 
-
+/* スケジュールの背景設定 */
      .schedule .whiteBackgroundContent {
        padding-bottom: 0px;
        padding-top: 20px;
      }
 
-
+/* タイムテーブルサイズ設定 */
      .schedule table {
        width: 35vw;
      }
 
+
+/* 段組み変更の設定 */
      .scheduleContainer {
        display: flex;
        justify-content: space-evenly;
@@ -572,6 +507,7 @@ list-style:none;とか
 
    }
 
+   /* PC表示はタブレットと同じ */
    @media screen and (min-width: 1028px) {
      main {}
    }
@@ -582,6 +518,7 @@ list-style:none;とか
 -------------------------------------------*/
    .dlContent dl {
      display: flex;
+     justify-content: space-around;
      /* dt、ddを横並びにする */
      flex-wrap: wrap;
      /* dtとddが100%になったら、横並びを折り返す */
@@ -591,12 +528,12 @@ list-style:none;とか
    }
 
    #price .dlContent dt {
-     width: 40%;
+     width: 70%;
    }
 
    #price .dlContent dd {
+     width: 30%;
      text-align: right;
-     width: 40%;
    }
 
    #price dd,
@@ -817,11 +754,6 @@ list-style:none;とか
    footer .copyright {
      height: 2rem;
    }
-
-
-
-
-
 
    .slick-slide img {
      width: 100%;
