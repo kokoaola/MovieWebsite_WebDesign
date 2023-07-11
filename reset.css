@@ -9,6 +9,7 @@ html {
 *, :after, :before {
    background-repeat: no-repeat;
    box-sizing: inherit
+   
 }
 
 :after, :before {
@@ -123,6 +124,10 @@ optgroup {
    font-weight: 700
 }
 
+li {
+   list-style: none;
+ }
+ 
 button {
    overflow: visible
 }

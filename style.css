@@ -19,10 +19,6 @@ body {
    object-position: center top;
 }
 
-リスト調整
-list-style:none;とか
-
-*/
 
    @charset "UTF-8";
 
@@ -37,7 +33,6 @@ list-style:none;とか
 
    main {
      background-color: rgb(0, 0, 0);
-     list-style: none;
    }
 
    body {
@@ -65,10 +60,6 @@ list-style:none;とか
        /* background-color: rgb(78, 78, 78); */
        background-color: rgb(0, 0, 0);
      }
-   }
-
-   li {
-     list-style: none;
    }
 
 
@@ -800,7 +791,6 @@ list-style:none;とか
     z-index: 2;
     padding: 5px;
 }
-
 
    /*-------------------------------------------
 フッター
