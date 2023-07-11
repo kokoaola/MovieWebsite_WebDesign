@@ -262,7 +262,6 @@ list-style:none;とか
      height: 50vh;
      object-fit: cover;
      vertical-align: bottom;
-     margin-bottom: 80px;
    }
 
    /*-------------------------------------------
@@ -289,7 +288,7 @@ list-style:none;とか
 各セクション共通設定
 -------------------------------------------*/
    section {
-     margin-bottom: 10%;
+     padding-top: 10%;
    }
 
 
