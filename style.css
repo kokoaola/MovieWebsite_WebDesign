@@ -32,6 +32,7 @@ list-style:none;とか
 
    html {
      -webkit-overflow-scrolling: touch;
+     scroll-behavior: smooth;
    }
 
    main {
@@ -43,7 +44,7 @@ list-style:none;とか
      /* font-family: "Helvetica Neue", "Arial", "Hiragino Sans", "Meiryo", sans-serif; */
      /* font-family: "メイリオ", meiryo, sans-serif; */
      font-family: 'Noto Sans JP', sans-serif;
-     font-weight: 300;
+     /* font-weight: 300; */
    }
 
 
@@ -262,6 +263,7 @@ list-style:none;とか
      height: 50vh;
      object-fit: cover;
      vertical-align: bottom;
+     margin-bottom: 5%;
    }
 
    /*-------------------------------------------
@@ -288,7 +290,8 @@ list-style:none;とか
 各セクション共通設定
 -------------------------------------------*/
    section {
-     padding-top: 10%;
+     padding-top: 5%;
+     padding-bottom: 5%;
    }
 
 
@@ -508,17 +511,21 @@ list-style:none;とか
    /*-------------------------------------------
 料金
 -------------------------------------------*/
+
    .price dl {
      display: flex;
      justify-content: space-around;
      /* dt、ddを横並びにする */
      flex-wrap: wrap;
      /* dtとddが100%になったら、横並びを折り返す */
-     /* padding: 0 1em; */
-     /* margin-bottom: 1em; */
      margin-left: auto;
      margin-right: auto;
    }
+
+   .price dl:last-child {
+     margin-bottom: 1em;
+   }
+
 
    .price dt {
      width: 70%;
@@ -557,6 +564,10 @@ list-style:none;とか
        justify-content: space-between;
      }
 
+     .price dl:last-child {
+      margin-bottom: 3em;
+    }
+
    }
 
 
@@ -565,100 +576,74 @@ list-style:none;とか
 アクセス
 -------------------------------------------*/
 
-.accessContainer{
-  /* background-color: red; */
-}
-
-
+   /* テーブルレイアウト設定 */
    .accessTable {
      border-collapse: collapse;
      margin: 20px auto;
-  
      width: 85vw;
-     /* opacity: 0.2; */
    }
 
+   /* テーブルレイアウト設定 */
    .accessTable th {
      background: rgb(30, 30, 30);
      color: #fff;
      padding: 0.5em;
      font-size: medium;
      font-weight: 400;
-
+     display: block;
    }
 
+   /* テーブルレイアウト設定 */
    .accessTable td {
-     border: 0px solid black;
      padding: 0.5em;
      text-align: left;
-     /* background-color: rgb(16, 16, 16); */
-   }
-
-   .last td:last-child {
-     border: 0px solid black;
-     width: 100%;
-   }
-
-   .accessTable th,
-   .accessTable td {
-     border-bottom: none;
      display: block;
-     width: 100%;
    }
 
 
-
-
-
+   /* タブレット表示（スマホと同じ）*/
    @media screen and (min-width: 768px) {}
 
    /* PC表示*/
    @media screen and (min-width: 1028px) {
 
+     .map {
+       position: relative;
+       width: 100%;
+       height: 0;
+       /* 比率を4:3に固定 */
+       /* padding-top: 50%; */
+     }
 
-    .map {
-      position: relative;
-      width: 100%;
-      height: 0;
-      padding-top: 50%; /* 比率を4:3に固定 */
-    }
-    
-    /* Google Mapのiframe */
-    .map iframe {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-    }
+     /* Google Mapのiframe */
+     .map iframe {
+       position: absolute;
+       top: 0;
+       left: 0;
+       width: 100%;
+       height: 100%;
+     }
 
-    .accessTable {
-      margin: 0;
-    }
+     /* PC表示のテーブル設定 */
+     .accessTable {
+       margin: 0;
+       width: 46vw;
+     }
 
+     /* PC表示のフレックス設定 */
      .accessContainer {
-      /* height: 39.5em; */
-       /* width: 85vw; */
        flex-wrap: wrap;
        align-items: top;
        margin: 0 auto;
        display: flex;
-       justify-content:space-between;
-       /* background-color: red; */
-     }
-
-     .accessContainer {
+       justify-content: space-between;
        width: 90vw;
      }
 
-     .accessContainer table {
-       width: 46vw;
-     }
-
+     /* PC表示のGoogleMap設定 */
      .map {
-      /* height: 39.5em; */
-      width: 40vw;
-      height: 50vw;
+       width: 40vw;
+       height: 50vw;
      }
 
    }
@@ -798,13 +783,23 @@ list-style:none;とか
      text-align: right;
    }
 
-   .jumpToTopButton {
-     margin-right: 20px;
-     background-color: white;
-     width: 3m;
-     height: 3em;
-     border-radius: 50%;
-   }
+
+/* トップへ戻るボタン */
+.jumpToTopButton {
+    height: 50px;
+    width: 50px;
+    position: fixed;
+    right: 30px;
+    bottom: 30px;
+    background: gray;
+    /* border: solid 2px #000; */
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 2;
+    padding: 5px;
+}
 
 
    /*-------------------------------------------
