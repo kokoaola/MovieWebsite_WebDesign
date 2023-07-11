@@ -275,7 +275,7 @@ list-style:none;とか
      /* padding: 2rem; */
      width: 90vw;
      margin: 0 auto;
-     padding: 3vw;
+     padding: 3vw 5vw;
      color: black;
    }
 
@@ -515,8 +515,8 @@ list-style:none;とか
      /* dt、ddを横並びにする */
      flex-wrap: wrap;
      /* dtとddが100%になったら、横並びを折り返す */
-     padding: 0 1em;
-     margin-bottom: 1em;
+     /* padding: 0 1em; */
+     /* margin-bottom: 1em; */
      margin-left: auto;
      margin-right: auto;
    }
@@ -535,26 +535,22 @@ list-style:none;とか
      margin-top: 1em;
    }
 
-   .price p {
-     margin: 2em 1em;
-   }
-
 
 
    @media screen and (min-width: 768px) {}
 
    /* PC表示*/
    @media screen and (min-width: 1028px) {
-    .price p {
-      margin: 2em 0 0 0;
-    }
-    
-    .price dl {
-      /* background-color: #032559; */
-      width: 35vw;
-      margin: 0;
-      /* background-color: red; */
-    }
+     .price p {
+       margin: 2em 0 0 0;
+     }
+
+     .price dl {
+       /* background-color: #032559; */
+       width: 35vw;
+       margin: 0;
+       /* background-color: red; */
+     }
 
      .priceContainer {
        display: flex;
@@ -570,12 +566,17 @@ list-style:none;とか
 アクセス
 -------------------------------------------*/
 
+.accessContainer{
+  /* background-color: red; */
+}
 
 
    .accessTable {
      border-collapse: collapse;
      margin: 20px auto;
+  
      width: 85vw;
+     /* opacity: 0.2; */
    }
 
    .accessTable th {
@@ -591,7 +592,7 @@ list-style:none;とか
      border: 0px solid black;
      padding: 0.5em;
      text-align: left;
-     background-color: rgb(16, 16, 16);
+     /* background-color: rgb(16, 16, 16); */
    }
 
    .last td:last-child {
@@ -606,48 +607,59 @@ list-style:none;とか
      width: 100%;
    }
 
-   
-   .map {
-    width: 100%;
-    position: relative;
-    /* padding-top: 56.25%; */
-  }
-  
-  .map iframe {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-  }
 
 
-   @media screen and (min-width: 768px) {
 
-   }
+
+   @media screen and (min-width: 768px) {}
 
    /* PC表示*/
    @media screen and (min-width: 1028px) {
-    .accessContainer {
-      /* width: 85vw; */
-      align-items: center;
-      margin: 0 auto;
-      display: flex;
-      justify-content:space-between;
+
+
+    .map {
+      position: relative;
+      width: 100%;
+      height: 0;
+      padding-top: 50%; /* 比率を4:3に固定 */
+    }
+    
+    /* Google Mapのiframe */
+    .map iframe {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
     }
 
-    .accessContainer {
-      width: 90vw;
+    .accessTable {
+      margin: 0;
     }
+
+     .accessContainer {
+      /* height: 39.5em; */
+       /* width: 85vw; */
+       flex-wrap: wrap;
+       align-items: top;
+       margin: 0 auto;
+       display: flex;
+       justify-content:space-between;
+       /* background-color: red; */
+     }
+
+     .accessContainer {
+       width: 90vw;
+     }
 
      .accessContainer table {
-      width: 46vw;
+       width: 46vw;
      }
 
      .map {
-       /* width: 40vw; */
-       height: 35em;
-       width: 40vw;
+      /* height: 39.5em; */
+      width: 40vw;
+      height: 50vw;
      }
 
    }
