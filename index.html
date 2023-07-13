@@ -12,39 +12,43 @@
   <link rel="apple-touch-icon" href="img/apple-touch-icon.png"><!-- 180×180 -->
   <link rel="icon" href="img/android-chrome-256x256.png" type="image/png">
 
-  <!-- slick -->
+  <!-- slickの設定 -->
   <link rel="stylesheet" type="text/css"
     href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css" />
   <link rel="stylesheet" type="text/css"
     href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css" />
 
-  <!-- my css -->
+  <!-- cssの設定 -->
   <link rel="stylesheet" href="reset.css">
   <link rel="stylesheet" href="style.css">
-
   <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css" />
 
-  <!-- use google font -->
+  <!-- Googleフォントの設定 -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link
     href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100;200;300;400;500;600;700;800;900&display=swap"
     rel="stylesheet">
 
-
+  <!-- deferでJavaScriptの読み込み -->
   <script src="js/hamburgerClose.js" defer></script>
   <script src="js/date.js" defer></script>
 
 </head>
 
+
+
 <body>
 
+  <!-- ヘッダー -->
   <header id="header">
     <div class="headerContainer">
       <div class="logo">
+        <!-- ロゴ -->
         <h1><a href="index.html"><img src="img/kiryuLogoYoko2.svg" alt="桐生シネマのロゴマーク"></a></h1>
       </div>
 
+      <!-- ナビゲーションメニュー兼ハンバーガーメニュー -->
       <div>
         <nav id="gnav" class="gnav">
           <input type="checkbox" id="menu-btn-check">
@@ -75,43 +79,37 @@
 
         <div class="newsContainer">
           <div class="topic topNews">
-            <li>
-              <img src="img/popcorn.webp" alt="">
-              <p class="icon">お知らせ</p>
-              <p>ポップコーンが更においしくなりました</p>
-              <p>2023年 7月 21日</p>
-            </li>
-          </div>
 
-          <div class="subNews">
-            <div class="topic">
+            <ol>
+              <li class="topNews">
+                <img src="img/popcorn.webp" alt="">
+                <p class="icon">お知らせ</p>
+                <p>ポップコーンが更においしくなりました</p>
+                <p>2023年 7月 21日</p>
+              </li>
+
               <li>
                 <p class="icon">お知らせ</p>
                 <p>椅子の入れ替えによる臨時休館日のお知らせ</p>
                 <p>2023年 7月 18日</p>
               </li>
-            </div>
 
-            <div class="topic">
+              <li>
+                <p class="icon ivent">イベント</p>
+                <p>遊星からの物体Wトークイベント開催！</p>
+                <p>2023年 7月 3日</p>
+              </li>
+
               <li>
                 <p class="icon">お知らせ</p>
                 <p>ノイズ愛好会雑誌にて当館が記事になりました</p>
-                <p>2023年 7月 3日</p>
-              </li>
-            </div>
-            <div class="topic">
-              <li>
-                <p class="icon">イベント</p>
-                <p>遊星からの物体Wトークイベント開催！</p>
                 <p>2023年 6月 3日</p>
-              </li>
-            </div>
+            </ol>
+
           </div>
         </div>
       </div>
     </section>
-
-
 
 
     <section id="schedule" class="schedule">
@@ -119,6 +117,7 @@
       <div class="whiteBackgroundContent">
 
         <div class="container">
+          <!-- 上のタブ -->
           <ul class="tabs">
             <oi class="tab" data-slide="0">-/-</oi>
             <oi class="tab" data-slide="1">-/-</oi>
@@ -127,66 +126,34 @@
             <oi class="tab" data-slide="4">-/-</oi>
           </ul>
 
+          <!-- タイムテーブル -->
           <section class="slider">
 
             <div>
               <h3 class="scheduleText">- / - のスケジュール</h3>
-              <div class="scheduleContainer">
-                <div>
-                  <table>
-                    <tr>
-                      <td colspan="2" class="titleCell">
-                        <p class="scheduleTitle">猫の一生（仮）</p>
-                      </td>
-                    </tr>
-                    <tr>
-                      <td rowspan="5" class="imageCell"><img src="img/cat.webp" alt=""></td>
-                    </tr>
 
-                    <tr>
-                      <td class="timeCell">10:00 ~ 11:27</td>
-                    </tr>
-                    <tr>
-                      <td class="timeCell">10:00 ~ 11:27</td>
-                    </tr>
-                    <tr>
-                      <td class="timeCell">10:00 ~ 11:27</td>
-                    </tr>
-                    <tr>
-                      <td class="timeCell">10:00 ~ 11:27</td>
-                    </tr>
-                  </table>
-                </div>
-
-                <div>
-                  <table>
-                    <tr>
-                      <td colspan="2" class="titleCell">
-                        <p class="scheduleTitle">猫の一生（仮）</p>
-                      </td>
-                    </tr>
-                    <tr>
-                      <td rowspan="5" class="imageCell"><img src="img/cat.webp" alt=""></td>
-                    </tr>
-
-                    <tr>
-                      <td class="timeCell">10:00 ~ 11:27</td>
-                    </tr>
-                    <tr>
-                      <td class="timeCell">10:00 ~ 11:27</td>
-                    </tr>
-                    <tr>
-                      <td class="timeCell">10:00 ~ 11:27</td>
-                    </tr>
-                    <tr>
-                      <td class="timeCell">10:00 ~ 11:27</td>
-                    </tr>
-                  </table>
-                </div>
+              <div class="timeTableContainer">
+                <div class="title">猫の一生（仮）</div>
+                <div class="img"><img src="img/cat.webp" width="100px" alt="cat"></div>
+                <div class="text1">10:00 <br class="sp_br">~ 11:27</div>
+                <div class="text2">10:00 <br class="sp_br">~ 11:27</div>
+                <div class="text3">10:00 <br class="sp_br">~ 11:27</div>
+                <div class="text4">10:00 <br class="sp_br">~ 11:27</div>
               </div>
+
+              <div class="timeTableContainer">
+                <div class="title">猫の一生（仮）</div>
+                <div class="img"><img src="img/cat.webp" width="100px" alt="cat"></div>
+                <div class="text1">10:00 <br class="sp_br">~ 11:27</div>
+                <div class="text2">10:00 <br class="sp_br">~ 11:27</div>
+                <div class="text3">10:00 <br class="sp_br">~ 11:27</div>
+                <div class="text4">10:00 <br class="sp_br">~ 11:27</div>
+              </div>
+
+
             </div>
 
-            <div>
+            <!-- <div>
               <h3 class="scheduleText">- / - のスケジュール</h3>
               <div class="scheduleContainer">
                 <div>
@@ -412,7 +379,7 @@
                   </table>
                 </div>
               </div>
-            </div>
+            </div> -->
 
           </section>
         </div>
@@ -421,75 +388,74 @@
     </section>
 
 
-    <div>
-      <section id="price" class="price">
-        <h2>料金</h2>
-        <div class="whiteBackgroundContent">
-          <div class="priceContainer">
-            <dl>
-              <dt>一般</dt>
-              <dd>1500円</dd>
-              <dt>大学生/専門学生</dt>
-              <dd>1200円</dd>
-              <dt>高校生以下</dt>
-              <dd>1000円</dd>
-            </dl>
-            <dl>
-              <dt>60歳以上</dt>
-              <dd>1000円</dd>
-              <dt>障がい者手帳をお持ちの方<br>（付き添いの方１名まで）</dt>
-              <dd>800円</dd>
-            </dl>
-          </div>
+    <section id="price" class="price">
+      <h2>料金</h2>
+      <div class="whiteBackgroundContent">
+        <div class="priceContainer">
+          <dl>
+            <dt>一般</dt>
+            <dd>1500円</dd>
+            <dt>大学生/専門学生</dt>
+            <dd>1200円</dd>
+            <dt>高校生以下</dt>
+            <dd>1000円</dd>
+          </dl>
+          <dl>
+            <dt>60歳以上</dt>
+            <dd>1000円</dd>
+            <dt>障がい者手帳をお持ちの方<br>（付き添いの方１名まで）</dt>
+            <dd>800円</dd>
+          </dl>
         </div>
-      </section>
-    </div>
-
-    <div>
-      <section id="access" class="access">
-        <h2>アクセス</h2>
-
-        <div class="accessContainer">
-          <div class="map ">
-            <iframe
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1606.1629967288072!2d139.06590599566695!3d36.377101582490134!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x601ef30243d3fa6d%3A0xb34075323e7c0f4c!2sFUTURO!5e0!3m2!1sja!2sjp!4v1687851002525!5m2!1sja!2sjp"
-              width="100%" height="300" frameborder="0" style="border: 0;" allowfullscreen></iframe>
-          </div>
+      </div>
+    </section>
 
 
-          <table class="accessTable">
-            <tr>
-              <th>所在地</th>
-              <td>〒371-0816<br>群馬県桐生市紅雲町3-766 根岸ビル1階</td>
-            </tr>
-            <tr>
-              <th>連絡先</th>
-              <td> 027-1649-13899 </td>
-            </tr>
-            <tr>
-              <th>営業時間</th>
-              <td>10:00〜23:00</td>
-            </tr>
-            <tr>
-              <th>座席数</th>
-              <td>60席（全席自由席）<br>
-              </td>
-            </tr>
-            <tr>
-              <th>駐車場</th>
-              <td>30台あり<br>※満車の場合は近くのコインパーキングをご利用ください</td>
-            </tr>
 
-            <tr class="last">
-              <th>その他</th>
-              <td>
-                ・2022年に改装工事を実施し、完全バリアフリーに対応しました。<br> ・飲食持ち込み自由。売店あり。</td>
-            </tr>
-          </table>
+    <section id="access" class="access">
+      <h2>アクセス</h2>
 
+      <div class="accessContainer">
+        <div class="map ">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1606.1629967288072!2d139.06590599566695!3d36.377101582490134!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x601ef30243d3fa6d%3A0xb34075323e7c0f4c!2sFUTURO!5e0!3m2!1sja!2sjp!4v1687851002525!5m2!1sja!2sjp"
+            width="100%" height="300" frameborder="0" style="border: 0;" allowfullscreen></iframe>
         </div>
-      </section>
-    </div>
+
+
+        <table class="accessTable">
+          <tr>
+            <th>所在地</th>
+            <td>〒371-0816<br>群馬県桐生市紅雲町3-766 根岸ビル1階</td>
+          </tr>
+          <tr>
+            <th>連絡先</th>
+            <td> 027-1649-13899 </td>
+          </tr>
+          <tr>
+            <th>営業時間</th>
+            <td>10:00〜23:00</td>
+          </tr>
+          <tr>
+            <th>座席数</th>
+            <td>60席（全席自由席）<br>
+            </td>
+          </tr>
+          <tr>
+            <th>駐車場</th>
+            <td>30台あり<br>※満車の場合は近くのコインパーキングをご利用ください</td>
+          </tr>
+
+          <tr class="last">
+            <th>その他</th>
+            <td>
+              ・2022年に改装工事を実施し、完全バリアフリーに対応しました。<br> ・飲食持ち込み自由。売店あり。</td>
+          </tr>
+        </table>
+
+      </div>
+    </section>
+
 
 
     <footer>

@@ -42,6 +42,12 @@ body {
      /* font-weight: 300; */
    }
 
+   li,
+   ol {
+     list-style: none;
+   }
+
+
 
    body {
      list-style: none;
@@ -50,7 +56,7 @@ body {
 
    @media screen and (min-width: 768px) {
      main {
-       background-color: rgb(0, 0, 0);
+       background-color: black;
        /* background-color: rgb(33, 33, 33); */
      }
    }
@@ -58,7 +64,7 @@ body {
    @media screen and (min-width: 1028px) {
      main {
        /* background-color: rgb(78, 78, 78); */
-       background-color: rgb(0, 0, 0);
+       background-color: black;
      }
    }
 
@@ -257,6 +263,16 @@ body {
      margin-bottom: 5%;
    }
 
+   /*ヘッダー タブレット、PCサイズ時設定 */
+   @media screen and (min-width: 768px) {
+     .mainvisual img {
+       height: 70vh;
+     }
+
+   }
+
+
+
    /*-------------------------------------------
 白枠背景共通要素
 -------------------------------------------*/
@@ -324,39 +340,47 @@ body {
    /* アイコンのスタイル */
    .icon {
      font-size: small;
-     background-color: rgb(248, 255, 41);
+     background-color: #5999e8;
      display: inline-block;
      color: #000;
      padding: 2px 10px;
      margin-bottom: 1px;
    }
 
+   .ivent {
+     background-color: #d5e859;
+   }
+
+
    /* タブレットサイズ、PCサイズ時 */
    @media screen and (min-width: 768px) {
 
-     /* ２カラムに変更 */
-     .newsContainer {
-       display: flex;
-       justify-content: space-around;
-     }
-
-     /* トップニュースの幅設定 */
-     .topNews {
-       width: 30%;
-     }
-
-     /* トップニュースの画像設定 */
      .topNews img {
-       width: 100%;
+       width: 30vw;
        display: block;
        margin: 0 auto 0 auto;
        margin-bottom: 5px;
      }
 
-     /* サブニュースの幅設定 */
-     .subNews {
-       width: 55%;
+     ol {
+       display: grid;
+       grid-template-columns: 1fr 1fr;
+       grid-template-rows: auto;
+       gap: 30px;
      }
+
+     li:first-child {
+       grid-column: 1;
+       grid-row: 1 / span 4;
+       width: 30vw;
+     }
+
+     li:not(:first-child) {
+       grid-column: 2;
+       width: 40vw;
+     }
+
+
 
    }
 
@@ -408,8 +432,8 @@ body {
 
 
 
-   /* 上映スケジュールテーブルの設定 */
 
+   /* 上映スケジュールテーブルの設定 */
 
    /* -/-のスケジュール */
    .schedule h3 {
@@ -485,18 +509,153 @@ body {
 
 
      /* 段組み変更の設定 */
-     .scheduleContainer {
+     /* .scheduleContainer {
        display: flex;
        justify-content: space-evenly;
        flex-direction: row;
        width: 80vw;
        margin: 0 auto 0 auto;
        margin-bottom: 50px;
-     }
+     } */
    }
 
    /* PC表示はタブレットと同じ */
    @media screen and (min-width: 1028px) {}
+
+
+
+
+
+
+
+   /* ------test--------- */
+
+   .timeTableContainer {
+     display: grid;
+     grid-template-areas:
+       "title title"
+       "img text1"
+       "img text2"
+       "img text3"
+       "img text4";
+     grid-template-columns: 1fr 1fr;
+
+     gap: 0px;
+     width: 95%;
+     /* height: 100%; */
+     margin: 5% auto;
+     /* border: gray solid 1px; */
+   }
+
+
+   .title {
+     grid-area: title;
+     padding: 1em;
+     background-color: #d8d8d8;
+   }
+
+   .img {
+     grid-area: img;
+
+   }
+
+   .text1 {
+     grid-area: text1;
+   }
+
+   .text2 {
+     grid-area: text2;
+   }
+
+   .text3 {
+     grid-area: text3
+   }
+
+   .text4 {
+     grid-area: text4;
+   }
+
+   .img img {
+     width: 100%;
+   }
+
+   .title,
+   .img,
+   .text1,
+   .text2,
+   .text3,
+   .text4 {
+     /* background-color: #fff; */
+     border: 1px solid gray;
+     display: flex;
+     align-items: center;
+     justify-content: center;
+     text-align: center;
+     font-size: large;
+     font-weight: 500;
+   }
+
+
+   .sp_br {
+     display: none;
+   }
+
+
+
+   @media (min-width: 768px) {
+
+     /* -/-のスケジュール */
+     .scheduleText {
+       margin: 0em 0;
+     }
+
+     .slider {
+       padding: 0.5em;
+     }
+
+     .timeTableContainer {
+       grid-template-areas:
+         "img title title title title"
+         "img text1 text2 text3 text4";
+       grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+       margin: 1em;
+     }
+
+     /* タイトルセルの余白の設定 */
+     .title {
+       padding: 0em;
+       /* border: none; */
+     }
+
+     /* 時間のセルの余白の設定 */
+     .text1,
+     .text2,
+     .text3,
+     .text4 {
+       padding: 2em 0;
+     }
+
+     .img {
+       /* background-color: #fff; */
+       border: none;
+       margin-right: 10px;
+     }
+
+     /* 時間の表示を２行に分ける改行を有効にする */
+     .sp_br {
+       display: block;
+     }
+
+     .schedule .whiteBackgroundContent {
+       padding-bottom: 2em;
+     }
+   }
+
+
+
+
+   /* -----ここまでtest--------- */
+
 
 
    /*-------------------------------------------
@@ -556,8 +715,8 @@ body {
      }
 
      .price dl:last-child {
-      margin-bottom: 3em;
-    }
+       margin-bottom: 3em;
+     }
 
    }
 
@@ -665,7 +824,7 @@ body {
    .privacyPolicy {
      color: #000;
      font-size: small;
-     margin-bottom: 20px;
+     margin: 3em 0;
      padding: 2%;
      width: 100%;
    }
@@ -775,22 +934,22 @@ body {
    }
 
 
-/* トップへ戻るボタン */
-.jumpToTopButton {
-    height: 50px;
-    width: 50px;
-    position: fixed;
-    right: 30px;
-    bottom: 30px;
-    background: gray;
-    /* border: solid 2px #000; */
-    border-radius: 50%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    z-index: 2;
-    padding: 5px;
-}
+   /* トップへ戻るボタン */
+   .jumpToTopButton {
+     height: 50px;
+     width: 50px;
+     position: fixed;
+     right: 30px;
+     bottom: 30px;
+     background: gray;
+     /* border: solid 2px #000; */
+     border-radius: 50%;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     z-index: 2;
+     padding: 5px;
+   }
 
    /*-------------------------------------------
 フッター

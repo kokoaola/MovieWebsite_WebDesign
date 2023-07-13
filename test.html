@@ -3,243 +3,48 @@
 
 <head>
   <title>Slick Demo</title>
-  <link rel="stylesheet" type="text/css"
-    href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css" />
-  <link rel="stylesheet" type="text/css"
-    href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css" />
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+
 
   <style>
-    .slider {
-      width: 90%;
-      margin: 30px auto;
-    }
+   
+   .grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-auto-rows: minmax(100px, auto);
+    gap: 1px;
+    background-color: #000;
+    width: 100%;
+    height: 100%;
+    margin: 5%;
+}
 
-    .slick-slide {
-      margin: 0px 20px;
-    }
+.cell {
+    background-color: #fff;
+    border: 1px solid #000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
 
-    .slick-slide img {
-      width: 100%;
-    }
-
-    .slick-prev:before,
-    .slick-next:before {
-      color: black;
-    }
-
-    .tabs {
-      display: flex;
-      justify-content: space-around;
-      list-style-type: none;
-      margin-bottom: 20px;
-    }
-
-    .tabs li {
-      cursor: pointer;
-      font-weight: normal;
-    }
-
-    .active-tab {
-      font-weight: bold;
-    }
+    
   </style>
 </head>
 
 <body>
 
-  <ul class="tabs">
-    <li class="tab" data-slide="0">Title 1</li>
-    <li class="tab" data-slide="1">Title 2</li>
-    <li class="tab" data-slide="2">Title 3</li>
-    <!-- Add more tabs here -->
-  </ul>
+  <div class="grid">
+    <div class="cell">Cell 1</div>
+    <div class="cell">Cell 2</div>
+    <div class="cell">Cell 3</div>
+    <div class="cell">Cell 4</div>
+</div>
 
-  <section class="slider">
-    <div>
-      <h3 class="scheduleText2">- / - のスケジュール</h3>
-      <table>
-        <tr>
-          <td colspan="2" class="titleCell2">
-            <p class="scheduleTitle2">猫の一生（仮）</p>
-          </td>
-        </tr>
-        <tr>
-          <td rowspan="5" class="imageCell2"><img src="img/cat.jpg" alt=""></td>
-        </tr>
-
-        <tr>
-          <td class="timeCell2">10:00 ~ 11:27</td>
-        </tr>
-        <tr>
-          <td class="timeCell2">10:00 ~ 11:27</td>
-        </tr>
-        <tr>
-          <td class="timeCell2">10:00 ~ 11:27</td>
-        </tr>
-        <tr>
-          <td class="timeCell2">10:00 ~ 11:27</td>
-        </tr>
-      </table>
-
-      <table>
-        <tr>
-          <td colspan="2" class="titleCell2">
-            <p class="scheduleTitle2">猫の一生（仮）</p>
-          </td>
-        </tr>
-        <tr>
-          <td rowspan="5" class="imageCell2"><img src="img/cat.jpg" alt=""></td>
-        </tr>
-
-        <tr>
-          <td class="timeCell2">10:00 ~ 11:27</td>
-        </tr>
-        <tr>
-          <td class="timeCell2">10:00 ~ 11:27</td>
-        </tr>
-        <tr>
-          <td class="timeCell2">10:00 ~ 11:27</td>
-        </tr>
-        <tr>
-          <td class="timeCell2">10:00 ~ 11:27</td>
-        </tr>
-      </table>
-    </div>
-
-    <div>
-      <h3 class="scheduleText2">- / - のスケジュール</h3>
-      <table>
-        <tr>
-          <td colspan="2" class="titleCell2">
-            <p class="scheduleTitle2">猫の一生（仮）</p>
-          </td>
-        </tr>
-        <tr>
-          <td rowspan="5" class="imageCell2"><img src="img/cat.jpg" alt=""></td>
-        </tr>
-
-        <tr>
-          <td class="timeCell2">10:00 ~ 11:27</td>
-        </tr>
-        <tr>
-          <td class="timeCell2">10:00 ~ 11:27</td>
-        </tr>
-        <tr>
-          <td class="timeCell2">10:00 ~ 11:27</td>
-        </tr>
-        <tr>
-          <td class="timeCell2">10:00 ~ 11:27</td>
-        </tr>
-      </table>
-
-      <table>
-        <tr>
-          <td colspan="2" class="titleCell2">
-            <p class="scheduleTitle2">猫の一生（仮）</p>
-          </td>
-        </tr>
-        <tr>
-          <td rowspan="5" class="imageCell2"><img src="img/cat.jpg" alt=""></td>
-        </tr>
-
-        <tr>
-          <td class="timeCell2">10:00 ~ 11:27</td>
-        </tr>
-        <tr>
-          <td class="timeCell2">10:00 ~ 11:27</td>
-        </tr>
-        <tr>
-          <td class="timeCell2">10:00 ~ 11:27</td>
-        </tr>
-        <tr>
-          <td class="timeCell2">10:00 ~ 11:27</td>
-        </tr>
-      </table>
-    </div>
+  </div>
 
 
-    <div>
-      <h3 class="scheduleText2">- / - のスケジュール</h3>
-      <table>
-        <tr>
-          <td colspan="2" class="titleCell2">
-            <p class="scheduleTitle2">猫の一生（仮）</p>
-          </td>
-        </tr>
-        <tr>
-          <td rowspan="5" class="imageCell2"><img src="img/cat.jpg" alt=""></td>
-        </tr>
 
-        <tr>
-          <td class="timeCell2">10:00 ~ 11:27</td>
-        </tr>
-        <tr>
-          <td class="timeCell2">10:00 ~ 11:27</td>
-        </tr>
-        <tr>
-          <td class="timeCell2">10:00 ~ 11:27</td>
-        </tr>
-        <tr>
-          <td class="timeCell2">10:00 ~ 11:27</td>
-        </tr>
-      </table>
-
-      <table>
-        <tr>
-          <td colspan="2" class="titleCell2">
-            <p class="scheduleTitle2">猫の一生（仮）</p>
-          </td>
-        </tr>
-        <tr>
-          <td rowspan="5" class="imageCell2"><img src="img/cat.jpg" alt=""></td>
-        </tr>
-
-        <tr>
-          <td class="timeCell2">10:00 ~ 11:27</td>
-        </tr>
-        <tr>
-          <td class="timeCell2">10:00 ~ 11:27</td>
-        </tr>
-        <tr>
-          <td class="timeCell2">10:00 ~ 11:27</td>
-        </tr>
-        <tr>
-          <td class="timeCell2">10:00 ~ 11:27</td>
-        </tr>
-      </table>
-    </div>
-    <!-- Add more slides here -->
-  </section>
-
-  <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
-  <!-- Custom script will be here -->
-  <script>
-    $(document).ready(function () {
-      var $slider = $('.slider').slick({
-        infinite: true,
-        slidesToShow: 1,
-        slidesToScroll: 1,
-        prevArrow: "<button type='button' class='slick-prev'>Previous</button>",
-        nextArrow: "<button type='button' class='slick-next'>Next</button>"
-      });
-
-      var $tabs = $('.tab');
-      $tabs.click(function () {
-        $tabs.css('font-weight', 'normal');
-        $(this).css('font-weight', 'bold');
-        $slider.slick('slickGoTo', $(this).data('slide'));
-      });
-
-      $slider.on('afterChange', function (event, slick, currentSlide) {
-        $tabs.css('font-weight', 'normal');
-        $($tabs.get(currentSlide)).css('font-weight', 'bold');
-      });
-
-      // Initialize
-      $($tabs.get(0)).css('font-weight', 'bold');
-    });
-  </script>
 
 </body>
 
