@@ -20,27 +20,19 @@ body {
 }
 
 
-   @charset "UTF-8";
+
 
    /* * {
 	border: 1px solid red;
 } */
+
+   @charset "UTF-8";
 
    html {
      -webkit-overflow-scrolling: touch;
      scroll-behavior: smooth;
    }
 
-   main {
-     background-color: rgb(0, 0, 0);
-   }
-
-   body {
-     /* font-family: "Helvetica Neue", "Arial", "Hiragino Sans", "Meiryo", sans-serif; */
-     /* font-family: "メイリオ", meiryo, sans-serif; */
-     font-family: 'Noto Sans JP', sans-serif;
-     /* font-weight: 300; */
-   }
 
    li,
    ol {
@@ -49,24 +41,21 @@ body {
 
 
 
+   /* 全体の設定 */
    body {
-     list-style: none;
+     /* フォントの設定 */
+     font-family: "Helvetica Neue",
+       Arial,
+       "Hiragino Kaku Gothic ProN",
+       "Hiragino Sans",
+       Meiryo,
+       sans-serif;
+
+     /* 色の設定 */
      color: white;
+     background-color: black;
    }
 
-   @media screen and (min-width: 768px) {
-     main {
-       background-color: black;
-       /* background-color: rgb(33, 33, 33); */
-     }
-   }
-
-   @media screen and (min-width: 1028px) {
-     main {
-       /* background-color: rgb(78, 78, 78); */
-       background-color: black;
-     }
-   }
 
 
 
@@ -77,8 +66,6 @@ body {
 
    /* ヘッダー本体のレイアウト */
    .headerContainer {
-     color: #fff;
-     background: black;
      display: flex;
      justify-content: center;
    }
@@ -98,18 +85,17 @@ body {
    .gnav a {
      display: block;
      padding: 15px 0;
-     color: #fff;
+     color: white;
      text-align: center;
      text-decoration: none;
      font-size: 20px;
-     font-weight: 500;
+     font-weight: 700;
    }
 
    /* ホバー時のメニューのコンテンツの設定 */
    .gnav a:hover {
      background-color: #a7a7a7;
      color: black;
-     font-weight: 500;
    }
 
    /* スマートフォンのみハンバーガーメニュー表示 */
@@ -131,7 +117,7 @@ body {
        z-index: 100;
      }
 
-     /* 三本線の配置 */
+     /* 三本線の配置1 */
      .menu-btn span,
      .menu-btn span:before,
      .menu-btn span:after {
@@ -145,18 +131,18 @@ body {
        border-radius: 3px;
      }
 
-     /* 三本線の配置 */
+     /* 三本線の配置2 */
      .menu-btn span:before,
      span:after {
        bottom: 8px;
      }
 
-     /* 三本線の配置 */
+     /* 三本線の配置3 */
      .menu-btn span:after {
        top: 8px;
      }
 
-     /* メニュー開いた時の表示されるリンク */
+     /* メニュー開いた時の表示されるリンク設定 */
      .gnav ul {
        background: gray;
        position: fixed;
@@ -171,6 +157,12 @@ body {
        align-items: center;
        padding-top: 5em;
        z-index: 99;
+     }
+
+     /* メニュー開いた時の表示されるリンク設定 */
+     .gnav a {
+       text-align: left;
+       padding-left: 20px;
      }
 
 
@@ -196,21 +188,8 @@ body {
        height: calc(100vh);
      }
 
-     .gnav {
-       border-bottom: 1px solid #d8c7a0;
-     }
-
      .gnav #menu-btn-check:checked~ul {
        left: 50%;
-     }
-
-     .gnav li {
-       width: 100%;
-     }
-
-     .gnav a {
-       text-align: left;
-       padding-left: 20px;
      }
    }
 
@@ -255,6 +234,7 @@ body {
    /*-------------------------------------------
 メインビジュアル
 -------------------------------------------*/
+   /*ヘッダー タブレット、PC共通 */
    .mainvisual img {
      width: 100%;
      height: 50vh;
@@ -262,16 +242,6 @@ body {
      vertical-align: bottom;
      margin-bottom: 5%;
    }
-
-   /*ヘッダー タブレット、PCサイズ時設定 */
-   @media screen and (min-width: 768px) {
-     .mainvisual img {
-       height: 70vh;
-     }
-
-   }
-
-
 
    /*-------------------------------------------
 白枠背景共通要素
@@ -297,8 +267,8 @@ body {
 各セクション共通設定
 -------------------------------------------*/
    section {
-     padding-top: 5%;
-     padding-bottom: 5%;
+     padding-top: 2.5em;
+     padding-bottom: 2.5em;
    }
 
 
@@ -309,9 +279,8 @@ body {
    h2 {
      margin-left: 5%;
      margin-bottom: 0.5em;
-     color: white;
      font-size: 1.55rem;
-     font-weight: 500;
+     font-weight: 600;
    }
 
 
@@ -325,19 +294,19 @@ body {
      font-weight: 600;
    }
 
-   /* トップメニューの画像設定 */
+   /* トップメニューの画像設定、スマホでは非表示 */
    .topNews img {
      display: none;
    }
 
-   /* 日付の書体設定 */
+   /* 日付の設定 */
    .topic p:last-child {
      text-align: right;
      font-size: 0.8em;
      color: gray;
    }
 
-   /* アイコンのスタイル */
+   /* アイコンのスタイル(お知らせ) */
    .icon {
      font-size: small;
      background-color: #5999e8;
@@ -347,6 +316,7 @@ body {
      margin-bottom: 1px;
    }
 
+   /* アイコンのスタイル(イベント) */
    .ivent {
      background-color: #d5e859;
    }
@@ -355,6 +325,7 @@ body {
    /* タブレットサイズ、PCサイズ時 */
    @media screen and (min-width: 768px) {
 
+     /* トップメニューの画像設定、PCで非表示 */
      .topNews img {
        width: 30vw;
        display: block;
@@ -362,6 +333,7 @@ body {
        margin-bottom: 5px;
      }
 
+     /* お知らせセクショングリッドの設定 */
      ol {
        display: grid;
        grid-template-columns: 1fr 1fr;
@@ -369,39 +341,31 @@ body {
        gap: 30px;
      }
 
+     /* トップメニューのグリッド設定 */
      li:first-child {
        grid-column: 1;
        grid-row: 1 / span 4;
        width: 30vw;
      }
 
+     /* サブメニューのグリッド設定 */
      li:not(:first-child) {
        grid-column: 2;
        width: 40vw;
      }
-
-
-
    }
 
    /*-------------------------------------------
 上映スケジュール
 -------------------------------------------*/
+   /* -/-のスケジュールを中央寄せ */
+   .schedule h3{
+    text-align: center;
+  }
 
-   /* slickの矢印のレイアウト設定 */
-   .slick-prev:before,
-   .slick-next:before {
-     color: red !important;
-     font-size: 50px !important;
-     opacity: 0.5 !important;
-   }
 
-   /* slickの矢印の位置調整 */
-   .slick-next {
-     right: 5px !important;
-   }
-
-   /* タブ全体の設定 */
+   /* Slick設定 */
+   /* 日付タブ全体の設定 */
    .tabs {
      display: flex;
      justify-content: space-around;
@@ -412,7 +376,7 @@ body {
 
    /* 個々のタブの設定 */
    .tab {
-     width: 3em;
+     width: 3.5em;
      padding-bottom: 5px;
      margin: auto auto 0 auto;
      font-size: small;
@@ -430,106 +394,70 @@ body {
      border-bottom: #000 3px solid;
    }
 
-
-
-
-   /* 上映スケジュールテーブルの設定 */
-
-   /* -/-のスケジュール */
-   .schedule h3 {
-     text-align: center;
-   }
-
-   /* テーブルの設定 */
-   .schedule table {
-     width: 95%;
-     table-layout: fixed;
-     border-collapse: collapse;
-     font-size: large;
-     margin: 0.5em auto 0em auto;
-   }
-
-   /* 作品ポスター画像の設定 */
-   .schedule .movieImage {
-     aspect-ratio: 3/4;
-     object-fit: cover;
-     height: 100%;
-     align-items: baseline;
-   }
-
-   /* 作品ポスターセルの設定 */
-   .schedule .imageCell {
-     width: 45vw;
-     border: 1px solid gray;
-   }
-
-   /* 時間格納セルの設定 */
-   .schedule .timeCell {
-     height: 2em;
-     font-size: 1rem;
-     border: 1px solid gray;
-     text-align: center;
-   }
-
-   /* セルの共通設定 */
-   .schedule td {
-     text-align: center;
-     border: 1px solid gray;
-     height: 2em;
+   /* デフォルトの矢印を非表示 */
+   .slick-arrow:before {
+     content: "" !important;
+     width: 100% !important;
+     height: 100% !important;
+     position: absolute;
+     top: 0;
+     left: 0;
    }
 
 
+   .prev-arrow {
+     background: url(img/angles-left-solid.svg) !important;
+   }
 
+   .next-arrow {
+     background: url(img/angles-right-solid.svg) !important;
+   }
 
-   /* タブレット、PCサイズ時設定 */
-   @media screen and (min-width: 768px) {
+   /* 左右の矢印の共通設定 */
+   .slick-prev,
+   .slick-next {
+     opacity: 0.4;
+     fill: red;
+     background-size: contain !important;
+     z-index: 2 !important;
+     width: 60px !important;
+     height: 60px !important;
+   }
 
-     /* タブ全体の設定 */
-     .tabs {
-       margin-bottom: 10px;
+   .next-arrow {
+     /* right: -30px; */
+   }
+
+   .prev-arrow {
+     /* left: -30px; */
+   }
+
+   /* Slick タブレット、PCサイズ時設定 */
+   @media (min-width: 768px) {
+
+     /* slickの矢印の位置調整 */
+     .slick-next {
+       right: -40px;
      }
 
-
-     /* -/-のスケジュール */
-     .scheduleTitle {
-       padding: 5px 0;
-       font-weight: bold;
+     /* slickの矢印の位置調整 */
+     .slick-prev {
+       left: -43px;
      }
 
-     /* スケジュールの背景設定 */
-     .schedule .whiteBackgroundContent {
-       padding-bottom: 0px;
-       padding-top: 20px;
+     .slick-slide {
+       /* margin: 0; */
+       /* padding: 0; */
      }
 
-     /* タイムテーブルサイズ設定 */
-     .schedule table {
-       width: 35vw;
+     .schedule section {
+       padding: 0.5em;
      }
-
-
-     /* 段組み変更の設定 */
-     /* .scheduleContainer {
-       display: flex;
-       justify-content: space-evenly;
-       flex-direction: row;
-       width: 80vw;
-       margin: 0 auto 0 auto;
-       margin-bottom: 50px;
-     } */
    }
-
-   /* PC表示はタブレットと同じ */
-   @media screen and (min-width: 1028px) {}
+   /* Slick設定ここまで */
 
 
-
-
-
-
-
-   /* ------test--------- */
-
+   /* Gridレイアウトの設定 */
    .timeTableContainer {
      display: grid;
      grid-template-areas:
@@ -538,27 +466,32 @@ body {
        "img text2"
        "img text3"
        "img text4";
-     grid-template-columns: 1fr 1fr;
-
-     gap: 0px;
-     width: 95%;
-     /* height: 100%; */
-     margin: 5% auto;
-     /* border: gray solid 1px; */
+     grid-template-columns: 0.8fr 1.2fr;
+     /* gap: 0px; */
+     /* width: 95%; */
+     margin: 1em auto 2em auto;
+     width: 70vw;
    }
 
-
+   /* 作品タイトルセルの設定 */
    .title {
      grid-area: title;
      padding: 1em;
      background-color: #d8d8d8;
    }
 
+   /* 作品ポスターセルの設定 */
    .img {
      grid-area: img;
-
    }
 
+   /* ポスター画像の設定 */
+   .img img {
+     object-fit: cover;
+     aspect-ratio: 3/4;
+   }
+
+   /* 上映時間の設定 */
    .text1 {
      grid-area: text1;
    }
@@ -575,17 +508,14 @@ body {
      grid-area: text4;
    }
 
-   .img img {
-     width: 100%;
-   }
 
+   /* 各セル共通設定 */
    .title,
    .img,
    .text1,
    .text2,
    .text3,
    .text4 {
-     /* background-color: #fff; */
      border: 1px solid gray;
      display: flex;
      align-items: center;
@@ -595,36 +525,36 @@ body {
      font-weight: 500;
    }
 
-
+   /* スマホ表示時には時間の改行をOFFにする */
    .sp_br {
      display: none;
    }
 
+   /* 余白の設定 */
+   .slider{
+    padding: 0;
+  }
 
-
+   /* タブレット、PCサイズ時設定 */
    @media (min-width: 768px) {
 
-     /* -/-のスケジュール */
-     .scheduleText {
-       margin: 0em 0;
-     }
 
-     .slider {
-       padding: 0.5em;
-     }
+     /* -/-のスケジュール */
+     /* .scheduleText {
+       margin: 0;
+     } */
 
      .timeTableContainer {
+       width: 95%;
        grid-template-areas:
          "img title title title title"
          "img text1 text2 text3 text4";
-       grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
-       margin: 1em;
+       grid-template-columns: max-content 1fr 1fr 1fr 1fr;
      }
 
      /* タイトルセルの余白の設定 */
      .title {
-       padding: 0em;
-       /* border: none; */
+       height: 4em;
      }
 
      /* 時間のセルの余白の設定 */
@@ -632,29 +562,34 @@ body {
      .text2,
      .text3,
      .text4 {
-       padding: 2em 0;
+       height: 9em;
      }
 
+     /* 作品ポスターセルの余白設定 */
      .img {
-       /* background-color: #fff; */
        border: none;
-       margin-right: 10px;
+       margin-right: 0.5em;
      }
 
-     /* 時間の表示を２行に分ける改行を有効にする */
+     .img img {
+       height: 13em;
+     }
+
+     /* 時間の表示の改行を有効にする */
      .sp_br {
        display: block;
      }
 
      .schedule .whiteBackgroundContent {
-       padding-bottom: 2em;
+       /* padding: 20vw; */
      }
    }
 
+   /* PC表示はタブレットと同じ */
+   @media screen and (min-width: 1028px) {}
 
 
 
-   /* -----ここまでtest--------- */
 
 
 

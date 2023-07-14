@@ -21,7 +21,8 @@ window.addEventListener('load', () => {
   //   return WEEK_STR_LIST[strIndex];
   // }
 
-  //
+
+  //タブの表示
   let date = startDate;
   SWIPER_TAB_LIST.forEach((tab, i) => {
     date = startDate + i;
@@ -35,13 +36,15 @@ window.addEventListener('load', () => {
   // スケジュール内のp要素を配列で取得
   const scheduleText = document.querySelectorAll('.scheduleText');
   scheduleText.forEach((str, i) => {
-    date = startDate + i;
 
     // 要素のコンテンツ
     // tab.textContent = `${month} / ${date}
+    i -= 1
+
     if (i === 0) {
       str.textContent = `本日の上映スケジュール`;
     } else {
+      date = startDate + i;
       str.textContent = `${month} / ${date}の上映スケジュール`;
     }
 

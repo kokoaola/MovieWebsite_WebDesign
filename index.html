@@ -24,11 +24,11 @@
   <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css" />
 
   <!-- Googleフォントの設定 -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <!-- <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link
     href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100;200;300;400;500;600;700;800;900&display=swap"
-    rel="stylesheet">
+    rel="stylesheet"> -->
 
   <!-- deferでJavaScriptの読み込み -->
   <script src="js/hamburgerClose.js" defer></script>
@@ -39,7 +39,6 @@
 
 
 <body>
-
   <!-- ヘッダー -->
   <header id="header">
     <div class="headerContainer">
@@ -66,52 +65,53 @@
   </header>
 
 
-  <main>
 
+  <main>
+    <!-- トップ画像 -->
     <div class="mainvisual ">
       <img src="img/cinema3.jpg" alt="劇場内写真">
     </div>
 
-
+    <!-- お知らせセクション -->
     <section id="news" class="news">
       <h2>お知らせ</h2>
       <div class="whiteBackgroundContent">
 
-        <div class="newsContainer">
-          <div class="topic topNews">
+        <div class="topic topNews">
+          <ol>
+            <!-- PC表示時に画像付きの２カラムになるトップニュース -->
+            <li class="topNews">
+              <img src="img/popcorn.webp" alt="">
+              <p class="icon">お知らせ</p>
+              <p>ポップコーンが更においしくなりました</p>
+              <p>2023年 7月 21日</p>
+            </li>
 
-            <ol>
-              <li class="topNews">
-                <img src="img/popcorn.webp" alt="">
-                <p class="icon">お知らせ</p>
-                <p>ポップコーンが更においしくなりました</p>
-                <p>2023年 7月 21日</p>
-              </li>
+            <!--画像なしのサブニュース１ -->
+            <li>
+              <p class="icon">お知らせ</p>
+              <p>椅子の入れ替えによる臨時休館日のお知らせ</p>
+              <p>2023年 7月 18日</p>
+            </li>
+            <!--画像なしのサブニュース２ -->
+            <li>
+              <p class="icon ivent">イベント</p>
+              <p>遊星からの物体Wトークイベント開催！</p>
+              <p>2023年 7月 3日</p>
+            </li>
+            <!--画像なしのサブニュース３ -->
+            <li>
+              <p class="icon">お知らせ</p>
+              <p>ノイズ愛好会雑誌にて当館が記事になりました</p>
+              <p>2023年 6月 3日</p>
+          </ol>
 
-              <li>
-                <p class="icon">お知らせ</p>
-                <p>椅子の入れ替えによる臨時休館日のお知らせ</p>
-                <p>2023年 7月 18日</p>
-              </li>
-
-              <li>
-                <p class="icon ivent">イベント</p>
-                <p>遊星からの物体Wトークイベント開催！</p>
-                <p>2023年 7月 3日</p>
-              </li>
-
-              <li>
-                <p class="icon">お知らせ</p>
-                <p>ノイズ愛好会雑誌にて当館が記事になりました</p>
-                <p>2023年 6月 3日</p>
-            </ol>
-
-          </div>
         </div>
       </div>
     </section>
 
 
+<!-- 上映スケジュールセクション -->
     <section id="schedule" class="schedule">
       <h2>上映スケジュール</h2>
       <div class="whiteBackgroundContent">
@@ -132,255 +132,117 @@
             <div>
               <h3 class="scheduleText">- / - のスケジュール</h3>
 
-              <div class="timeTableContainer">
-                <div class="title">猫の一生（仮）</div>
-                <div class="img"><img src="img/cat.webp" width="100px" alt="cat"></div>
-                <div class="text1">10:00 <br class="sp_br">~ 11:27</div>
-                <div class="text2">10:00 <br class="sp_br">~ 11:27</div>
-                <div class="text3">10:00 <br class="sp_br">~ 11:27</div>
-                <div class="text4">10:00 <br class="sp_br">~ 11:27</div>
-              </div>
-
-              <div class="timeTableContainer">
-                <div class="title">猫の一生（仮）</div>
-                <div class="img"><img src="img/cat.webp" width="100px" alt="cat"></div>
-                <div class="text1">10:00 <br class="sp_br">~ 11:27</div>
-                <div class="text2">10:00 <br class="sp_br">~ 11:27</div>
-                <div class="text3">10:00 <br class="sp_br">~ 11:27</div>
-                <div class="text4">10:00 <br class="sp_br">~ 11:27</div>
-              </div>
-
-
-            </div>
-
-            <!-- <div>
-              <h3 class="scheduleText">- / - のスケジュール</h3>
-              <div class="scheduleContainer">
-                <div>
-                  <table>
-                    <tr>
-                      <td colspan="2" class="titleCell">
-                        <p class="scheduleTitle">猫の一生（仮）</p>
-                      </td>
-                    </tr>
-                    <tr>
-                      <td rowspan="5" class="imageCell"><img src="img/cat.webp" alt=""></td>
-                    </tr>
-
-                    <tr>
-                      <td class="timeCell">10:00 ~ 11:27</td>
-                    </tr>
-                    <tr>
-                      <td class="timeCell">10:00 ~ 11:27</td>
-                    </tr>
-                    <tr>
-                      <td class="timeCell">10:00 ~ 11:27</td>
-                    </tr>
-                    <tr>
-                      <td class="timeCell">10:00 ~ 11:27</td>
-                    </tr>
-                  </table>
+                <div class="timeTableContainer">
+                  <div class="title">猫の一生（仮）</div>
+                  <div class="img"><img src="img/cat.webp" alt="cat"></div>
+                  <div class="text1">10:00 <br class="sp_br">~ 11:27</div>
+                  <div class="text2">10:00 <br class="sp_br">~ 11:27</div>
+                  <div class="text3">10:00 <br class="sp_br">~ 11:27</div>
+                  <div class="text4">10:00 <br class="sp_br">~ 11:27</div>
                 </div>
 
-                <div>
-                  <table>
-                    <tr>
-                      <td colspan="2" class="titleCell">
-                        <p class="scheduleTitle">猫の一生（仮）</p>
-                      </td>
-                    </tr>
-                    <tr>
-                      <td rowspan="5" class="imageCell"><img src="img/cat.webp" alt=""></td>
-                    </tr>
-
-                    <tr>
-                      <td class="timeCell">10:00 ~ 11:27</td>
-                    </tr>
-                    <tr>
-                      <td class="timeCell">10:00 ~ 11:27</td>
-                    </tr>
-                    <tr>
-                      <td class="timeCell">10:00 ~ 11:27</td>
-                    </tr>
-                    <tr>
-                      <td class="timeCell">10:00 ~ 11:27</td>
-                    </tr>
-                  </table>
+                <div class="timeTableContainer">
+                  <div class="title">猫の一生（仮）</div>
+                  <div class="img"><img src="img/cat.webp" width="100px" alt="cat"></div>
+                  <div class="text1">10:00 <br class="sp_br">~ 11:27</div>
+                  <div class="text2">10:00 <br class="sp_br">~ 11:27</div>
+                  <div class="text3">10:00 <br class="sp_br">~ 11:27</div>
+                  <div class="text4">10:00 <br class="sp_br">~ 11:27</div>
                 </div>
-              </div>
             </div>
+
 
             <div>
               <h3 class="scheduleText">- / - のスケジュール</h3>
-              <div class="scheduleContainer">
-                <div>
-                  <table>
-                    <tr>
-                      <td colspan="2" class="titleCell">
-                        <p class="scheduleTitle">猫の一生（仮）</p>
-                      </td>
-                    </tr>
-                    <tr>
-                      <td rowspan="5" class="imageCell"><img src="img/cat.webp" alt=""></td>
-                    </tr>
 
-                    <tr>
-                      <td class="timeCell">10:00 ~ 11:27</td>
-                    </tr>
-                    <tr>
-                      <td class="timeCell">10:00 ~ 11:27</td>
-                    </tr>
-                    <tr>
-                      <td class="timeCell">10:00 ~ 11:27</td>
-                    </tr>
-                    <tr>
-                      <td class="timeCell">10:00 ~ 11:27</td>
-                    </tr>
-                  </table>
+                <div class="timeTableContainer">
+                  <div class="title">猫の一生（仮）</div>
+                  <div class="img"><img src="img/cat.webp" alt="cat"></div>
+                  <div class="text1">10:00 <br class="sp_br">~ 11:27</div>
+                  <div class="text2">10:00 <br class="sp_br">~ 11:27</div>
+                  <div class="text3">10:00 <br class="sp_br">~ 11:27</div>
+                  <div class="text4">10:00 <br class="sp_br">~ 11:27</div>
                 </div>
 
-                <div>
-                  <table>
-                    <tr>
-                      <td colspan="2" class="titleCell">
-                        <p class="scheduleTitle">猫の一生（仮）</p>
-                      </td>
-                    </tr>
-                    <tr>
-                      <td rowspan="5" class="imageCell"><img src="img/cat.webp" alt=""></td>
-                    </tr>
-
-                    <tr>
-                      <td class="timeCell">10:00 ~ 11:27</td>
-                    </tr>
-                    <tr>
-                      <td class="timeCell">10:00 ~ 11:27</td>
-                    </tr>
-                    <tr>
-                      <td class="timeCell">10:00 ~ 11:27</td>
-                    </tr>
-                    <tr>
-                      <td class="timeCell">10:00 ~ 11:27</td>
-                    </tr>
-                  </table>
+                <div class="timeTableContainer">
+                  <div class="title">猫の一生（仮）</div>
+                  <div class="img"><img src="img/cat.webp" width="100px" alt="cat"></div>
+                  <div class="text1">10:00 <br class="sp_br">~ 11:27</div>
+                  <div class="text2">10:00 <br class="sp_br">~ 11:27</div>
+                  <div class="text3">10:00 <br class="sp_br">~ 11:27</div>
+                  <div class="text4">10:00 <br class="sp_br">~ 11:27</div>
                 </div>
-              </div>
             </div>
+            
 
             <div>
               <h3 class="scheduleText">- / - のスケジュール</h3>
-              <div class="scheduleContainer">
-                <div>
-                  <table>
-                    <tr>
-                      <td colspan="2" class="titleCell">
-                        <p class="scheduleTitle">猫の一生（仮）</p>
-                      </td>
-                    </tr>
-                    <tr>
-                      <td rowspan="5" class="imageCell"><img src="img/cat.webp" alt=""></td>
-                    </tr>
 
-                    <tr>
-                      <td class="timeCell">10:00 ~ 11:27</td>
-                    </tr>
-                    <tr>
-                      <td class="timeCell">10:00 ~ 11:27</td>
-                    </tr>
-                    <tr>
-                      <td class="timeCell">10:00 ~ 11:27</td>
-                    </tr>
-                    <tr>
-                      <td class="timeCell">10:00 ~ 11:27</td>
-                    </tr>
-                  </table>
+                <div class="timeTableContainer">
+                  <div class="title">猫の一生（仮）</div>
+                  <div class="img"><img src="img/cat.webp" alt="cat"></div>
+                  <div class="text1">10:00 <br class="sp_br">~ 11:27</div>
+                  <div class="text2">10:00 <br class="sp_br">~ 11:27</div>
+                  <div class="text3">10:00 <br class="sp_br">~ 11:27</div>
+                  <div class="text4">10:00 <br class="sp_br">~ 11:27</div>
                 </div>
 
-                <div>
-                  <table>
-                    <tr>
-                      <td colspan="2" class="titleCell">
-                        <p class="scheduleTitle">猫の一生（仮）</p>
-                      </td>
-                    </tr>
-                    <tr>
-                      <td rowspan="5" class="imageCell"><img src="img/cat.webp" alt=""></td>
-                    </tr>
-
-                    <tr>
-                      <td class="timeCell">10:00 ~ 11:27</td>
-                    </tr>
-                    <tr>
-                      <td class="timeCell">10:00 ~ 11:27</td>
-                    </tr>
-                    <tr>
-                      <td class="timeCell">10:00 ~ 11:27</td>
-                    </tr>
-                    <tr>
-                      <td class="timeCell">10:00 ~ 11:27</td>
-                    </tr>
-                  </table>
+                <div class="timeTableContainer">
+                  <div class="title">猫の一生（仮）</div>
+                  <div class="img"><img src="img/cat.webp" width="100px" alt="cat"></div>
+                  <div class="text1">10:00 <br class="sp_br">~ 11:27</div>
+                  <div class="text2">10:00 <br class="sp_br">~ 11:27</div>
+                  <div class="text3">10:00 <br class="sp_br">~ 11:27</div>
+                  <div class="text4">10:00 <br class="sp_br">~ 11:27</div>
                 </div>
-              </div>
             </div>
+
 
             <div>
               <h3 class="scheduleText">- / - のスケジュール</h3>
-              <div class="scheduleContainer">
-                <div>
-                  <table>
-                    <tr>
-                      <td colspan="2" class="titleCell">
-                        <p class="scheduleTitle">猫の一生（仮）</p>
-                      </td>
-                    </tr>
-                    <tr>
-                      <td rowspan="5" class="imageCell"><img src="img/cat.webp" alt=""></td>
-                    </tr>
 
-                    <tr>
-                      <td class="timeCell">10:00 ~ 11:27</td>
-                    </tr>
-                    <tr>
-                      <td class="timeCell">10:00 ~ 11:27</td>
-                    </tr>
-                    <tr>
-                      <td class="timeCell">10:00 ~ 11:27</td>
-                    </tr>
-                    <tr>
-                      <td class="timeCell">10:00 ~ 11:27</td>
-                    </tr>
-                  </table>
+                <div class="timeTableContainer">
+                  <div class="title">猫の一生（仮）</div>
+                  <div class="img"><img src="img/cat.webp" alt="cat"></div>
+                  <div class="text1">10:00 <br class="sp_br">~ 11:27</div>
+                  <div class="text2">10:00 <br class="sp_br">~ 11:27</div>
+                  <div class="text3">10:00 <br class="sp_br">~ 11:27</div>
+                  <div class="text4">10:00 <br class="sp_br">~ 11:27</div>
                 </div>
 
-                <div>
-                  <table>
-                    <tr>
-                      <td colspan="2" class="titleCell">
-                        <p class="scheduleTitle">猫の一生（仮）</p>
-                      </td>
-                    </tr>
-                    <tr>
-                      <td rowspan="5" class="imageCell"><img src="img/cat.webp" alt=""></td>
-                    </tr>
-
-                    <tr>
-                      <td class="timeCell">10:00 ~ 11:27</td>
-                    </tr>
-                    <tr>
-                      <td class="timeCell">10:00 ~ 11:27</td>
-                    </tr>
-                    <tr>
-                      <td class="timeCell">10:00 ~ 11:27</td>
-                    </tr>
-                    <tr>
-                      <td class="timeCell">10:00 ~ 11:27</td>
-                    </tr>
-                  </table>
+                <div class="timeTableContainer">
+                  <div class="title">猫の一生（仮）</div>
+                  <div class="img"><img src="img/cat.webp" width="100px" alt="cat"></div>
+                  <div class="text1">10:00 <br class="sp_br">~ 11:27</div>
+                  <div class="text2">10:00 <br class="sp_br">~ 11:27</div>
+                  <div class="text3">10:00 <br class="sp_br">~ 11:27</div>
+                  <div class="text4">10:00 <br class="sp_br">~ 11:27</div>
                 </div>
-              </div>
-            </div> -->
+            </div>
 
+
+            <div>
+              <h3 class="scheduleText">- / - のスケジュール</h3>
+
+                <div class="timeTableContainer">
+                  <div class="title">猫の一生（仮）</div>
+                  <div class="img"><img src="img/cat.webp" alt="cat"></div>
+                  <div class="text1">10:00 <br class="sp_br">~ 11:27</div>
+                  <div class="text2">10:00 <br class="sp_br">~ 11:27</div>
+                  <div class="text3">10:00 <br class="sp_br">~ 11:27</div>
+                  <div class="text4">10:00 <br class="sp_br">~ 11:27</div>
+                </div>
+
+                <div class="timeTableContainer">
+                  <div class="title">猫の一生（仮）</div>
+                  <div class="img"><img src="img/cat.webp" width="100px" alt="cat"></div>
+                  <div class="text1">10:00 <br class="sp_br">~ 11:27</div>
+                  <div class="text2">10:00 <br class="sp_br">~ 11:27</div>
+                  <div class="text3">10:00 <br class="sp_br">~ 11:27</div>
+                  <div class="text4">10:00 <br class="sp_br">~ 11:27</div>
+                </div>
+            </div>
+            
           </section>
         </div>
 
