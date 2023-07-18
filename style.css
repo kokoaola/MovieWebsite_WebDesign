@@ -2,16 +2,6 @@
 
 コーディング仕様
 
-
-html {
-  font-size: 100%;
-}
-
-body {
-  font-family: 'Crimson Text', serif;
-}
-
-これ大切
 #mainVisual img{
    width: 100%;
    height: 100vh;
@@ -26,22 +16,19 @@ body {
 	border: 1px solid red;
 } */
 
-   @charset "UTF-8";
+   @charset 'UTF-8';
 
+   /* 全体の設定 */
    html {
      -webkit-overflow-scrolling: touch;
      scroll-behavior: smooth;
    }
-
 
    li,
    ol {
      list-style: none;
    }
 
-
-
-   /* 全体の設定 */
    body {
      /* フォントの設定 */
      font-family: "Helvetica Neue",
@@ -50,7 +37,6 @@ body {
        "Hiragino Sans",
        Meiryo,
        sans-serif;
-
      /* 色の設定 */
      color: white;
      background-color: black;
@@ -63,7 +49,7 @@ body {
    /*-------------------------------------------
 ヘッダーナビゲーション、ロゴ
 -------------------------------------------*/
-
+   /* スマホ、タブレット、PC共通 */
    /* ヘッダー本体のレイアウト */
    .headerContainer {
      display: flex;
@@ -81,7 +67,7 @@ body {
 ハンバーガーメニュー
 ---------------------------------*/
 
-   /* メニューの中身のコンテンツのレイアウト設定 */
+   /* メニューの中身のコンテンツのレイアウト 共通設定 */
    .gnav a {
      display: block;
      padding: 15px 0;
@@ -92,13 +78,9 @@ body {
      font-weight: 700;
    }
 
-   /* ホバー時のメニューのコンテンツの設定 */
-   .gnav a:hover {
-     background-color: #a7a7a7;
-     color: black;
-   }
 
    /* スマートフォンのみハンバーガーメニュー表示 */
+   /* ハンバーガーメニュー スマホ設定 */
    @media screen and (max-width: 767px) {
 
      /* ハンバーガーメニューアイコン */
@@ -188,6 +170,7 @@ body {
        height: calc(100vh);
      }
 
+     /* メニューの出現を50％にする */
      .gnav #menu-btn-check:checked~ul {
        left: 50%;
      }
@@ -197,6 +180,8 @@ body {
    #menu-btn-check {
      display: none;
    }
+
+   /* ハンバーガーメニュー スマホ設定 ここまで */
 
 
    /*ヘッダー タブレット、PCサイズ時設定 */
@@ -227,7 +212,15 @@ body {
        padding-right: 1em;
        padding-left: 1em;
      }
+
+     /* ホバー時のメニューのコンテンツの設定 */
+     .gnav a:hover {
+       background-color: #a7a7a7;
+       color: black;
+     }
    }
+
+   /*ヘッダー タブレット、PCサイズ時設定 ここまで*/
 
 
 
@@ -243,14 +236,15 @@ body {
      margin-bottom: 5%;
    }
 
+
+
    /*-------------------------------------------
 白枠背景共通要素
 -------------------------------------------*/
+   /*スマホ、タブレット、PC共通 */
    .whiteBackgroundContent {
      background-color: white;
      border-radius: 10px;
-     /* margin: 0 5%; */
-     /* padding: 2rem; */
      width: 90vw;
      margin: 0 auto;
      padding: 3vw 5vw;
@@ -258,23 +252,16 @@ body {
    }
 
 
-   .blackBackgroundContent {
-     margin: 0 5%;
-     padding: 5% 5%;
-   }
 
    /*-------------------------------------------
 各セクション共通設定
 -------------------------------------------*/
+   /*スマホ、タブレット、PC共通 */
    section {
      padding-top: 2.5em;
      padding-bottom: 2.5em;
    }
 
-
-   /*-------------------------------------------
-各見出し共通設定
--------------------------------------------*/
    /* セクション毎の見出しの設定 */
    h2 {
      margin-left: 5%;
@@ -284,10 +271,11 @@ body {
    }
 
 
+
    /*-------------------------------------------
 お知らせ
 -------------------------------------------*/
-
+   /* スマホ お知らせ */
    /* 各お知らせの共通設定 */
    .topic {
      margin-top: 1em;
@@ -321,8 +309,10 @@ body {
      background-color: #d5e859;
    }
 
+   /* スマホ お知らせここまで */
 
-   /* タブレットサイズ、PCサイズ時 */
+
+   /* タブレット、PC お知らせ */
    @media screen and (min-width: 768px) {
 
      /* トップメニューの画像設定、PCで非表示 */
@@ -355,16 +345,20 @@ body {
      }
    }
 
+   /* タブレット、PC お知らせ ここまで*/
+
+
+
    /*-------------------------------------------
 上映スケジュール
 -------------------------------------------*/
+
+   /*  スマホ Slick設定 */
    /* -/-のスケジュールを中央寄せ */
-   .schedule h3{
-    text-align: center;
-  }
+   .schedule h3 {
+     text-align: center;
+   }
 
-
-   /* Slick設定 */
    /* 日付タブ全体の設定 */
    .tabs {
      display: flex;
@@ -397,18 +391,19 @@ body {
    /* デフォルトの矢印を非表示 */
    .slick-arrow:before {
      content: "" !important;
-     width: 100% !important;
+     /* width: 100% !important;
      height: 100% !important;
      position: absolute;
      top: 0;
-     left: 0;
+     left: 0; */
    }
 
-
+   /* 左の矢印 */
    .prev-arrow {
      background: url(img/angles-left-solid.svg) !important;
    }
 
+   /* 右の矢印 */
    .next-arrow {
      background: url(img/angles-right-solid.svg) !important;
    }
@@ -424,15 +419,11 @@ body {
      height: 60px !important;
    }
 
-   .next-arrow {
-     /* right: -30px; */
-   }
+   /* スマホ Slick設定ここまで */
 
-   .prev-arrow {
-     /* left: -30px; */
-   }
 
-   /* Slick タブレット、PCサイズ時設定 */
+
+   /* Slick タブレット、PC設定 */
    @media (min-width: 768px) {
 
      /* slickの矢印の位置調整 */
@@ -454,10 +445,12 @@ body {
        padding: 0.5em;
      }
    }
-   /* Slick設定ここまで */
+
+   /*  Slick タブレット、PC設定 */
 
 
-   /* Gridレイアウトの設定 */
+
+   /* スマホ Gridレイアウト設定 */
    .timeTableContainer {
      display: grid;
      grid-template-areas:
@@ -489,7 +482,7 @@ body {
    .img img {
      object-fit: cover;
      height: 100%;
-     aspect-ratio: 3/4;
+     aspect-ratio: 32/45;
    }
 
    /* 上映時間の設定 */
@@ -532,30 +525,29 @@ body {
    }
 
    /* 余白の設定 */
-   .slider{
-    padding: 0;
-  }
+   .slider {
+     padding: 0;
+   }
 
-   /* タブレット、PCサイズ時設定 */
+   /* スマホ Gridレイアウトの設定ここまで */
+
+
+   /* タブレット、PC Gridレイアウト設定 */
    @media (min-width: 768px) {
 
-
-     /* -/-のスケジュール */
-     /* .scheduleText {
-       margin: 0;
-     } */
-
+     /* Gridの段組み設定 */
      .timeTableContainer {
        width: 95%;
        grid-template-areas:
          "img title title title title"
          "img text1 text2 text3 text4";
-       grid-template-columns: max-content 1fr 1fr 1fr 1fr;
+       grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+       padding: 0.5em 0 1em 0;
      }
 
      /* タイトルセルの余白の設定 */
      .title {
-       height: 4em;
+       padding: 0em;
      }
 
      /* 時間のセルの余白の設定 */
@@ -563,7 +555,7 @@ body {
      .text2,
      .text3,
      .text4 {
-       height: 9em;
+       padding: 2em;
        font-size: large;
        font-weight: 700;
      }
@@ -574,26 +566,20 @@ body {
        margin-right: 0.5em;
      }
 
-     .img img {
-       height: 13em;
-     }
-
      /* 時間の表示の改行を有効にする */
      .sp_br {
        display: block;
      }
-
-     .schedule .whiteBackgroundContent {
-       /* padding: 20vw; */
-     }
    }
+
+   /* PC Gridレイアウトの設定ここまで */
 
 
 
    /*-------------------------------------------
 料金
 -------------------------------------------*/
-
+   /* スマホ 料金表設定 */
    .price dl {
      display: flex;
      justify-content: space-around;
@@ -604,60 +590,53 @@ body {
      margin-right: auto;
    }
 
-   .price dl:last-child {
-     margin-bottom: 1em;
-   }
-
-
+   /* 横幅設定 */
    .price dt {
      width: 70%;
    }
 
+   /* 横幅設定 */
    .price dd {
      width: 30%;
      text-align: right;
    }
 
+   /* 行間と文字寄せ設定 */
    .price dd,
    dt {
      margin-top: 1em;
    }
 
+   /* スマホ 料金表設定 ここまで */
 
 
-   @media screen and (min-width: 768px) {}
 
-   /* PC表示*/
+   /* タブレット、PC 料金表設定 */
    @media screen and (min-width: 1028px) {
-     .price p {
-       margin: 2em 0 0 0;
-     }
 
-     .price dl {
-       /* background-color: #032559; */
-       width: 35vw;
-       margin: 0;
-       /* background-color: red; */
-     }
-
+     /* ２カラムに切り替え */
      .priceContainer {
        display: flex;
-       /* background-color: black; */
        justify-content: space-between;
+       margin-bottom: 1em;
      }
 
-     .price dl:last-child {
-       margin-bottom: 3em;
+     /* 横幅の設定 */
+     .price dl {
+       width: 35vw;
+       margin: 0;
      }
 
    }
+
+   /* タブレット、PC 料金表設定 ここまで*/
 
 
 
    /*-------------------------------------------
 アクセス
 -------------------------------------------*/
-
+   /* スマホ アクセス設定 */
    /* テーブルレイアウト設定 */
    .accessTable {
      border-collapse: collapse;
@@ -682,19 +661,17 @@ body {
      display: block;
    }
 
+   /* スマホ アクセス設定 ここまで*/
 
-   /* タブレット表示（スマホと同じ）*/
-   @media screen and (min-width: 768px) {}
 
-   /* PC表示*/
+   /* タブレット、PC アクセス設定*/
    @media screen and (min-width: 1028px) {
 
+     /* Mapのサイズ設定*/
      .map {
        position: relative;
        width: 100%;
        height: 0;
-       /* 比率を4:3に固定 */
-       /* padding-top: 50%; */
      }
 
      /* Google Mapのiframe */
@@ -730,6 +707,8 @@ body {
 
    }
 
+   /* タブレット、PC アクセス設定 ここまで*/
+
 
 
 
@@ -737,6 +716,8 @@ body {
 お問い合わせ
 -------------------------------------------*/
 
+/* スマホ タブレット PC共通お問い合わせ設定 */
+/* 全体の幅 */
    .contact {
      width: 90%;
      margin: 0 auto;
@@ -858,9 +839,6 @@ body {
      /* 文字色     */
    }
 
-
-
-
    footer div {
      text-align: right;
    }
@@ -882,10 +860,12 @@ body {
      z-index: 2;
      padding: 5px;
    }
+   /* スマホ タブレット PC共通お問い合わせ設定 ここまで*/
 
    /*-------------------------------------------
 フッター
 -------------------------------------------*/
+/* スマホ タブレット PC共通フッター設定 */
    footer {
      text-align: center;
    }
@@ -902,3 +882,5 @@ body {
    .slick-next:before {
      color: #d8c7a0;
    }
+
+   /* スマホ タブレット PC共通フッター設定 ここまで*/
