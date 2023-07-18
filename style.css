@@ -488,6 +488,7 @@ body {
    /* ポスター画像の設定 */
    .img img {
      object-fit: cover;
+     height: 100%;
      aspect-ratio: 3/4;
    }
 
@@ -563,6 +564,8 @@ body {
      .text3,
      .text4 {
        height: 9em;
+       font-size: large;
+       font-weight: 700;
      }
 
      /* 作品ポスターセルの余白設定 */
@@ -584,12 +587,6 @@ body {
        /* padding: 20vw; */
      }
    }
-
-   /* PC表示はタブレットと同じ */
-   @media screen and (min-width: 1028px) {}
-
-
-
 
 
 
