@@ -42,6 +42,10 @@
      background-color: black;
    }
 
+   main {
+     max-width: 1028px;
+     margin: auto;
+   }
 
 
 
@@ -53,7 +57,14 @@
    /* ヘッダー本体のレイアウト */
    .headerContainer {
      display: flex;
+     width: 100vw;
+     /* justify-content: space-around; */
      justify-content: center;
+     background-color: black;
+     position: fixed;
+     /* メニューは常に最前面に */
+     z-index: 100;
+
    }
 
    /* ロゴ画像の設定 */
@@ -201,16 +212,22 @@
 
      /* メニューを横並びに変更 */
      .listContainer {
-       width: 70vw;
+       /* width: 70vw; */
        display: flex;
-       justify-content: flex-end;
+       margin-right: 2em;
+       /* justify-content: space-around; */
      }
 
      /* メニューの文字レイアウト設定 */
      .gnav a {
+       /* width: 10vw; */
+       /* min-width: 9.5em; */
+       display: inline-block;
+       /* background-color: #032559; */
        font-size: medium;
        padding-right: 1em;
        padding-left: 1em;
+       /* border-left: 1px white solid; */
      }
 
      /* ホバー時のメニューのコンテンツの設定 */
@@ -218,6 +235,23 @@
        background-color: #a7a7a7;
        color: black;
      }
+
+
+
+     /*ヘッダー タブレット、PCサイズ時設定 */
+     @media screen and (min-width: 1024px) {
+
+
+       /* メニューの文字レイアウト設定 */
+       .gnav a {
+         display: inline-block;
+         font-size: medium;
+         padding-right: 2em;
+         padding-left: 2em;
+       }
+     }
+
+
    }
 
    /*ヘッダー タブレット、PCサイズ時設定 ここまで*/
@@ -249,6 +283,8 @@
      margin: 0 auto;
      padding: 3vw 5vw;
      color: black;
+     max-width: 1028px;
+     margin: auto;
    }
 
 
@@ -318,13 +354,14 @@
      /* トップメニューの画像設定、PCで非表示 */
      .topNews img {
        width: 30vw;
+       max-width: 300px;
        display: block;
        margin: 0 auto 0 auto;
        margin-bottom: 5px;
      }
 
      /* お知らせセクショングリッドの設定 */
-     ol {
+     .topic ol {
        display: grid;
        grid-template-columns: 1fr 1fr;
        grid-template-rows: auto;
@@ -332,16 +369,18 @@
      }
 
      /* トップメニューのグリッド設定 */
-     li:first-child {
+     .topic li:first-child {
        grid-column: 1;
        grid-row: 1 / span 4;
        width: 30vw;
+       max-width: 300px;
      }
 
      /* サブメニューのグリッド設定 */
-     li:not(:first-child) {
+     .topic li:not(:first-child) {
        grid-column: 2;
        width: 40vw;
+       max-width: 400px;
      }
    }
 
@@ -436,17 +475,12 @@
        left: -43px;
      }
 
-     .slick-slide {
-       /* margin: 0; */
-       /* padding: 0; */
-     }
-
      .schedule section {
        padding: 0.5em;
      }
    }
 
-   /*  Slick タブレット、PC設定 */
+   /*  Slick タブレット、PC設定ここまで */
 
 
 
@@ -460,8 +494,6 @@
        "img text3"
        "img text4";
      grid-template-columns: 0.8fr 1.2fr;
-     /* gap: 0px; */
-     /* width: 95%; */
      margin: 1em auto 2em auto;
      width: 70vw;
    }
@@ -469,7 +501,7 @@
    /* 作品タイトルセルの設定 */
    .title {
      grid-area: title;
-     padding: 1em;
+     padding: 1em 0 1em 0;
      background-color: #d8d8d8;
    }
 
@@ -530,6 +562,7 @@
    }
 
    /* スマホ Gridレイアウトの設定ここまで */
+
 
 
    /* タブレット、PC Gridレイアウト設定 */
@@ -625,6 +658,7 @@
      .price dl {
        width: 35vw;
        margin: 0;
+       max-width: 300px;
      }
 
    }
@@ -638,6 +672,13 @@
 -------------------------------------------*/
    /* スマホ アクセス設定 */
    /* テーブルレイアウト設定 */
+
+   /* Google Mapのiframe */
+   .map iframe {
+     width: 100%;
+     height: 40vw;
+   }
+
    .accessTable {
      border-collapse: collapse;
      margin: 20px auto;
@@ -657,6 +698,7 @@
    /* テーブルレイアウト設定 */
    .accessTable td {
      padding: 0.5em;
+     padding-bottom: 1em;
      text-align: left;
      display: block;
    }
@@ -681,12 +723,13 @@
        left: 0;
        width: 100%;
        height: 100%;
+       border-radius: 10px;
      }
 
      /* PC表示のテーブル設定 */
      .accessTable {
        margin: 0;
-       width: 46vw;
+       max-width: 500px;
      }
 
      /* PC表示のフレックス設定 */
@@ -697,12 +740,15 @@
        display: flex;
        justify-content: space-between;
        width: 90vw;
+       max-width: 1028px;
      }
 
      /* PC表示のGoogleMap設定 */
      .map {
        width: 40vw;
        height: 50vw;
+       max-width: 500px;
+       max-height: 700px;
      }
 
    }
@@ -716,8 +762,8 @@
 お問い合わせ
 -------------------------------------------*/
 
-/* スマホ タブレット PC共通お問い合わせ設定 */
-/* 全体の幅 */
+   /* スマホ タブレット PC共通お問い合わせ設定 */
+   /* 全体の幅 */
    .contact {
      width: 90%;
      margin: 0 auto;
@@ -737,9 +783,14 @@
    .privacyPolicy {
      color: #000;
      font-size: small;
-     margin: 3em 0;
-     padding: 2%;
+     margin: 2em 0;
+     padding: 1em;
      width: 100%;
+
+     /* width: 100%; */
+     height: 300px;
+     overflow-y: scroll;
+     background:#eeeeee;
    }
 
    .privacyPolicy h3 {
@@ -810,7 +861,7 @@
 
    .button {
      display: inline-block;
-     border-radius: 5%;
+     border-radius: 10px;
      /* 角丸       */
      font-size: 18pt;
      /* 文字サイズ */
@@ -860,12 +911,13 @@
      z-index: 2;
      padding: 5px;
    }
+
    /* スマホ タブレット PC共通お問い合わせ設定 ここまで*/
 
    /*-------------------------------------------
 フッター
 -------------------------------------------*/
-/* スマホ タブレット PC共通フッター設定 */
+   /* スマホ タブレット PC共通フッター設定 */
    footer {
      text-align: center;
    }
