@@ -43,7 +43,7 @@
    }
 
    main {
-     max-width: 1028px;
+     max-width: 1628px;
      margin: auto;
    }
 
@@ -64,7 +64,7 @@
      position: fixed;
      /* メニューは常に最前面に */
      z-index: 100;
-
+     height: 65px;
    }
 
    /* ロゴ画像の設定 */
@@ -96,15 +96,17 @@
 
      /* ハンバーガーメニューアイコン */
      .menu-btn {
+       background-color: rgb(30, 30, 30);
        position: fixed;
        margin: 8px;
+
        right: 0;
        width: 48px;
        height: 48px;
        display: flex;
        justify-content: center;
        align-items: center;
-       background: black;
+       /* background: black; */
        border-radius: 5px;
        /* メニューは常に最前面に */
        z-index: 100;
@@ -161,7 +163,7 @@
 
      /* ハンバーガーメニュータップ時の挙動 */
      #menu-btn-check:checked~.menu-btn span {
-       background-color: black;
+       background-color: rgb(30, 30, 30);
      }
 
      /* 線を斜めに */
@@ -241,7 +243,6 @@
      /*ヘッダー タブレット、PCサイズ時設定 */
      @media screen and (min-width: 1024px) {
 
-
        /* メニューの文字レイアウト設定 */
        .gnav a {
          display: inline-block;
@@ -250,8 +251,6 @@
          padding-left: 2em;
        }
      }
-
-
    }
 
    /*ヘッダー タブレット、PCサイズ時設定 ここまで*/
@@ -267,9 +266,12 @@
      height: 50vh;
      object-fit: cover;
      vertical-align: bottom;
-     margin-bottom: 5%;
+     /* margin-bottom: 5%; */
    }
 
+   .mainvisual p {
+     text-align: right;
+   }
 
 
    /*-------------------------------------------
@@ -279,31 +281,33 @@
    .whiteBackgroundContent {
      background-color: white;
      border-radius: 10px;
-     width: 90vw;
-     margin: 0 auto;
      padding: 3vw 5vw;
+
      color: black;
-     max-width: 1028px;
-     margin: auto;
    }
 
-
-
-   /*-------------------------------------------
-各セクション共通設定
--------------------------------------------*/
-   /*スマホ、タブレット、PC共通 */
-   section {
-     padding-top: 2.5em;
-     padding-bottom: 2.5em;
+   .wrap {
+     width: 90vw;
+     max-width: 1028px;
+     margin: auto;
+     /* padding-top: 3em; */
+     /* width: 90vw; */
+     /* margin: 0 5vw; */
    }
 
    /* セクション毎の見出しの設定 */
    h2 {
-     margin-left: 5%;
+     /* margin-left: 5vw; */
      margin-bottom: 0.5em;
+     padding-top: 2.5em;
      font-size: 1.55rem;
      font-weight: 600;
+   }
+
+   @media screen and (min-width: 1024px) {
+     .wrap {
+       margin-top: 3em;
+     }
    }
 
 
@@ -454,29 +458,70 @@
      fill: red;
      background-size: contain !important;
      z-index: 2 !important;
-     width: 60px !important;
-     height: 60px !important;
+     width: 50px !important;
+     height: 50px !important;
+     top: 46% !important;
    }
+     /* slickの矢印の位置調整 */
+     .slick-next {
+      right: -20px;
+    }
+
+    /* slickの矢印の位置調整 */
+    .slick-prev {
+      left: -20px;
+    }
 
    /* スマホ Slick設定ここまで */
 
 
 
-   /* Slick タブレット、PC設定 */
+   /* Slick タブレット設定 */
    @media (min-width: 768px) {
+
+     /* 左右の矢印の共通設定 */
+     .slick-prev,
+     .slick-next {
+       width: 50px !important;
+       height: 50px !important;
+       top: 47% !important;
+     }
 
      /* slickの矢印の位置調整 */
      .slick-next {
-       right: -40px;
+       right: -42px;
      }
 
      /* slickの矢印の位置調整 */
      .slick-prev {
-       left: -43px;
+       left: -42px;
+     }
+   }
+
+   /* Slick PC設定 */
+   @media (min-width: 1028px) {
+
+     /* 左右の矢印の共通設定 */
+     .slick-prev,
+     .slick-next {
+       width: 50px !important;
+       height: 50px !important;
+       top: 47% !important;
      }
 
-     .schedule section {
-       padding: 0.5em;
+     /* 左右の矢印の共通設定 */
+     /* slickの矢印の位置調整 */
+     .slick-next {
+       right: -35px;
+     }
+
+     /* slickの矢印の位置調整 */
+     .slick-prev {
+       left: -35px;
+     }
+
+     .schedule .whiteBackgroundContent {
+       padding: 2.5em;
      }
    }
 
@@ -484,7 +529,7 @@
 
 
 
-   /* スマホ Gridレイアウト設定 */
+   /* Gridレイアウト設定 */
    .timeTableContainer {
      display: grid;
      grid-template-areas:
@@ -494,8 +539,8 @@
        "img text3"
        "img text4";
      grid-template-columns: 0.8fr 1.2fr;
-     margin: 1em auto 2em auto;
-     width: 70vw;
+     margin: 0 auto 3em auto;
+     width: 65vw;
    }
 
    /* 作品タイトルセルの設定 */
@@ -504,6 +549,7 @@
      padding: 1em 0 1em 0;
      background-color: #d8d8d8;
    }
+
 
    /* 作品ポスターセルの設定 */
    .img {
@@ -542,7 +588,7 @@
    .text2,
    .text3,
    .text4 {
-     border: 1px solid gray;
+     border: 1px solid black;
      display: flex;
      align-items: center;
      justify-content: center;
@@ -550,6 +596,8 @@
      font-size: large;
      font-weight: 500;
    }
+
+
 
    /* スマホ表示時には時間の改行をOFFにする */
    .sp_br {
@@ -561,7 +609,22 @@
      padding: 0;
    }
 
-   /* スマホ Gridレイアウトの設定ここまで */
+   /* セルの線の設定 */
+   .title {
+     border-bottom: none;
+   }
+
+   .img {
+     border-right: none;
+   }
+
+   .text1,
+   .text2,
+   .text3 {
+     border-bottom: none;
+   }
+
+   /* Gridレイアウトの設定ここまで */
 
 
 
@@ -588,7 +651,7 @@
      .text2,
      .text3,
      .text4 {
-       padding: 2em;
+       padding: 1em 0em 1em 0;
        font-size: large;
        font-weight: 700;
      }
@@ -602,6 +665,27 @@
      /* 時間の表示の改行を有効にする */
      .sp_br {
        display: block;
+     }
+
+     /* 各セル共通設定 */
+     .title,
+     .img,
+     .text1,
+     .text2,
+     .text3,
+     .text4 {
+       border: 1px solid black;
+     }
+
+     .title {
+       border-bottom: none;
+     }
+
+     /* セルの線の設定 */
+     .text1,
+     .text2,
+     .text3 {
+       border-right: none;
      }
    }
 
@@ -640,6 +724,10 @@
      margin-top: 1em;
    }
 
+   .lastdd {
+     margin-bottom: 1.5em;
+   }
+
    /* スマホ 料金表設定 ここまで */
 
 
@@ -658,7 +746,7 @@
      .price dl {
        width: 35vw;
        margin: 0;
-       max-width: 300px;
+       max-width: 350px;
      }
 
    }
@@ -682,7 +770,8 @@
    .accessTable {
      border-collapse: collapse;
      margin: 20px auto;
-     width: 85vw;
+     /* width: 90%; */
+     width: 90vw;
    }
 
    /* テーブルレイアウト設定 */
@@ -701,6 +790,11 @@
      padding-bottom: 1em;
      text-align: left;
      display: block;
+   }
+
+   .accessTable li {
+     list-style-type: disc;
+     margin-left: 1em;
    }
 
    /* スマホ アクセス設定 ここまで*/
@@ -786,11 +880,9 @@
      margin: 2em 0;
      padding: 1em;
      width: 100%;
-
-     /* width: 100%; */
      height: 300px;
      overflow-y: scroll;
-     background:#eeeeee;
+     background: #eeeeee;
    }
 
    .privacyPolicy h3 {
@@ -804,10 +896,7 @@
      width: 70%;
    }
 
-   input {
-     color: white;
-   }
-
+   input,
    textarea {
      color: white;
    }
@@ -843,7 +932,8 @@
    input[type="text"]:focus,
    input[type="email"]:focus,
    textarea:focus {
-     border-color: #032559;
+     border-color: white;
+     background-color: rgb(30, 30, 30);
      outline: none;
    }
 
@@ -900,8 +990,8 @@
      height: 50px;
      width: 50px;
      position: fixed;
-     right: 30px;
-     bottom: 30px;
+     right: 8px;
+     bottom: 12px;
      background: gray;
      /* border: solid 2px #000; */
      border-radius: 50%;
@@ -919,6 +1009,7 @@
 -------------------------------------------*/
    /* スマホ タブレット PC共通フッター設定 */
    footer {
+     margin-top: 2em;
      text-align: center;
    }
 
