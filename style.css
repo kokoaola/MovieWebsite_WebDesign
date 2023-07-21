@@ -554,7 +554,7 @@
        "img text2"
        "img text3"
        "img text4";
-     grid-template-columns: 0.8fr 1.2fr;
+    grid-template-columns: 1fr 1fr;
      margin: 0 auto 3em auto;
      width: 65vw;
    }
@@ -653,7 +653,7 @@
        grid-template-areas:
          "img title title title title"
          "img text1 text2 text3 text4";
-       grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+       grid-template-columns: 1.5fr 1fr 1fr 1fr 1fr;
        padding: 0.5em 0 1em 0;
      }
 
