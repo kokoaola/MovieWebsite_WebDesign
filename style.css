@@ -43,11 +43,16 @@
    }
 
    main {
-     max-width: 1628px;
+     max-width: 1728px;
      margin: auto;
    }
 
-
+   /* タブレット、PC 料金表設定 */
+   @media screen and (min-width: 1028px) {
+     main {
+       font-size: large;
+     }
+   }
 
 
    /*-------------------------------------------
@@ -65,7 +70,7 @@
      /* メニューは常に最前面に */
      z-index: 100;
      height: 60px;
-     align-content: stretch
+     align-content: stretch;
    }
 
    /* ロゴ画像の設定 */
@@ -111,7 +116,7 @@
        justify-content: center;
        align-items: center;
        /* background: black; */
-       border-radius: 5px;
+       border-radius: 10px;
        /* メニューは常に最前面に */
        z-index: 100;
      }
@@ -264,26 +269,88 @@
    /*-------------------------------------------
 メインビジュアル
 -------------------------------------------*/
+
+   .flame {}
+
    /*ヘッダー タブレット、PC共通 */
    .mainvisual img {
      width: 100%;
-     height: 60vh;
+     height: 70vh;
      object-fit: cover;
      vertical-align: bottom;
-     /* margin-bottom: 5%; */
+     margin: auto;
+     padding-top: 60px;
+     object-position: center top;
+     /* max-width: 1828px;; */
+
+     /* 3秒かけてズームインを1回だけ行う */
+     animation: animationZoom 5s ease-in-out 0s 1 forwards;
    }
 
-   .mainvisual p {
-     text-align: right;
+   .mainvisual {
+     /* じわっと画像が表示される */
+     animation: fadeIn 5s ease 0s 1 normal;
    }
+
+
+   /* じわっと画像が表示される ---------　一度追加していたら不要*/
+   @keyframes fadeIn {
+
+     /*上のbody内で呼び出しているアニメーションと名前をそろえる*/
+     0% {
+       opacity: 0
+     }
+
+     /* 始め */
+     100% {
+       opacity: 1
+     }
+
+     /* 終わり */
+   }
+
+
+   /*拡大した画像のはみ出した部分を隠すためのクラス*/
+   .slidewrap {
+     width: 100%;
+     height: 100% !important;
+     overflow: hidden;
+   }
+
+   @keyframes animationZoom {
+
+     /* アニメーション開始時に10%拡大 */
+     0% {
+       transform: scale(1.1);
+     }
+
+     /* アニメーション終了時に通常サイズ */
+     100% {
+       transform: scale(1.0);
+     }
+   }
+
+
+
+
+
+
 
    /*ヘッダー タブレット、PCサイズ時設定 */
    @media screen and (min-width: 768px) {
+     maim {
+       margin-top: 80px;
+     }
+
+
+     main {
+       max-width: none;
+       margin: auto;
+     }
 
      /* メニューの文字レイアウト設定 */
      .mainvisual img {
-       height: 70vh;
-
+       height: 90vh;
      }
    }
 
@@ -554,7 +621,7 @@
        "img text2"
        "img text3"
        "img text4";
-    grid-template-columns: 1fr 1fr;
+     grid-template-columns: 1fr 1fr;
      margin: 0 auto 3em auto;
      width: 65vw;
    }
@@ -798,7 +865,7 @@
      font-size: medium;
      font-weight: 400;
      text-align: left;
-     padding-left: 3em;
+     padding-left: 5vw;
      display: block;
    }
 
@@ -808,7 +875,7 @@
      padding-bottom: 1em;
      text-align: left;
      display: block;
-     padding-left: 3em;
+     padding-left: 5vw;
    }
 
    .accessTable li {
@@ -883,7 +950,7 @@
    }
 
    .contactTop {
-     padding: 2em 0 0 0;
+     padding: 100px 0 0 0;
    }
 
    .privacyPolicy h2 {
@@ -919,6 +986,12 @@
    textarea {
      color: white;
    }
+
+   @media screen and (min-width: 1024px){
+.wrap {
+    margin-top: 0em;
+}
+}
 
    /* フォームの3つのブロックに対する指定 */
    .form-group {
@@ -998,35 +1071,36 @@
      background: #000000;
      /* 文字色     */
    }
-
-   footer div {
-     text-align: right;
-   }
-
-
-   /* トップへ戻るボタン */
-   .jumpToTopButton {
-     height: 50px;
-     width: 50px;
-     position: fixed;
-     right: 6px;
-     bottom: 12px;
-     background: gray;
-     /* border: solid 2px #000; */
-     border-radius: 50%;
-     display: flex;
-     justify-content: center;
-     align-items: center;
-     z-index: 2;
-     padding: 5px;
-   }
-
    /* スマホ タブレット PC共通お問い合わせ設定 ここまで*/
+
+
 
    /*-------------------------------------------
 フッター
 -------------------------------------------*/
    /* スマホ タブレット PC共通フッター設定 */
+   footer div {
+    text-align: right;
+  }
+
+
+  /* トップへ戻るボタン */
+  .jumpToTopButton {
+    height: 50px;
+    width: 50px;
+    position: fixed;
+    right: 6px;
+    bottom: 12px;
+    background: gray;
+    /* border: solid 2px #000; */
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 2;
+    padding: 5px;
+  }
+
    footer {
      margin-top: 2em;
      text-align: center;
