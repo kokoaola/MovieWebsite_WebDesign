@@ -5,12 +5,13 @@
 
 ## 概要
 - Web制作のポートフォリオとして作った架空の映画館のサイトです
-- 制作期間：2023.6.26 - 2023.7.21
-- 使用した技術：HTML/CSS, JavaScript, jQuery, Illustrator, Photoshop
+- URL: https://kokoaola.github.io/MovieWebSite-main/
+- 制作期間: 2023.6.26 - 2023.7.21
+- 使用した技術: HTML/CSS, JavaScript, jQuery, Illustrator, Photoshop
  
  ## ターゲット層
- - メインターゲット：50-70代男性
- - サブターゲット：20代男女
+ - メインターゲット: 50-70代男性
+ - サブターゲット: 20代男女
 
 ## Contributing
 現状、このプロジェクトはポートフォリオ用として公開しております。外部からのコントリビューションは受け付けていませんが、フィードバックや質問も大歓迎なので、遠慮なくIssueを作成してください。
